@@ -30,6 +30,7 @@ export default function RootLayout({
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <link rel="icon" href="favicon.ico" />
+        <link rel="manifest" href="/manifest.json" /> {/* 👈 เพิ่มตรงนี้ */}
       </head>
       <body className={inter.className}>
         <LanguageProvider>
@@ -38,7 +39,7 @@ export default function RootLayout({
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
               {children}
             </main>
-            <Footer /> {/* ใช้ Footer component ใหม่ */}
+            <Footer />
           </div>
           <CookieConsent />
         </LanguageProvider>
