@@ -36,10 +36,10 @@ export default function Footer() {
               <p className="text-gray-300">
                 {language === "th" ? "อีเมล: " : "Email: "}
                 <a
-                  href="mailto:team@goroll.co"
+                  href="mailto:goosewayofficial@gmail.com"
                   className="hover:text-white transition-colors"
                 >
-                  team@goroll.co
+                  goosewayofficial@gmail.com
                 </a>
               </p>
               <p className="text-gray-300">
@@ -54,7 +54,7 @@ export default function Footer() {
               <p className="text-gray-300">
                 {language === "th" ? "Line Official: " : "Line Official: "}
                 <a
-                  href="https://line.me/R/ti/p/@goroll"
+                  href="https://line.me/R/ti/p/@We Wheel Go"
                   className="hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -71,7 +71,7 @@ export default function Footer() {
               </h3>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://www.facebook.com/goroll.co"
+                  href="https://www.facebook.com/We Wheel Go.co"
                   className="text-gray-300 hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -80,7 +80,7 @@ export default function Footer() {
                   Facebook
                 </a>
                 <a
-                  href="https://www.instagram.com/goroll.co"
+                  href="https://www.instagram.com/We Wheel Go.co"
                   className="text-gray-300 hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -89,7 +89,7 @@ export default function Footer() {
                   Instagram
                 </a>
                 <a
-                  href="https://www.tiktok.com/@goroll.co"
+                  href="https://www.tiktok.com/@We Wheel Go.co"
                   className="text-gray-300 hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -98,7 +98,7 @@ export default function Footer() {
                   TikTok
                 </a>
                 <a
-                  href="https://x.com/goroll_co"
+                  href="https://x.com/We Wheel Go_co"
                   className="text-gray-300 hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -131,7 +131,7 @@ export default function Footer() {
           {/* Copyright and Legal Links */}
           <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
             <p className="mb-2">
-              © 2024 GOROLL.{" "}
+              © 2024 We Wheel Go.{" "}
               {language === "th" ? "สงวนลิขสิทธิ์" : "All rights reserved"}.
             </p>
             <div className="flex flex-wrap justify-center items-center gap-2 text-sm">

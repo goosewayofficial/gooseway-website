@@ -1,8 +1,8 @@
-# GOROLL - Accessible Journeys Platform
+# We Wheel Go - Accessible Journeys Platform
 
 ## About
 
-GOROLL is a platform dedicated to making mobility accessible and inclusive for wheelchair users. We provide information about wheelchair-friendly locations, routes, and transportation options while building a supportive community.
+We Wheel Go is a platform dedicated to making mobility accessible and inclusive for wheelchair users. We provide information about wheelchair-friendly locations, routes, and transportation options while building a supportive community.
 
 ## Features
 

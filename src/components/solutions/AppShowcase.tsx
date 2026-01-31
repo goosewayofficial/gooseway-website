@@ -273,7 +273,7 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
                       </p>
                     </div>
                   </div>
-                )
+                ),
               )}
             </div>
 
@@ -311,7 +311,7 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
               {/* User Manual Button - Separate Row */}
               <div className="flex justify-center lg:justify-start">
                 <a
-                  href="https://goroll.co/user-manual.pdf"
+                  href="https://We Wheel Go.co/user-manual.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`${

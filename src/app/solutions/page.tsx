@@ -34,7 +34,7 @@ const solutions: Solution[] = [
     id: 2,
     title: "Explore",
     description:
-      "Provide suitable cost-saving transportation options (GOROLL Carpool service/other choices for transport) which fit with their wheelchair.",
+      "Provide suitable cost-saving transportation options (We Wheel Go Carpool service/other choices for transport) which fit with their wheelchair.",
     features: [
       "Wheelchair-friendly vehicle matching",
       "Real-time ride tracking",

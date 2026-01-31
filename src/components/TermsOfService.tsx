@@ -41,7 +41,7 @@ export default function TermsOfService({
                   วันที่มีผลบังคับใช้: 1 มกราคม 2024
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  ยินดีต้อนรับสู่ GOROLL
+                  ยินดีต้อนรับสู่ We Wheel Go
                   โปรดอ่านข้อตกลงการใช้บริการนี้อย่างละเอียดก่อนใช้งานเว็บไซต์และบริการของเรา
                 </p>
               </div>
@@ -50,14 +50,14 @@ export default function TermsOfService({
                 1. การยอมรับข้อตกลง
               </h3>
               <p className="mb-6 text-gray-700 leading-relaxed">
-                การเข้าถึงและใช้งานเว็บไซต์ GOROLL
+                การเข้าถึงและใช้งานเว็บไซต์ We Wheel Go
                 แสดงให้เห็นว่าคุณยอมรับและตกลงที่จะปฏิบัติตามข้อตกลงการใช้บริการนี้ทั้งหมด
                 หากคุณไม่เห็นด้วยกับข้อตกลงใดๆ โปรดหยุดการใช้งานเว็บไซต์ทันที
               </p>
 
               <h3 className="text-xl font-semibold mb-4">2. บริการของเรา</h3>
               <p className="mb-4 text-gray-700 leading-relaxed">
-                GOROLL เป็นแพลตฟอร์มที่ให้บริการ:
+                We Wheel Go เป็นแพลตฟอร์มที่ให้บริการ:
               </p>
               <ul className="list-disc pl-8 mb-6 space-y-2 text-gray-700">
                 <li>ข้อมูลเส้นทางที่เข้าถึงได้สำหรับผู้ใช้วีลแชร์</li>
@@ -87,7 +87,7 @@ export default function TermsOfService({
               <p className="mb-6 text-gray-700 leading-relaxed">
                 เมื่อคุณแบ่งปันเนื้อหาใดๆ บนแพลตฟอร์มของเรา
                 คุณยืนยันว่าคุณเป็นเจ้าของหรือมีสิทธิ์ในเนื้อหานั้น คุณอนุญาตให้
-                GOROLL ใช้ เก็บ และแสดงเนื้อหาของคุณเพื่อการให้บริการ
+                We Wheel Go ใช้ เก็บ และแสดงเนื้อหาของคุณเพื่อการให้บริการ
               </p>
 
               <h3 className="text-xl font-semibold mb-4">
@@ -127,7 +127,7 @@ export default function TermsOfService({
               </p>
               <div className="bg-gray-50 p-4 rounded-lg mb-6">
                 <p className="text-gray-700">
-                  <strong>อีเมล:</strong> team@goroll.co
+                  <strong>อีเมล:</strong> goosewayofficial@gmail.com
                   <br />
                   <strong>โทรศัพท์:</strong> +66 830796796
                   <br />
@@ -142,7 +142,7 @@ export default function TermsOfService({
                   Effective Date: January 1, 2024
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  Welcome to GOROLL. Please read these Terms of Service
+                  Welcome to We Wheel Go. Please read these Terms of Service
                   carefully before using our website and services.
                 </p>
               </div>
@@ -151,15 +151,15 @@ export default function TermsOfService({
                 1. Acceptance of Terms
               </h3>
               <p className="mb-6 text-gray-700 leading-relaxed">
-                By accessing and using the GOROLL website, you acknowledge that
-                you have read, understood, and agree to be bound by these Terms
-                of Service. If you do not agree to any part of these terms,
-                please discontinue use of our website immediately.
+                By accessing and using the We Wheel Go website, you acknowledge
+                that you have read, understood, and agree to be bound by these
+                Terms of Service. If you do not agree to any part of these
+                terms, please discontinue use of our website immediately.
               </p>
 
               <h3 className="text-xl font-semibold mb-4">2. Our Services</h3>
               <p className="mb-4 text-gray-700 leading-relaxed">
-                GOROLL provides the following services:
+                We Wheel Go provides the following services:
               </p>
               <ul className="list-disc pl-8 mb-6 space-y-2 text-gray-700">
                 <li>Accessible route information for wheelchair users</li>
@@ -186,7 +186,7 @@ export default function TermsOfService({
               </h3>
               <p className="mb-6 text-gray-700 leading-relaxed">
                 When you share any content on our platform, you confirm that you
-                own or have the rights to that content. You grant GOROLL
+                own or have the rights to that content. You grant We Wheel Go
                 permission to use, store, and display your content for service
                 provision purposes.
               </p>
@@ -231,7 +231,7 @@ export default function TermsOfService({
               </p>
               <div className="bg-gray-50 p-4 rounded-lg mb-6">
                 <p className="text-gray-700">
-                  <strong>Email:</strong> team@goroll.co
+                  <strong>Email:</strong> goosewayofficial@gmail.com
                   <br />
                   <strong>Phone:</strong> +66 830796796
                   <br />

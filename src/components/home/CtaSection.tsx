@@ -39,7 +39,7 @@ export default function CtaSection({ onVideoClick }: CtaSectionProps) {
 
         <div className="mt-12 flex justify-center space-x-6">
           <a
-            href="https://www.facebook.com/goroll.co"
+            href="https://www.facebook.com/We Wheel Go.co"
             className="text-blue-600 hover:text-blue-800 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
@@ -54,7 +54,7 @@ export default function CtaSection({ onVideoClick }: CtaSectionProps) {
             </svg>
           </a>
           <a
-            href="https://www.instagram.com/goroll.co"
+            href="https://www.instagram.com/We Wheel Go.co"
             className="text-blue-600 hover:text-blue-800 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
@@ -69,7 +69,7 @@ export default function CtaSection({ onVideoClick }: CtaSectionProps) {
             </svg>
           </a>
           <a
-            href="https://www.tiktok.com/@goroll.co"
+            href="https://www.tiktok.com/@We Wheel Go.co"
             className="text-blue-600 hover:text-blue-800 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
@@ -85,7 +85,7 @@ export default function CtaSection({ onVideoClick }: CtaSectionProps) {
             </svg>
           </a>
           <a
-            href="https://x.com/goroll_co"
+            href="https://x.com/We Wheel Go_co"
             className="text-blue-600 hover:text-blue-800 transition-colors"
             target="_blank"
             rel="noopener noreferrer"

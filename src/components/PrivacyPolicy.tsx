@@ -38,8 +38,8 @@ export default function PrivacyPolicy({ isOpen, onClose }: PrivacyPolicyProps) {
                   วันที่มีผลบังคับใช้: 1 มกราคม 2024
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  นโยบายความเป็นส่วนตัวนี้อธิบายวิธีที่ GOROLL เก็บรวบรวม ใช้
-                  และปกป้องข้อมูลส่วนบุคคลของคุณ
+                  นโยบายความเป็นส่วนตัวนี้อธิบายวิธีที่ We Wheel Go เก็บรวบรวม
+                  ใช้ และปกป้องข้อมูลส่วนบุคคลของคุณ
                   เราให้ความสำคัญกับความเป็นส่วนตัวและความปลอดภัยของข้อมูลของคุณ
                 </p>
               </div>
@@ -215,15 +215,16 @@ export default function PrivacyPolicy({ isOpen, onClose }: PrivacyPolicyProps) {
               </p>
               <div className="bg-gray-50 p-4 rounded-lg mb-6">
                 <p className="text-gray-700">
-                  <strong>อีเมล:</strong> team@gorollth.com
+                  <strong>อีเมล:</strong> team@We Wheel Goth.com
                   <br />
-                  <strong>อีเมลทั่วไป:</strong> team@goroll.co
+                  <strong>อีเมลทั่วไป:</strong> goosewayofficial@gmail.com
                   <br />
                   <strong>โทรศัพท์:</strong> +66 830796796
                   <br />
                   <strong>ที่อยู่:</strong> Bangkok, Thailand
                   <br />
-                  <strong>เจ้าหน้าที่คุมครองข้อมูล:</strong> team@gorollth.com
+                  <strong>เจ้าหน้าที่คุมครองข้อมูล:</strong> team@We Wheel
+                  Goth.com
                 </p>
               </div>
             </>
@@ -234,8 +235,8 @@ export default function PrivacyPolicy({ isOpen, onClose }: PrivacyPolicyProps) {
                   Effective Date: January 1, 2024
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  This Privacy Policy explains how GOROLL collects, uses, and
-                  protects your personal information. We are committed to
+                  This Privacy Policy explains how We Wheel Go collects, uses,
+                  and protects your personal information. We are committed to
                   protecting your privacy and ensuring the security of your
                   data.
                 </p>
@@ -416,7 +417,7 @@ export default function PrivacyPolicy({ isOpen, onClose }: PrivacyPolicyProps) {
               </p>
               <div className="bg-gray-50 p-4 rounded-lg mb-6">
                 <p className="text-gray-700">
-                  <strong>General Email:</strong> team@goroll.co
+                  <strong>General Email:</strong> goosewayofficial@gmail.com
                   <br />
                   <strong>Phone:</strong> +66 830796796
                   <br />

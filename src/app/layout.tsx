@@ -13,7 +13,7 @@ import CookieConsent from "@/components/CookieConsent";
 const inter = Inter({ subsets: ["latin"] });
 
 const metadata = {
-  title: "GOROLL",
+  title: "We Wheel Go",
   description: "Your route, your rights",
 };
 

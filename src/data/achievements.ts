@@ -62,8 +62,8 @@ const achievementsData: BilingualAchievement[] = [
       en: "Finalist in the top 22 teams out of 234 teams, received a fund for development from HealthTech X 2 The Future by ThaiHealth",
     },
     longDescription: {
-      th: "GOROLL ได้รับคัดเลือกเป็นหนึ่งใน 22 ทีมสุดท้ายจากทั้งหมด 234 ทีม ในการแข่งขัน HealthTech X 2 The Future ซึ่งเป็นเวทีที่สนับสนุนโซลูชันด้านเทคโนโลยีเพื่อสุขภาพที่มีศักยภาพสูง พร้อมรับทุนสนับสนุนการพัฒนาจำนวน 500,000 บาท เพื่อยกระดับโครงการให้สามารถสร้างผลกระทบในวงกว้าง การได้รับการยอมรับในครั้งนี้สะท้อนถึงความมุ่งมั่น ความคิดสร้างสรรค์ และความสามารถของทีมในการพัฒนาแพลตฟอร์มที่ตอบโจทย์ความท้าทายด้านการเข้าถึงและความเท่าเทียมในการเดินทางของผู้ใช้วีลแชร์ ทุนที่ได้รับช่วยเสริมศักยภาพให้เราสามารถต่อยอดฟีเจอร์สำคัญ ปรับปรุงประสบการณ์การใช้งาน และเดินหน้าสร้างสรรค์สังคมที่ครอบคลุมและเข้าถึงได้สำหรับทุกคน",
-      en: "GOROLL was selected as one of the top 22 finalist teams out of 234 entries in HealthTech X 2 The Future, a prestigious platform supporting high-potential health technology solutions. The project was awarded 500,000 THB in development funding to further enhance its impact and scalability. This recognition reflects our team’s commitment, creativity, and capability in addressing critical challenges related to accessibility and equity in transportation for wheelchair users. The funding has empowered us to expand key features, improve user experience, and continue building a more inclusive and accessible society for everyone.",
+      th: "We Wheel Go ได้รับคัดเลือกเป็นหนึ่งใน 22 ทีมสุดท้ายจากทั้งหมด 234 ทีม ในการแข่งขัน HealthTech X 2 The Future ซึ่งเป็นเวทีที่สนับสนุนโซลูชันด้านเทคโนโลยีเพื่อสุขภาพที่มีศักยภาพสูง พร้อมรับทุนสนับสนุนการพัฒนาจำนวน 500,000 บาท เพื่อยกระดับโครงการให้สามารถสร้างผลกระทบในวงกว้าง การได้รับการยอมรับในครั้งนี้สะท้อนถึงความมุ่งมั่น ความคิดสร้างสรรค์ และความสามารถของทีมในการพัฒนาแพลตฟอร์มที่ตอบโจทย์ความท้าทายด้านการเข้าถึงและความเท่าเทียมในการเดินทางของผู้ใช้วีลแชร์ ทุนที่ได้รับช่วยเสริมศักยภาพให้เราสามารถต่อยอดฟีเจอร์สำคัญ ปรับปรุงประสบการณ์การใช้งาน และเดินหน้าสร้างสรรค์สังคมที่ครอบคลุมและเข้าถึงได้สำหรับทุกคน",
+      en: "We Wheel Go was selected as one of the top 22 finalist teams out of 234 entries in HealthTech X 2 The Future, a prestigious platform supporting high-potential health technology solutions. The project was awarded 500,000 THB in development funding to further enhance its impact and scalability. This recognition reflects our team’s commitment, creativity, and capability in addressing critical challenges related to accessibility and equity in transportation for wheelchair users. The funding has empowered us to expand key features, improve user experience, and continue building a more inclusive and accessible society for everyone.",
     },
 
     date: "2024",
@@ -138,7 +138,7 @@ export const getAchievements = (language: "th" | "en"): Achievement[] => {
 // Function สำหรับดึงหมวดหมู่ที่ไม่ซ้ำกันในภาษาที่เลือก
 export const getCategories = (language: "th" | "en"): string[] => {
   const categories = achievementsData.map(
-    (achievement) => achievement.category[language]
+    (achievement) => achievement.category[language],
   );
   return [...new Set(categories)];
 };

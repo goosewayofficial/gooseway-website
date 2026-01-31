@@ -14,28 +14,28 @@ export default function ContactFAQ() {
           : "How can I contact the support team?",
       answer:
         language === "th"
-          ? "คุณสามารถติดต่อเราได้ทางอีเมล team@goroll.co หรือโทรศัพท์ที่ +66 830796796 ในช่วงเวลาทำการ"
-          : "You can reach us via email at team@goroll.co or by phone at +66 830796796 during business hours.",
+          ? "คุณสามารถติดต่อเราได้ทางอีเมล goosewayofficial@gmail.com หรือโทรศัพท์ที่ +66 830796796 ในช่วงเวลาทำการ"
+          : "You can reach us via email at goosewayofficial@gmail.com or by phone at +66 830796796 during business hours.",
     },
     {
       question:
         language === "th"
-          ? "GOROLL มีให้บริการที่ไหนบ้าง?"
-          : "Where is GOROLL available?",
+          ? "We Wheel Go มีให้บริการที่ไหนบ้าง?"
+          : "Where is We Wheel Go available?",
       answer:
         language === "th"
-          ? "ปัจจุบัน GOROLL ให้บริการในกรุงเทพฯ และปริมณฑล เรามีแผนขยายไปยังจังหวัดหลักๆ ในประเทศไทยเร็วๆ นี้"
-          : "Currently, GOROLL services are available in Bangkok and surrounding areas. We plan to expand to other major cities in Thailand soon.",
+          ? "ปัจจุบัน We Wheel Go ให้บริการในกรุงเทพฯ และปริมณฑล เรามีแผนขยายไปยังจังหวัดหลักๆ ในประเทศไทยเร็วๆ นี้"
+          : "Currently, We Wheel Go services are available in Bangkok and surrounding areas. We plan to expand to other major cities in Thailand soon.",
     },
     {
       question:
         language === "th"
-          ? "ฉันสามารถร่วมเป็นพันธมิตรกับ GOROLL ได้อย่างไร?"
-          : "How can I partner with GOROLL?",
+          ? "ฉันสามารถร่วมเป็นพันธมิตรกับ We Wheel Go ได้อย่างไร?"
+          : "How can I partner with We Wheel Go?",
       answer:
         language === "th"
-          ? "เรายินดีที่จะร่วมงานกับพันธมิตรที่มีวิสัยทัศน์เดียวกัน โปรดส่งอีเมลรายละเอียดเกี่ยวกับธุรกิจของคุณและข้อเสนอความร่วมมือไปที่ team@goroll.co"
-          : "We welcome partnerships with like-minded organizations. Please email details about your business and partnership proposal to team@goroll.co",
+          ? "เรายินดีที่จะร่วมงานกับพันธมิตรที่มีวิสัยทัศน์เดียวกัน โปรดส่งอีเมลรายละเอียดเกี่ยวกับธุรกิจของคุณและข้อเสนอความร่วมมือไปที่ goosewayofficial@gmail.com"
+          : "We welcome partnerships with like-minded organizations. Please email details about your business and partnership proposal to goosewayofficial@gmail.com",
     },
   ];
 
