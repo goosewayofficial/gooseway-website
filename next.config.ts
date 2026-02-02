@@ -6,7 +6,7 @@ const isDev = process.env.NODE_ENV === "development";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  turbopack: {},
 };
 
 export default withPWA({
