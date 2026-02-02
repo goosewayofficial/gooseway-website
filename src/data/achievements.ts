@@ -86,8 +86,8 @@ const achievementsData: BilingualAchievement[] = [
   {
     id: 3,
     title: {
-      th: "Academy for Women Entrepreneurs Thailand 2024",
-      en: "Academy for Women Entrepreneurs Thailand 2024",
+      th: "ผ่านการคัดเลือก10 ทีมสุดท้ายเข้ารอบ Pre-Pitching 1/2569 กับ SYNHUB TED Fellow ",
+      en: "Selected as one of the top 10 teams for Pre-Pitching 1/2024 with SYNHUB TED Fellow",
     },
     description: {
       th: "ผู้เข้ารอบสุดท้าย 30 ทีมจาก 193 ใบสมัคร",

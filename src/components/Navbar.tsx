@@ -30,21 +30,30 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0 flex items-center">
-              {/* Logo Image */}
-              <div className="w-10 h-10 mr-3 relative">
+            <Link href="/" className="flex-shrink-0 flex items-center gap-3">
+              {/* 1. ส่วน Logo (Icon) */}
+              <div className="w-10 h-10 relative">
                 <Image
-                  src="/logo.svg"
-                  alt="GOOSEWAY Logo"
+                  src="/logo.svg" // ไฟล์ Logo รูปภาพ (Icon)
+                  alt="GOOSEWAY Icon"
                   width={40}
                   height={40}
                   className="object-contain"
                 />
               </div>
-              {/* Brand Text */}
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                GOOSEWAY
-              </span>
+
+              {/* 2. ส่วน Text Logo (Image) - วางข้างกัน */}
+              {/* ปรับความสูง h-6 หรือ h-8 ตามขนาดรูป text logo จริง */}
+              <div className="10 sm:h-12 w-auto relative">
+                <Image
+                  src="/logo-text.svg" // TODO: ใส่ชื่อไฟล์ Text Logo ของคุณที่นี่
+                  alt="GOOSEWAY"
+                  width={120} // กำหนด width กว้างๆ ไว้เพื่อให้ aspect ratio ไม่เพี้ยน
+                  height={28}
+                  className="object-contain h-full w-auto" // ให้รูปสูงเต็ม container และกว้าง auto
+                  priority
+                />
+              </div>
             </Link>
           </div>
 
@@ -98,21 +107,27 @@ export default function Navbar() {
         <div className="relative float-right bg-white h-full w-64 shadow-xl">
           <div className="pt-5 pb-6 px-5">
             <div className="flex items-center justify-between mb-6">
-              <Link href="/" className="flex items-center">
-                {/* Mobile Logo Image */}
-                <div className="w-8 h-8 mr-2 relative">
+              <Link href="/" className="flex items-center gap-2">
+                {/* Mobile: Logo Icon */}
+                <div className="w-8 h-8 relative">
                   <Image
                     src="/logo.svg"
-                    alt="GOOSEWAY Logo"
+                    alt="GOOSEWAY Icon"
                     width={32}
                     height={32}
                     className="object-contain"
                   />
                 </div>
-                {/* Mobile Brand Text */}
-                <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                  GOOSEWAY
-                </span>
+                {/* Mobile: Text Logo Image */}
+                <div className="h-9 w-auto relative">
+                  <Image
+                    src="/logo-text.svg" // TODO: อย่าลืมเปลี่ยนชื่อไฟล์ตรงนี้ด้วยครับ
+                    alt="GOOSEWAY"
+                    width={100}
+                    height={20}
+                    className="object-contain h-full w-auto"
+                  />
+                </div>
               </Link>
               <button
                 onClick={() => setIsOpen(false)}

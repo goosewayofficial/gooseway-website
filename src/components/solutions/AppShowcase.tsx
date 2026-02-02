@@ -1,6 +1,14 @@
 // src/components/solutions/AppShowcase.tsx
 import React, { useState } from "react";
-import { MapPin, Users, Car, Smartphone, BookOpen } from "lucide-react";
+// 1. เพิ่ม PlayCircle เข้าไปใน import
+import {
+  MapPin,
+  Users,
+  Car,
+  Smartphone,
+  BookOpen,
+  PlayCircle,
+} from "lucide-react";
 import { Solution } from "@/app/interfaces";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -209,7 +217,7 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
           </p>
         </div>
 
-        {/* Responsive Tab Navigation - Fixed for Desktop Centering */}
+        {/* Responsive Tab Navigation */}
         <div className="flex justify-center mb-8 sm:mb-10 px-2">
           <div className="bg-gray-100 rounded-full p-1 w-full max-w-full sm:max-w-fit overflow-x-auto scrollbar-hide">
             <div className="flex space-x-1 min-w-full sm:min-w-0 sm:justify-center">
@@ -237,10 +245,9 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center">
-          {/* Phone Mockup - Responsive */}
+          {/* Phone Mockup */}
           <div className="relative mx-auto max-w-xs fade-in-section order-2 lg:order-1">
             <div className="relative mx-auto w-[240px] sm:w-[270px] h-[480px] sm:h-[540px] bg-gray-900 rounded-[30px] sm:rounded-[36px] shadow-xl overflow-hidden border-[6px] sm:border-[8px] border-gray-900">
-              {/* <div className="absolute top-0 inset-x-0 h-5 sm:h-6 bg-gray-900 rounded-b-lg z-10"></div> */}
               <div className="w-full h-full rounded-[20px] sm:rounded-[24px] overflow-hidden">
                 <img
                   src={getActiveSolution().image}
@@ -281,7 +288,6 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
             <div className="mt-6 sm:mt-8 space-y-4">
               {/* App Store Download Buttons */}
               <div className="flex flex-row gap-2 sm:gap-4 justify-center lg:justify-start">
-                {/* App Store Button */}
                 <a
                   href="https://testflight.apple.com/join/B1hnSF1F"
                   className="inline-block transition-transform hover:scale-105 flex-shrink-0"
@@ -294,7 +300,6 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
                   />
                 </a>
 
-                {/* Google Play Button */}
                 <a
                   href="https://drive.google.com/file/d/1cquzTcoWqeHZHNzX-feMXYnMK90DzSd9/view?usp=sharing"
                   className="inline-block transition-transform hover:scale-105 flex-shrink-0"
@@ -308,18 +313,34 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
                 </a>
               </div>
 
-              {/* User Manual Button - Separate Row */}
-              <div className="flex justify-center lg:justify-start">
+              {/* User Manual & Video Tutorial Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2">
+                {/* Manual Button (Filled) */}
                 <a
                   href="https://GOOSEWAY.co/user-manual.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`${
                     getCategoryColors(getActiveSolution().category).buttonColor
-                  } text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 hover:shadow-lg transform hover:scale-105 flex items-center justify-center gap-2 min-w-[200px] sm:min-w-[220px] no-underline`}
+                  } text-white px-6 py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 hover:shadow-lg transform hover:scale-105 flex items-center justify-center gap-2 flex-1 sm:flex-none sm:min-w-[180px] no-underline`}
                 >
                   <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span>{t("view_user_manual")}</span>
+                  <span>{t("GOOSEWAY")}</span>
+                </a>
+
+                {/* Video Tutorial Button (Outline) */}
+                <a
+                  href="#" /* ใส่ลิงก์วิดีโอของคุณที่นี่ */
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`bg-white border-2 ${
+                    getCategoryColors(getActiveSolution().category).borderColor
+                  } ${
+                    getCategoryColors(getActiveSolution().category).textColor
+                  } px-6 py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 hover:bg-gray-50 hover:shadow-lg transform hover:scale-105 flex items-center justify-center gap-2 flex-1 sm:flex-none sm:min-w-[180px] no-underline`}
+                >
+                  <PlayCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span>{t("video_tutorial") || "Video Tutorial"}</span>
                 </a>
               </div>
             </div>
