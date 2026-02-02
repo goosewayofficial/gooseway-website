@@ -1,8 +1,8 @@
-# We Wheel Go - Accessible Journeys Platform
+# GOOSEWAY - Accessible Journeys Platform
 
 ## About
 
-We Wheel Go is a platform dedicated to making mobility accessible and inclusive for wheelchair users. We provide information about wheelchair-friendly locations, routes, and transportation options while building a supportive community.
+GOOSEWAY is a platform dedicated to making mobility accessible and inclusive for wheelchair users. We provide information about wheelchair-friendly locations, routes, and transportation options while building a supportive community.
 
 ## Features
 

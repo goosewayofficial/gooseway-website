@@ -13,7 +13,7 @@ import CookieConsent from "@/components/CookieConsent";
 const inter = Inter({ subsets: ["latin"] });
 
 const metadata = {
-  title: "We Wheel Go",
+  title: "GOOSEWAY",
   description: "Your route, your rights",
 };
 

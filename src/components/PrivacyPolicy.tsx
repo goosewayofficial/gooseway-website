@@ -38,8 +38,8 @@ export default function PrivacyPolicy({ isOpen, onClose }: PrivacyPolicyProps) {
                   วันที่มีผลบังคับใช้: 1 มกราคม 2024
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  นโยบายความเป็นส่วนตัวนี้อธิบายวิธีที่ We Wheel Go เก็บรวบรวม
-                  ใช้ และปกป้องข้อมูลส่วนบุคคลของคุณ
+                  นโยบายความเป็นส่วนตัวนี้อธิบายวิธีที่ GOOSEWAY เก็บรวบรวม ใช้
+                  และปกป้องข้อมูลส่วนบุคคลของคุณ
                   เราให้ความสำคัญกับความเป็นส่วนตัวและความปลอดภัยของข้อมูลของคุณ
                 </p>
               </div>
@@ -215,7 +215,7 @@ export default function PrivacyPolicy({ isOpen, onClose }: PrivacyPolicyProps) {
               </p>
               <div className="bg-gray-50 p-4 rounded-lg mb-6">
                 <p className="text-gray-700">
-                  <strong>อีเมล:</strong> team@We Wheel Goth.com
+                  <strong>อีเมล:</strong> team@GOOSEWAYth.com
                   <br />
                   <strong>อีเมลทั่วไป:</strong> goosewayofficial@gmail.com
                   <br />
@@ -235,8 +235,8 @@ export default function PrivacyPolicy({ isOpen, onClose }: PrivacyPolicyProps) {
                   Effective Date: January 1, 2024
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  This Privacy Policy explains how We Wheel Go collects, uses,
-                  and protects your personal information. We are committed to
+                  This Privacy Policy explains how GOOSEWAY collects, uses, and
+                  protects your personal information. We are committed to
                   protecting your privacy and ensuring the security of your
                   data.
                 </p>

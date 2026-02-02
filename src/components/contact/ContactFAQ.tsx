@@ -20,18 +20,18 @@ export default function ContactFAQ() {
     {
       question:
         language === "th"
-          ? "We Wheel Go มีให้บริการที่ไหนบ้าง?"
-          : "Where is We Wheel Go available?",
+          ? "GOOSEWAY มีให้บริการที่ไหนบ้าง?"
+          : "Where is GOOSEWAY available?",
       answer:
         language === "th"
-          ? "ปัจจุบัน We Wheel Go ให้บริการในกรุงเทพฯ และปริมณฑล เรามีแผนขยายไปยังจังหวัดหลักๆ ในประเทศไทยเร็วๆ นี้"
-          : "Currently, We Wheel Go services are available in Bangkok and surrounding areas. We plan to expand to other major cities in Thailand soon.",
+          ? "ปัจจุบัน GOOSEWAY ให้บริการในกรุงเทพฯ และปริมณฑล เรามีแผนขยายไปยังจังหวัดหลักๆ ในประเทศไทยเร็วๆ นี้"
+          : "Currently, GOOSEWAY services are available in Bangkok and surrounding areas. We plan to expand to other major cities in Thailand soon.",
     },
     {
       question:
         language === "th"
-          ? "ฉันสามารถร่วมเป็นพันธมิตรกับ We Wheel Go ได้อย่างไร?"
-          : "How can I partner with We Wheel Go?",
+          ? "ฉันสามารถร่วมเป็นพันธมิตรกับ GOOSEWAY ได้อย่างไร?"
+          : "How can I partner with GOOSEWAY?",
       answer:
         language === "th"
           ? "เรายินดีที่จะร่วมงานกับพันธมิตรที่มีวิสัยทัศน์เดียวกัน โปรดส่งอีเมลรายละเอียดเกี่ยวกับธุรกิจของคุณและข้อเสนอความร่วมมือไปที่ goosewayofficial@gmail.com"

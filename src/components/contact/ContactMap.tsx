@@ -18,7 +18,7 @@ export default function ContactMap() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="We Wheel Go Location"
+          title="GOOSEWAY Location"
           className="absolute inset-0"
         ></iframe>
       </div>

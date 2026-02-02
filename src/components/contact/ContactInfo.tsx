@@ -114,7 +114,7 @@ export default function ContactInfo() {
         </h3>
         <div className="flex space-x-4 flex-wrap">
           <a
-            href="https://www.facebook.com/We Wheel Go.co"
+            href="https://www.facebook.com/GOOSEWAY.co"
             className="bg-gray-100 p-3 rounded-full text-blue-600 hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
@@ -124,7 +124,7 @@ export default function ContactInfo() {
           </a>
 
           <a
-            href="https://www.instagram.com/We Wheel Go.co"
+            href="https://www.instagram.com/GOOSEWAY.co"
             className="bg-gray-100 p-3 rounded-full text-pink-600 hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 hover:text-white transition-all transform hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
@@ -134,7 +134,7 @@ export default function ContactInfo() {
           </a>
 
           <a
-            href="https://www.tiktok.com/@We Wheel Go.co"
+            href="https://www.tiktok.com/@GOOSEWAY.co"
             className="bg-gray-100 p-3 rounded-full text-black hover:bg-black hover:text-white transition-all transform hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
@@ -144,7 +144,7 @@ export default function ContactInfo() {
           </a>
 
           <a
-            href="https://x.com/We Wheel Go_co"
+            href="https://x.com/GOOSEWAY_co"
             className="bg-gray-100 p-3 rounded-full text-black hover:bg-black hover:text-white transition-all transform hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
@@ -153,7 +153,7 @@ export default function ContactInfo() {
             <XIcon className="w-5 h-5" />
           </a>
           <a
-            href="https://line.me/R/ti/p/@We Wheel Go"
+            href="https://line.me/R/ti/p/@GOOSEWAY"
             className="bg-gray-100 p-3 rounded-full text-green-500 hover:bg-green-500 hover:text-white transition-all transform hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"

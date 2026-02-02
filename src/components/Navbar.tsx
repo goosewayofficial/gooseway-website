@@ -35,7 +35,7 @@ export default function Navbar() {
               <div className="w-10 h-10 mr-3 relative">
                 <Image
                   src="/logo.svg"
-                  alt="We Wheel Go Logo"
+                  alt="GOOSEWAY Logo"
                   width={40}
                   height={40}
                   className="object-contain"
@@ -43,7 +43,7 @@ export default function Navbar() {
               </div>
               {/* Brand Text */}
               <span className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                We Wheel Go
+                GOOSEWAY
               </span>
             </Link>
           </div>
@@ -103,7 +103,7 @@ export default function Navbar() {
                 <div className="w-8 h-8 mr-2 relative">
                   <Image
                     src="/logo.svg"
-                    alt="We Wheel Go Logo"
+                    alt="GOOSEWAY Logo"
                     width={32}
                     height={32}
                     className="object-contain"
@@ -111,7 +111,7 @@ export default function Navbar() {
                 </div>
                 {/* Mobile Brand Text */}
                 <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
-                  We Wheel Go
+                  GOOSEWAY
                 </span>
               </Link>
               <button

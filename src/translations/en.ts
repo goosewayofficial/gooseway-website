@@ -17,7 +17,7 @@ export const enTranslations = {
   // ===========================================
   // HERO SECTIONS
   // ===========================================
-  welcome: "Welcome to We Wheel Go",
+  welcome: "Welcome to GOOSEWAY",
   tagline: "A platform for accessible journeys and inclusive communities",
   start_journey: "Start Your Journey",
 
@@ -44,7 +44,7 @@ export const enTranslations = {
     "Connect with others, share experiences, and contribute to making places more accessible for everyone.",
   feature_explore_title: "Explore with Confidence",
   feature_explore_desc:
-    "Discover accessible routes, verified places, and inclusive experiences near you — all powered by the We Wheel Go community.",
+    "Discover accessible routes, verified places, and inclusive experiences near you — all powered by the GOOSEWAY community.",
 
   // ===========================================
   // TESTIMONIALS SECTION
@@ -53,32 +53,32 @@ export const enTranslations = {
   testimonial1_name: "Mock user 1",
   testimonial1_role: "Wheelchair User",
   testimonial1_content:
-    "We Wheel Go has made my travel much easier. I can plan accessible routes and share experiences with others.",
+    "GOOSEWAY has made my travel much easier. I can plan accessible routes and share experiences with others.",
   testimonial2_name: "Mock user 2",
   testimonial2_role: "Tourist",
   testimonial2_content:
-    "This app helped me plan trips for my mother who uses a wheelchair. Thank you We Wheel Go for making tourism accessible for everyone.",
+    "This app helped me plan trips for my mother who uses a wheelchair. Thank you GOOSEWAY for making tourism accessible for everyone.",
   testimonial3_name: "Mock user 3",
-  testimonial3_role: "We Wheel Go Driver",
+  testimonial3_role: "GOOSEWAY Driver",
   testimonial3_content:
-    "I'm glad to be part of the We Wheel Go community. Helping wheelchair users travel conveniently makes me proud.",
+    "I'm glad to be part of the GOOSEWAY community. Helping wheelchair users travel conveniently makes me proud.",
 
   // ===========================================
   // FAQ SECTION
   // ===========================================
   faq_title: "Frequently Asked Questions",
-  faq1_question: "What is We Wheel Go?",
+  faq1_question: "What is GOOSEWAY?",
   faq1_answer:
-    "We Wheel Go is a platform that helps wheelchair users plan their trips, find accessible routes, and connect with like-minded communities. We are committed to making travel accessible for everyone.",
-  faq2_question: "How do I use We Wheel Go?",
+    "GOOSEWAY is a platform that helps wheelchair users plan their trips, find accessible routes, and connect with like-minded communities. We are committed to making travel accessible for everyone.",
+  faq2_question: "How do I use GOOSEWAY?",
   faq2_answer:
-    "You can access We Wheel Go through our website or mobile app. Register a user account and start exploring accessible routes, sharing experiences, and connecting with the community.",
-  faq3_question: "How does We Wheel Go Carpool work?",
+    "You can access GOOSEWAY through our website or mobile app. Register a user account and start exploring accessible routes, sharing experiences, and connecting with the community.",
+  faq3_question: "How does GOOSEWAY Carpool work?",
   faq3_answer:
-    "We Wheel Go Carpool connects wheelchair users with verified drivers who have accessible vehicles. You can book a ride through the app, track your journey in real-time, and pay securely on our platform.",
-  faq4_question: "Where is We Wheel Go available?",
+    "GOOSEWAY Carpool connects wheelchair users with verified drivers who have accessible vehicles. You can book a ride through the app, track your journey in real-time, and pay securely on our platform.",
+  faq4_question: "Where is GOOSEWAY available?",
   faq4_answer:
-    "Currently, We Wheel Go operates in Bangkok and surrounding areas. We plan to expand to other major cities in Thailand soon.",
+    "Currently, GOOSEWAY operates in Bangkok and surrounding areas. We plan to expand to other major cities in Thailand soon.",
 
   // ===========================================
   // COMMUNITY/CTA SECTION
@@ -112,7 +112,7 @@ export const enTranslations = {
   // ===========================================
   our_story: "Our Story",
   story_desc1:
-    "The We Wheel Go project is an application developed based on the experience of working with individuals with mobility impairments. This experience has led to a deeper awareness of the challenges faced by wheelchair users when traveling in Thailand.",
+    "The GOOSEWAY project is an application developed based on the experience of working with individuals with mobility impairments. This experience has led to a deeper awareness of the challenges faced by wheelchair users when traveling in Thailand.",
   story_desc2:
     "The primary goal of this project is to create an equitable society by improving the travel experience for wheelchair users. It focuses on reducing travel expenses and raising social awareness about the travel challenges faced by wheelchair users.",
 
@@ -201,7 +201,7 @@ export const enTranslations = {
     "Look for the 'Verified Accessible' badge to ensure the place truly supports wheelchair users.",
   map_promotion: "Deals & Nearby Activities",
   map_promotion_desc:
-    "Access exclusive promotions and events from businesses featured in the We Wheel Go Accessible Business Spotlight program.",
+    "Access exclusive promotions and events from businesses featured in the GOOSEWAY Accessible Business Spotlight program.",
 
   view_user_manual: "View User Manual",
 
