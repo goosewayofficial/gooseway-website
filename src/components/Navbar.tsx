@@ -34,7 +34,7 @@ export default function Navbar() {
               {/* 1. ส่วน Logo (Icon) */}
               <div className="w-10 h-10 relative">
                 <Image
-                  src="/logo.svg" // ไฟล์ Logo รูปภาพ (Icon)
+                  src="/logo.svg"
                   alt="GOOSEWAY Icon"
                   width={40}
                   height={40}
@@ -42,15 +42,16 @@ export default function Navbar() {
                 />
               </div>
 
-              {/* 2. ส่วน Text Logo (Image) - วางข้างกัน */}
-              {/* ปรับความสูง h-6 หรือ h-8 ตามขนาดรูป text logo จริง */}
-              <div className="10 sm:h-12 w-auto relative">
+              {/* 2. ส่วน Text Logo (Image) */}
+              {/* --- แก้ไขตรงนี้ครับ --- */}
+              {/* เดิมเขียนว่า "10 ..." แก้เป็น "h-8" หรือ "h-10" ครับ */}
+              <div className="h-10 sm:h-12 w-auto relative">
                 <Image
-                  src="/logo-text.svg" // TODO: ใส่ชื่อไฟล์ Text Logo ของคุณที่นี่
+                  src="/logo-text.svg"
                   alt="GOOSEWAY"
-                  width={120} // กำหนด width กว้างๆ ไว้เพื่อให้ aspect ratio ไม่เพี้ยน
+                  width={120}
                   height={28}
-                  className="object-contain h-full w-auto" // ให้รูปสูงเต็ม container และกว้าง auto
+                  className="object-contain h-full w-auto"
                   priority
                 />
               </div>
@@ -121,7 +122,7 @@ export default function Navbar() {
                 {/* Mobile: Text Logo Image */}
                 <div className="h-9 w-auto relative">
                   <Image
-                    src="/logo-text.svg" // TODO: อย่าลืมเปลี่ยนชื่อไฟล์ตรงนี้ด้วยครับ
+                    src="/logo-text.svg"
                     alt="GOOSEWAY"
                     width={100}
                     height={20}
