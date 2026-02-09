@@ -39,7 +39,7 @@ export default function CtaSection({ onVideoClick }: CtaSectionProps) {
 
         <div className="mt-12 flex justify-center space-x-6">
           <a
-            href="https://www.facebook.com/GOOSEWAY.co"
+            href="https://www.facebook.com/goosewayofficial"
             className="text-blue-600 hover:text-blue-800 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
@@ -54,7 +54,7 @@ export default function CtaSection({ onVideoClick }: CtaSectionProps) {
             </svg>
           </a>
           <a
-            href="https://www.instagram.com/GOOSEWAY.co"
+            href="https://www.instagram.com/goosewayofficial"
             className="text-blue-600 hover:text-blue-800 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
@@ -69,7 +69,7 @@ export default function CtaSection({ onVideoClick }: CtaSectionProps) {
             </svg>
           </a>
           <a
-            href="https://www.tiktok.com/@GOOSEWAY.co"
+            href="https://www.tiktok.com/@goosewayofficial"
             className="text-blue-600 hover:text-blue-800 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
@@ -85,7 +85,7 @@ export default function CtaSection({ onVideoClick }: CtaSectionProps) {
             </svg>
           </a>
           <a
-            href="https://x.com/GOOSEWAY_co"
+            href="https://x.com/goosewayofficial"
             className="text-blue-600 hover:text-blue-800 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
@@ -102,7 +102,7 @@ export default function CtaSection({ onVideoClick }: CtaSectionProps) {
           </a>
 
           <a
-            href="https://line.me/R/ti/p/@314ndpou"
+            href="https://line.me"
             className="text-blue-600 hover:text-blue-800 transition-colors"
             target="_blank"
             rel="noopener noreferrer"

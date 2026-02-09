@@ -1,49 +1,47 @@
-// src/app/page.tsx
-"use client";
+"use client"; // 👈 เพิ่มบรรทัดนี้ เพื่อให้ใช้ Event Handler ได้
 
-import React, { useState } from "react";
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/home/HeroSection";
 import FeaturesSection from "@/components/home/FeaturesSection";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
-import FaqSection from "@/components/home/FaqSection";
-import CtaSection from "@/components/home/CtaSection";
-import ComingSoonModal from "@/components/home/ComingsoonModal";
-import "@/components/home/animations.css";
+import Footer from "@/components/Footer";
+import { useRouter } from "next/navigation"; // 👈 import สำหรับเปลี่ยนหน้า
 
 export default function Home() {
-  const [showModal, setShowModal] = useState(false);
+  const router = useRouter();
 
-  const handleShowModal = () => {
-    setShowModal(true);
-  };
+  // 👇 สร้างฟังก์ชันสำหรับปุ่ม Learn More
+  const handleLearnMore = () => {
+    // คุณสามารถเลือกได้ว่าจะให้ทำอะไร เช่น ไปหน้าเกี่ยวกับเรา
+    router.push("/about");
 
-  const handleCloseModal = () => {
-    setShowModal(false);
+    // หรือถ้าอยากให้เลื่อนลงไปดูส่วนอื่น (Scroll) ก็ใช้แบบนี้แทนได้:
+    // document.getElementById('target-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <div className="space-y-16">
-      {/* Hero Section */}
+    <main className="flex min-h-screen flex-col bg-white">
+      <Navbar />
+
       <HeroSection />
 
-      {/* Features Section - ตอนนี้ใช้ FeatureCard component ข้างใน */}
-      <FeaturesSection onLearnMoreClick={handleShowModal} />
+      {/* 👇 ส่ง prop onLearnMoreClick เข้าไปแก้ Error */}
+      <FeaturesSection onLearnMoreClick={handleLearnMore} />
 
-      {/* Testimonials Section */}
-      <TestimonialsSection />
+      <section className="bg-brand-900 text-white py-20 text-center">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6">
+            พร้อมออกเดินทางหรือยัง? 🚀
+          </h2>
+          <p className="mb-8 text-brand-100">
+            มาร่วมเป็นส่วนหนึ่งของชุมชน We Wheel Go วันนี้
+          </p>
+          <button className="bg-brand-accent text-brand-900 px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform">
+            สมัครสมาชิกเลย
+          </button>
+        </div>
+      </section>
 
-      {/* FAQ Section */}
-      <FaqSection />
-
-      {/* Community/CTA Section */}
-      <CtaSection onVideoClick={handleShowModal} />
-
-      {/* Decorative Elements */}
-      <div className="fixed -z-10 top-0 left-0 w-64 h-64 bg-blue-500 rounded-full opacity-20 blur-3xl"></div>
-      <div className="fixed -z-10 bottom-0 right-0 w-96 h-96 bg-blue-600 rounded-full opacity-20 blur-3xl"></div>
-
-      {/* Modal */}
-      {showModal && <ComingSoonModal onClose={handleCloseModal} />}
-    </div>
+      <Footer />
+    </main>
   );
 }
