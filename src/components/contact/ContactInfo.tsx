@@ -114,7 +114,7 @@ export default function ContactInfo() {
         </h3>
         <div className="flex space-x-4 flex-wrap">
           <a
-            href="https://www.facebook.com/GOOSEWAY.co"
+            href="https://www.facebook.com/goosewayofficial"
             className="bg-gray-100 p-3 rounded-full text-blue-600 hover:bg-blue-600 hover:text-white transition-all transform hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
@@ -124,7 +124,7 @@ export default function ContactInfo() {
           </a>
 
           <a
-            href="https://www.instagram.com/GOOSEWAY.co"
+            href="https://www.instagram.com/goosewayofficial"
             className="bg-gray-100 p-3 rounded-full text-pink-600 hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 hover:text-white transition-all transform hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
@@ -134,7 +134,7 @@ export default function ContactInfo() {
           </a>
 
           <a
-            href="https://www.tiktok.com/@GOOSEWAY.co"
+            href="https://www.tiktok.com/@goosewayofficial"
             className="bg-gray-100 p-3 rounded-full text-black hover:bg-black hover:text-white transition-all transform hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"

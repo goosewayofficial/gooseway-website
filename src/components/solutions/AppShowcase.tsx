@@ -317,7 +317,7 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2">
                 {/* Manual Button (Filled) */}
                 <a
-                  href="https://GOOSEWAY.co/user-manual.pdf"
+                  href="https://gooseway.vercel.app/user-manual.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`${

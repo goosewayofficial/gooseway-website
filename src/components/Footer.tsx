@@ -71,7 +71,7 @@ export default function Footer() {
               </h3>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://www.facebook.com/GOOSEWAY.co"
+                  href="https://www.facebook.com/goosewayofficial"
                   className="text-gray-300 hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -80,7 +80,7 @@ export default function Footer() {
                   Facebook
                 </a>
                 <a
-                  href="https://www.instagram.com/GOOSEWAY.co"
+                  href="https://www.instagram.com/goosewayofficial"
                   className="text-gray-300 hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -89,7 +89,7 @@ export default function Footer() {
                   Instagram
                 </a>
                 <a
-                  href="https://www.tiktok.com/@GOOSEWAY.co"
+                  href="https://www.tiktok.com/@goosewayofficial"
                   className="text-gray-300 hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -107,7 +107,7 @@ export default function Footer() {
                   X
                 </a>
                 <a
-                  href="https://line.me/R/ti/p/@314ndpou"
+                  href="https://line.me/R/"
                   className="text-gray-300 hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
