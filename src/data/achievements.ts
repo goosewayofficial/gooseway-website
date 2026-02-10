@@ -108,12 +108,7 @@ const achievementsData: BilingualAchievement[] = [
       en: "The U.S. Embassy, in collaboration with True Digital Park and the Y.I.Y. Foundation.",
     },
     coverImage: "/achievements/achievement03/achievement03.jpg",
-    images: [
-      "/achievements/achievement03/achievement03_01.jpg",
-      "/achievements/achievement03/achievement03_02.jpg",
-      "/achievements/achievement03/achievement03_03.jpg",
-      "/achievements/achievement03/achievement03_04.jpg",
-    ],
+    images: ["/achievements/achievement03/achievement03_01.jpg"],
   },
 ];
 
