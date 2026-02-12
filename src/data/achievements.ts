@@ -86,16 +86,16 @@ const achievementsData: BilingualAchievement[] = [
   {
     id: 3,
     title: {
-      th: "ผ่านการคัดเลือก10 ทีมสุดท้ายเข้ารอบ Pre-Pitching 1/2569 กับ SYNHUB TED Fellow ",
-      en: "Selected as one of the top 10 teams for Pre-Pitching 1/2024 with SYNHUB TED Fellow",
+      th: "ผ่านการคัดเลือก 10 ทีมสุดท้าย เข้าสู่รอบ Pre-Pitching 1/2569 โครงการ SYNHUB TED Fellow ในฐานะตัวแทนศูนย์",
+      en: "Selected as a Top 10 Finalist for Pre-Pitching Round 1/2026, SYNHUB TED Fellow (Center Representative)",
     },
     description: {
-      th: "ผู้เข้ารอบสุดท้าย 30 ทีมจาก 193 ใบสมัคร",
-      en: "Finalist in the top 30 teams from 193 applications",
+      th: "ตัวแทนศูนย์ผู้ผ่านเข้ารอบ 10 ทีมสุดท้าย ในการนำเสนอแผนธุรกิจโครงการ SYNHUB TED Fellow",
+      en: "Representing the center as one of the top 10 finalists in the SYNHUB TED Fellow business pitching.",
     },
     longDescription: {
-      th: 'เราได้รับคัดเลือกเข้ารอบสุดท้าย 30 ทีม จาก 193 ทีม และจบการฝึกอบรมโครงการ AWE 2024 เรียบร้อยแล้ว ซึ่งจัดโดยสถานทูตสหรัฐฯ True Digital Park และมูลนิธิ Y.I.Y. ระหว่างการฝึกอบรม เราได้เข้าร่วมคอร์สออนไลน์จากแพลตฟอร์ม "100 Million Learners" เข้าร่วม masterclass เชิงปฏิบัติ 3 ครั้ง และนำเสนอธุรกิจในงาน Demo Day โครงการนี้ช่วยให้เราเติบโตในฐานะผู้ประกอบการและเชื่อมโยงกับชุมชนผู้หญิงในธุรกิจที่แข็งแกร่ง',
-      en: 'We were selected as finalists among the top 30 teams from 193 applications and have successfully completed the AWE 2024 program, organized by the U.S. Embassy, True Digital Park, and the Y.I.Y. Foundation. During the program, We joined online courses from the "100 Million Learners" platform, attended 3 hands-on masterclasses, and showcased my business at the Demo Day. The program helped us grow as an entrepreneur and connect with a strong community of women in business.',
+      th: "เราได้รับคัดเลือกให้เป็น 1 ใน 10 ทีมสุดท้ายในฐานะตัวแทนศูนย์ เพื่อเข้าสู่รอบ Pre-Pitching ของโครงการ SYNHUB TED Fellow รอบที่ 1/2569 ซึ่งเป็นโครงการบ่มเพาะและพัฒนาผู้ประกอบการเทคโนโลยีและนวัตกรรม ภายใต้การสนับสนุนจาก TED Fund โดยเราได้เข้าร่วมกิจกรรมเตรียมความพร้อม การให้คำปรึกษาจากผู้เชี่ยวชาญ (Mentoring) และการขัดเกลาแผนธุรกิจเพื่อเตรียมนำเสนอต่อคณะกรรมการในระดับประเทศ ถือเป็นก้าวสำคัญในการขับเคลื่อนนวัตกรรมของเราสู่เชิงพาณิชย์",
+      en: "We have been selected as one of the top 10 finalists representing the center to enter the Pre-Pitching round of the SYNHUB TED Fellow Program (Batch 1/2026). This program, supported by the TED Fund, focuses on nurturing technology and innovation-driven entrepreneurs. We participated in intensive preparation sessions, received professional mentoring, and refined our business model to meet national standards, marking a significant milestone in transitioning our innovation into a viable commercial reality.",
     },
     date: "2024",
     icon: "🚀",
