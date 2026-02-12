@@ -23,8 +23,8 @@ export default function Footer() {
               </h3>
               <p className="text-gray-300">
                 {language === "th"
-                  ? "Your goose, your guides"
-                  : "Your goose, your guides"}
+                  ? "Your goose, your guide"
+                  : "Your goose, your guide"}
               </p>
             </div>
 
@@ -52,15 +52,15 @@ export default function Footer() {
                 </a>
               </p>
               <p className="text-gray-300">
-                {language === "th" ? "Line Official: " : "Line Official: "}
+                {language === "th"
+                  ? "Line Official: @248ynfet"
+                  : "Line Official: @248ynfet"}
                 <a
-                  href="https://line.me/R/ti/p/@GOOSEWAY"
+                  href="https://lin.ee/K6cFkWW"
                   className="hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
-                >
-                  @314ndpou
-                </a>
+                ></a>
               </p>
             </div>
 

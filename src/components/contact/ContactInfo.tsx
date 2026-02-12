@@ -153,7 +153,7 @@ export default function ContactInfo() {
             <XIcon className="w-5 h-5" />
           </a>
           <a
-            href="https://line.me/R/ti/p/@GOOSEWAY"
+            href="https://lin.ee/K6cFkWW"
             className="bg-gray-100 p-3 rounded-full text-green-500 hover:bg-green-500 hover:text-white transition-all transform hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
