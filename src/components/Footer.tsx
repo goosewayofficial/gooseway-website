@@ -107,7 +107,7 @@ export default function Footer() {
                   X
                 </a>
                 <a
-                  href="https://line.me/R/"
+                  href="https://lin.ee/K6cFkWW"
                   className="text-gray-300 hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
