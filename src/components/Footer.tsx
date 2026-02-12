@@ -98,7 +98,7 @@ export default function Footer() {
                   TikTok
                 </a>
                 <a
-                  href="https://x.com/GOOSEWAY_co"
+                  href="https://x.com/gooseway_"
                   className="text-gray-300 hover:text-white transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
