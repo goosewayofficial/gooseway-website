@@ -144,7 +144,7 @@ export default function ContactInfo() {
           </a>
 
           <a
-            href="https://x.com/GOOSEWAY_co"
+            href="https://x.com/gooseway_"
             className="bg-gray-100 p-3 rounded-full text-black hover:bg-black hover:text-white transition-all transform hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"

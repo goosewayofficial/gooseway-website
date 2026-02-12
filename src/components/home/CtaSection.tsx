@@ -85,7 +85,7 @@ export default function CtaSection({ onVideoClick }: CtaSectionProps) {
             </svg>
           </a>
           <a
-            href="https://x.com/goosewayofficial"
+            href="https://x.com/gooseway_"
             className="text-blue-600 hover:text-blue-800 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
