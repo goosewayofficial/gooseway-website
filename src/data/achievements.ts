@@ -80,7 +80,7 @@ const achievementsData: BilingualAchievement[] = [
     images: [
       "/achievements/achievement02/achievement02_01.jpg",
       "/achievements/achievement02/achievement02_02.jpg",
-      "/achievements/achievement02/achievement02_03.png",
+      "/achievements/achievement02/achievement02_03.jpg",
     ],
   },
   {
