@@ -325,22 +325,7 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
                   } text-white px-6 py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 hover:shadow-lg transform hover:scale-105 flex items-center justify-center gap-2 flex-1 sm:flex-none sm:min-w-[180px] no-underline`}
                 >
                   <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span>{t("GOOSEWAY")}</span>
-                </a>
-
-                {/* Video Tutorial Button (Outline) */}
-                <a
-                  href="#" /* ใส่ลิงก์วิดีโอของคุณที่นี่ */
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`bg-white border-2 ${
-                    getCategoryColors(getActiveSolution().category).borderColor
-                  } ${
-                    getCategoryColors(getActiveSolution().category).textColor
-                  } px-6 py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 hover:bg-gray-50 hover:shadow-lg transform hover:scale-105 flex items-center justify-center gap-2 flex-1 sm:flex-none sm:min-w-[180px] no-underline`}
-                >
-                  <PlayCircle className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span>{t("video_tutorial") || "Video Tutorial"}</span>
+                  <span>{t("Manual")}</span>
                 </a>
               </div>
             </div>
