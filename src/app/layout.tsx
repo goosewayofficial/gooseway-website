@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const metadata = {
   title: "GOOSEWAY",
-  description: "Your route, your rights",
+  description: "Your goose, your guides",
 };
 
 // ลบ Footer function ทั้งหมดออก
