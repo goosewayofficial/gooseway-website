@@ -104,8 +104,8 @@ const achievementsData: BilingualAchievement[] = [
       en: "Incubation",
     },
     organizer: {
-      th: "สถานทูตสหรัฐฯ ร่วมกับ True Digital Park และมูลนิธิ Y.I.Y.",
-      en: "The U.S. Embassy, in collaboration with True Digital Park and the Y.I.Y. Foundation.",
+      th: "SynHub TED Fellow ร่วมกับ TED Fund",
+      en: "SynHub TED Fellow in collaboration with TED Fund",
     },
     coverImage: "/achievements/achievement03/achievement03.jpg",
     images: ["/achievements/achievement03/achievement03_01.jpg"],
