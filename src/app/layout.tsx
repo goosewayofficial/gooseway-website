@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer"; // เพิ่ม import Footer component ใหม่
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "@/context/LanguageContext"; // ลบ useLanguage ออก
 import CookieConsent from "@/components/CookieConsent";
 // ลบ import useState, PrivacyPolicy, TermsOfService ออก
