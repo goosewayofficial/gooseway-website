@@ -1,23 +1,24 @@
 // src/app/layout.tsx
-"use client";
-
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer"; // เพิ่ม import Footer component ใหม่
+import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next";
-import { LanguageProvider } from "@/context/LanguageContext"; // ลบ useLanguage ออก
+import { LanguageProvider } from "@/context/LanguageContext";
 import CookieConsent from "@/components/CookieConsent";
-// ลบ import useState, PrivacyPolicy, TermsOfService ออก
+import { Metadata } from "next"; // เพิ่ม Type สำหรับ Metadata
 
 const inter = Inter({ subsets: ["latin"] });
 
-const metadata = {
+// เมื่อไฟล์นี้ไม่มี "use client" ตัวแปรนี้จะทำงานกับ SEO ของ Next.js ทันที
+export const metadata: Metadata = {
   title: "GOOSEWAY",
   description: "Your goose, your guide",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  manifest: "/manifest.json",
 };
-
-// ลบ Footer function ทั้งหมดออก
 
 export default function RootLayout({
   children,
@@ -26,12 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <link rel="icon" href="favicon.ico" />
-        <link rel="manifest" href="/manifest.json" /> {/* 👈 เพิ่มตรงนี้ */}
-      </head>
+      {/* ไม่ต้องใส่ <head> เองแล้ว Next.js จะจัดการให้จาก metadata ข้างบน */}
       <body className={inter.className}>
         <LanguageProvider>
           <div className="min-h-screen bg-gray-50">
