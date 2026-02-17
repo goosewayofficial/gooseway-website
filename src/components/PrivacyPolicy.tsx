@@ -35,7 +35,7 @@ export default function PrivacyPolicy({ isOpen, onClose }: PrivacyPolicyProps) {
             <>
               <div className="mb-6">
                 <p className="text-sm text-gray-600 mb-4">
-                  วันที่มีผลบังคับใช้: 1 มกราคม 2024
+                  วันที่มีผลบังคับใช้: 1 มกราคม 2025
                 </p>
                 <p className="text-gray-700 leading-relaxed">
                   นโยบายความเป็นส่วนตัวนี้อธิบายวิธีที่ GOOSEWAY เก็บรวบรวม ใช้
@@ -232,7 +232,7 @@ export default function PrivacyPolicy({ isOpen, onClose }: PrivacyPolicyProps) {
             <>
               <div className="mb-6">
                 <p className="text-sm text-gray-600 mb-4">
-                  Effective Date: January 1, 2024
+                  Effective Date: January 1, 2025
                 </p>
                 <p className="text-gray-700 leading-relaxed">
                   This Privacy Policy explains how GOOSEWAY collects, uses, and

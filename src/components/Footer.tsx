@@ -131,7 +131,7 @@ export default function Footer() {
           {/* Copyright and Legal Links */}
           <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
             <p className="mb-2">
-              © 2024 GOOSEWAY.{" "}
+              © 2025 GOOSEWAY.{" "}
               {language === "th" ? "สงวนลิขสิทธิ์" : "All rights reserved"}.
             </p>
             <div className="flex flex-wrap justify-center items-center gap-2 text-sm">
