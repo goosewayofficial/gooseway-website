@@ -1,16 +1,19 @@
 // src/app/layout.tsx
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "@/context/LanguageContext";
 import CookieConsent from "@/components/CookieConsent";
-import { Metadata } from "next"; // เพิ่ม Type สำหรับ Metadata
+import { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-nunito",
+});
 
-// เมื่อไฟล์นี้ไม่มี "use client" ตัวแปรนี้จะทำงานกับ SEO ของ Next.js ทันที
 export const metadata: Metadata = {
   title: "GOOSEWAY",
   description: "Your goose, your guide",
@@ -30,11 +33,11 @@ export default function RootLayout({
       <head>
         <meta name="agd-partner-manual-verification" />
       </head>
-      <body className={inter.className}>
+      <body className={`${nunito.variable} font-sans`} style={{ fontFamily: "var(--font-nunito), Nunito, sans-serif" }}>
         <LanguageProvider>
-          <div className="min-h-screen bg-gray-50">
+          <div className="min-h-screen bg-white">
             <Navbar />
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <main>
               {children}
             </main>
             <Footer />

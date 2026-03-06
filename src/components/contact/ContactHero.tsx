@@ -17,8 +17,7 @@ export default function ContactHero({ scrollY }: ContactHeroProps) {
           ? "มีคำถามหรือข้อเสนอแนะ? นี่คือวิธีที่คุณสามารถติดต่อเราได้"
           : "Have questions? Here's how you can reach us."
       }
-      enableParallax={true}
-      scrollY={scrollY}
+      mascotImage="/mascot/GooseMascot-7.png"
     />
   );
 }

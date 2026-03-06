@@ -1,11 +1,16 @@
 // src/components/CommonHeroSection.tsx
-import React, { useRef, useEffect, useState } from "react";
+"use client";
+
+import Image from "next/image";
 
 interface CommonHeroSectionProps {
   title: string;
   subtitle?: string;
   buttonText?: string;
   buttonLink?: string;
+  mascotImage?: string;
+  bgColor?: string;
+  // legacy props (kept for compatibility)
   enableParallax?: boolean;
   scrollY?: number;
   backgroundColor?: string;
@@ -18,111 +23,76 @@ export default function CommonHeroSection({
   subtitle,
   buttonText,
   buttonLink,
-  enableParallax = false,
-  scrollY = 0,
-  backgroundColor = "bg-gradient-to-r from-blue-500 to-blue-600",
-  height = "py-24",
+  mascotImage,
+  bgColor = "bg-[#2563EB]",
   children,
 }: CommonHeroSectionProps) {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-
-    if (enableParallax && !scrollY) {
-      const handleScroll = () => {
-        if (!heroRef.current) return;
-        heroRef.current.style.backgroundPositionY = `${window.scrollY * 0.3}px`;
-      };
-
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }
-  }, [enableParallax, scrollY]);
-
-  const parallaxStyle =
-    enableParallax && scrollY
-      ? { backgroundPositionY: `${scrollY * 0.3}px` }
-      : {};
-
   return (
-    <div
-      ref={heroRef}
-      className={`relative ${height} ${backgroundColor} text-white overflow-hidden rounded-3xl mb-8 mt-4`}
-      style={parallaxStyle}
-    >
-      {/* กำหนดสไตล์ที่มี animation ตลอดเวลา */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Blob ตัวที่ 1 - ด้านซ้ายบน */}
-        <div className="absolute -left-32 top-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+    <section className={`relative ${bgColor} overflow-hidden`}>
+      {/* Decorative circles */}
+      <div className="absolute top-0 right-0 w-72 h-72 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/4 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-52 h-52 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/4 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 w-28 h-28 bg-[#F9C423]/10 rounded-full -translate-y-1/2 pointer-events-none" />
 
-        {/* Blob ตัวที่ 2 - ด้านขวาบน */}
-        <div className="absolute -right-32 top-32 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
-
-        {/* Blob ตัวที่ 3 - ด้านล่าง */}
-        <div className="absolute left-1/4 bottom-0 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-60"></div>
-      </div>
-
-      <div className="max-w-4xl mx-auto px-4 relative z-10 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">{title}</h1>
-
-        {subtitle && (
-          <p
-            className="text-xl md:text-2xl mb-8"
-            style={{
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible ? "translateY(0)" : "translateY(30px)",
-              transition:
-                "opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s",
-            }}
-          >
-            {subtitle}
-          </p>
-        )}
-
-        {buttonText && buttonLink && (
-          <div
-            className="mt-8"
-            style={{
-              opacity: isVisible ? 1 : 0,
-              transform: isVisible ? "translateY(0)" : "translateY(30px)",
-              transition:
-                "opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s",
-            }}
-          >
-            <a
-              href={buttonLink}
-              target={buttonLink.startsWith("http") ? "_blank" : undefined}
-              rel={
-                buttonLink.startsWith("http")
-                  ? "noopener noreferrer"
-                  : undefined
-              }
-              className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold transition-all inline-block hover:bg-gray-100 hover:shadow-lg"
-            >
-              <span className="flex items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Text content */}
+          <div className="flex-1 text-center md:text-left">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight animate-fade-down">
+              {title}
+            </h1>
+            {subtitle && (
+              <p
+                className="mt-4 text-lg text-blue-100 max-w-xl animate-fade-up"
+                style={{ animationDelay: "0.2s", opacity: 0 }}
+              >
+                {subtitle}
+              </p>
+            )}
+            {buttonText && buttonLink && (
+              <a
+                href={buttonLink}
+                target={buttonLink.startsWith("http") ? "_blank" : undefined}
+                rel={buttonLink.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="inline-flex items-center gap-2 mt-6 bg-[#F9C423] hover:bg-yellow-400 text-[#231F20] font-bold px-7 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 animate-fade-up"
+                style={{ animationDelay: "0.4s", opacity: 0 }}
+              >
                 {buttonText}
-                <svg
-                  className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  ></path>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
-              </span>
-            </a>
+              </a>
+            )}
+            {children}
           </div>
-        )}
-        {children}
+
+          {/* Mascot */}
+          {mascotImage && (
+            <div className="flex-shrink-0 w-40 h-40 md:w-56 md:h-56 animate-float">
+              <Image
+                src={mascotImage}
+                alt="Gooseway Mascot"
+                width={224}
+                height={224}
+                className="object-contain w-full h-full drop-shadow-xl"
+                priority
+              />
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+
+      {/* Wave bottom */}
+      <div className="w-full overflow-hidden leading-none -mb-px">
+        <svg
+          viewBox="0 0 1440 60"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          className="w-full block"
+        >
+          <path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="white" />
+        </svg>
+      </div>
+    </section>
   );
 }

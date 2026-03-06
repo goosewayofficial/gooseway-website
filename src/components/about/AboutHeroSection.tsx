@@ -1,4 +1,6 @@
-import React from "react";
+// src/components/about/AboutHeroSection.tsx
+"use client";
+
 import { useLanguage } from "@/context/LanguageContext";
 import CommonHeroSection from "../CommonHeroSection";
 
@@ -15,6 +17,7 @@ export default function AboutHeroSection() {
       }
       buttonText={language === "th" ? "ทำความรู้จักเรา" : "Get to Know Us"}
       buttonLink="#our-story"
+      mascotImage="/mascot/GooseMascot-1.png"
     />
   );
 }

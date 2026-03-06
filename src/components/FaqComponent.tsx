@@ -1,6 +1,8 @@
 // src/components/FaqComponent.tsx
-import React, { useState } from "react";
-import { ChevronUp, ChevronDown } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 interface FaqItem {
   question: string;
@@ -13,55 +15,42 @@ interface FaqComponentProps {
   className?: string;
 }
 
-export default function FaqComponent({
-  title,
-  faqs,
-  className = "",
-}: FaqComponentProps) {
-  const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
-
-  const toggleAccordion = (index: number) => {
-    setActiveAccordion(activeAccordion === index ? null : index);
-  };
+export default function FaqComponent({ title, faqs, className = "" }: FaqComponentProps) {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className={`py-16 ${className}`}>
-      <div className="max-w-3xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-          {title}
-        </h2>
-        <div className="space-y-4">
+    <section className={`py-20 bg-[#E7EFF3] ${className}`}>
+      <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#231F20]">{title}</h2>
+          <div className="mt-3 w-16 h-1.5 bg-[#4DB7AB] rounded-full mx-auto" />
+        </div>
+        <div className="space-y-3">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg"
+              className="bg-white rounded-2xl shadow-sm overflow-hidden transition-all duration-200 hover:shadow-md"
             >
               <button
-                className="flex justify-between items-center w-full p-6 text-left font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
-                onClick={() => toggleAccordion(index)}
-                aria-expanded={activeAccordion === index}
+                className="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none"
+                onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                aria-expanded={activeIndex === index}
               >
-                <span className="text-lg font-semibold">{faq.question}</span>
-                <div className="flex-shrink-0 ml-4">
-                  {activeAccordion === index ? (
-                    <ChevronUp size={20} className="text-blue-600" />
-                  ) : (
-                    <ChevronDown size={20} className="text-gray-500" />
-                  )}
-                </div>
+                <span className="font-bold text-[#231F20] pr-4">{faq.question}</span>
+                <ChevronDown
+                  size={20}
+                  className={`flex-shrink-0 text-[#2563EB] transition-transform duration-300 ${
+                    activeIndex === index ? "rotate-180" : ""
+                  }`}
+                />
               </button>
               <div
                 className={`transition-all duration-300 ease-in-out ${
-                  activeAccordion === index
-                    ? "max-h-96 opacity-100"
-                    : "max-h-0 opacity-0"
-                }`}
-                style={{
-                  overflow: "hidden",
-                }}
+                  activeIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                } overflow-hidden`}
               >
-                <div className="px-6 pb-6">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                <div className="px-6 pb-5 text-gray-500 leading-relaxed text-sm border-t border-gray-100 pt-3">
+                  {faq.answer}
                 </div>
               </div>
             </div>

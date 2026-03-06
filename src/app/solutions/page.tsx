@@ -116,13 +116,14 @@ export default function SolutionPage() {
       <CommonHeroSection
         title={t("our_solutions")}
         subtitle={t("solutions_hero_subtitle")}
+        mascotImage="/mascot/GooseMascot-4.png"
       />
 
       {/* App Showcase */}
       <AppShowcase solutions={solutions} />
 
       {/* Call to Action */}
-      <section className="text-center bg-blue-50 py-12 rounded-xl">
+      <section className="text-center bg-[#E7EFF3] py-14 rounded-3xl mx-4">
         <h2 className="text-2xl font-bold mb-4">
           {t("ready_to_make_mobility_accessible")}
         </h2>
@@ -131,7 +132,7 @@ export default function SolutionPage() {
           href="https://lin.ee/K6cFkWW"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-block"
+          className="bg-[#2563EB] hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg inline-block"
         >
           {t("get_started")}
         </a>

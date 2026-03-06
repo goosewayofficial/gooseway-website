@@ -1,92 +1,58 @@
 // src/components/home/TestimonialCard.tsx
-import React from "react";
-import Image from "next/image";
+"use client";
+
 import { Star } from "lucide-react";
 import type { Testimonial } from "@/app/interfaces";
 
+const avatarColors = [
+  "bg-[#2563EB] text-white",
+  "bg-[#F9C423] text-[#231F20]",
+  "bg-[#4DB7AB] text-white",
+];
+
 interface TestimonialCardProps extends Testimonial {
   className?: string;
+  index?: number;
 }
 
 export default function TestimonialCard({
   name,
   role,
   content,
-  avatar,
   rating,
   className = "",
+  index = 0,
 }: TestimonialCardProps) {
   return (
     <div
-      className={`bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${className}`}
+      className={`bg-white rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-[#2563EB] ${className}`}
     >
-      {/* Header with Avatar and Info */}
-      <div className="flex items-center mb-4">
-        <div className="flex-shrink-0">
-          {avatar && avatar !== "/testimonials/user1.jpg" ? (
-            <Image
-              src={avatar}
-              alt={`${name} avatar`}
-              width={48}
-              height={48}
-              className="h-12 w-12 rounded-full object-cover"
-              onError={(e) => {
-                // Fallback to initials if image fails to load
-                const target = e.target as HTMLImageElement;
-                target.style.display = "none";
-                const parent = target.parentElement;
-                if (parent) {
-                  parent.innerHTML = `
-                    <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
-                      <span class="text-blue-600 font-bold text-lg">${name.charAt(
-                        0
-                      )}</span>
-                    </div>
-                  `;
-                }
-              }}
-            />
-          ) : (
-            <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
-              <span className="text-blue-600 font-bold text-lg">
-                {name.charAt(0)}
-              </span>
-            </div>
-          )}
-        </div>
-
-        <div className="ml-4 flex-1">
-          <h4 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-            {name}
-          </h4>
-          <p className="text-gray-600 text-sm">{role}</p>
-        </div>
-      </div>
-
-      {/* Rating Stars */}
-      <div className="mb-4 flex items-center">
+      {/* Stars */}
+      <div className="flex items-center gap-0.5 mb-4">
         {[...Array(5)].map((_, i) => (
           <Star
             key={i}
             size={16}
-            className={
-              i < rating
-                ? "text-yellow-400 fill-yellow-400 transition-colors"
-                : "text-gray-300 transition-colors"
-            }
+            className={i < rating ? "text-[#F9C423] fill-[#F9C423]" : "text-gray-200 fill-gray-200"}
           />
         ))}
-        <span className="ml-2 text-sm text-gray-500">({rating}/5)</span>
       </div>
 
-      {/* Testimonial Content */}
-      <blockquote className="text-gray-700 leading-relaxed">
-        <p className="relative">
-          <span className="text-blue-600 text-2xl leading-none">&ldquo;</span>
-          {content}
-          <span className="text-blue-600 text-2xl leading-none">&rdquo;</span>
-        </p>
+      {/* Content */}
+      <blockquote className="text-gray-600 text-sm leading-relaxed mb-5">
+        &ldquo;{content}&rdquo;
       </blockquote>
+
+      {/* Author */}
+      <div className="flex items-center gap-3">
+        <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-base ${avatarColors[index % avatarColors.length]}`}>
+          {name.charAt(0)}
+        </div>
+        <div>
+          <p className="font-bold text-[#231F20] text-sm">{name}</p>
+          <p className="text-gray-400 text-xs">{role}</p>
+        </div>
+      </div>
     </div>
   );
 }
