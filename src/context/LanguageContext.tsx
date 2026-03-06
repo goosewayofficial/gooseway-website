@@ -1,4 +1,5 @@
 // src/context/LanguageContext.tsx
+"use client";
 import React, {
   createContext,
   useContext,
@@ -26,21 +27,21 @@ const defaultTranslations = {
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   // ดึงค่าภาษาจาก localStorage ถ้าไม่มีให้ใช้ภาษาไทยเป็นค่าเริ่มต้น
   const [language, setLanguage] = useState("th");
   const [translations, setTranslations] = useState<Translations>(
-    defaultTranslations.th
+    defaultTranslations.th,
   );
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem("language") || "th";
     setLanguage(savedLanguage);
     setTranslations(
-      defaultTranslations[savedLanguage as keyof typeof defaultTranslations]
+      defaultTranslations[savedLanguage as keyof typeof defaultTranslations],
     );
   }, []);
 
@@ -48,7 +49,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const handleSetLanguage = (lang: string) => {
     setLanguage(lang);
     setTranslations(
-      defaultTranslations[lang as keyof typeof defaultTranslations]
+      defaultTranslations[lang as keyof typeof defaultTranslations],
     );
     localStorage.setItem("language", lang);
   };
