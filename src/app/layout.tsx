@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   manifest: "/manifest.json",
+  other: {
+    "agd-partner-manual-verification": "",
+  },
 };
 
 export default function RootLayout({
