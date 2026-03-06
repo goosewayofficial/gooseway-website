@@ -18,9 +18,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   manifest: "/manifest.json",
-  other: {
-    "agd-partner-manual-verification": "",
-  },
 };
 
 export default function RootLayout({
@@ -30,7 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* ไม่ต้องใส่ <head> เองแล้ว Next.js จะจัดการให้จาก metadata ข้างบน */}
+      <head>
+        <meta name="agd-partner-manual-verification" />
+      </head>
       <body className={inter.className}>
         <LanguageProvider>
           <div className="min-h-screen bg-gray-50">
