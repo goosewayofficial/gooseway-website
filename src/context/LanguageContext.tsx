@@ -1,3 +1,4 @@
+"use client";
 // src/context/LanguageContext.tsx
 "use client";
 import React, {
