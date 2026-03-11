@@ -29,7 +29,7 @@ export default function FeaturesSection({ onLearnMoreClick }: FeaturesSectionPro
       title: t("feature_explore_title"),
       description: t("feature_explore_desc"),
       icon: <Shield size={28} className="text-[#231F20]" />,
-      image: "/home/Safe_Transportation.png",
+      image: "/solutions/solution3.png",
     },
     {
       title: t("feature_inclusive_community_title"),

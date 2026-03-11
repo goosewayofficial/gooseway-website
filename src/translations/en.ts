@@ -17,8 +17,9 @@ export const enTranslations = {
   // ===========================================
   // HERO SECTIONS
   // ===========================================
-  welcome: "Welcome to GOOSEWAY",
-  tagline: "A platform for accessible journeys and inclusive communities",
+  welcome: "Navigate Thailand with Confidence",
+  tagline:
+    "The accessibility app for mobility-constrained users — find accessible routes, discover places, and connect with the community",
   start_journey: "Start Your Journey",
 
   // Specific Hero Sections
@@ -42,9 +43,9 @@ export const enTranslations = {
   feature_inclusive_community_title: "Inclusive Community",
   feature_inclusive_community_desc:
     "Connect with others, share experiences, and contribute to making places more accessible for everyone.",
-  feature_explore_title: "Explore with Confidence",
+  feature_explore_title: "Discover Accessible Places",
   feature_explore_desc:
-    "Discover accessible routes, verified places, and inclusive experiences near you — all powered by the GOOSEWAY community.",
+    "Search for wheelchair-friendly shops, cafés, and landmarks — all verified by real users in the GOOSEWAY community.",
 
   // ===========================================
   // TESTIMONIALS SECTION
@@ -73,9 +74,9 @@ export const enTranslations = {
   faq2_question: "How do I use GOOSEWAY?",
   faq2_answer:
     "You can access GOOSEWAY through our website or mobile app. Register a user account and start exploring accessible routes, sharing experiences, and connecting with the community.",
-  faq3_question: "How does GOOSEWAY Carpool work?",
+  faq3_question: "Can I report an accessibility obstacle?",
   faq3_answer:
-    "GOOSEWAY Carpool connects wheelchair users with verified drivers who have accessible vehicles. You can book a ride through the app, track your journey in real-time, and pay securely on our platform.",
+    "Yes! You can easily report obstacles such as broken ramps, blocked paths, or steep stairs directly through the GOOSEWAY app. Your reports help the whole community plan safer journeys.",
   faq4_question: "Where is GOOSEWAY available?",
   faq4_answer:
     "Currently, GOOSEWAY operates in Bangkok and surrounding areas. We plan to expand to other major cities in Thailand soon.",
@@ -106,6 +107,30 @@ export const enTranslations = {
   stats_accessible_places: "Accessible Places",
   stats_users: "Users",
   stats_verified_drivers: "Verified Drivers",
+
+  // ===========================================
+  // HOW IT WORKS SECTION
+  // ===========================================
+  how_it_works_title: "How GOOSEWAY Works",
+  how_it_works_subtitle: "Start exploring accessible Thailand in 3 simple steps",
+  step1_title: "Download the App",
+  step1_desc: "Join thousands of mobility-constrained users already navigating Thailand with confidence",
+  step2_title: "Find Routes & Places",
+  step2_desc: "Search accessible routes, discover wheelchair-friendly places, and check real-time obstacle reports",
+  step3_title: "Share & Help Others",
+  step3_desc: "Contribute to the community by sharing your experiences and verified accessible locations",
+
+  // ===========================================
+  // APP SHOWCASE SECTION
+  // ===========================================
+  app_showcase_title: "See GOOSEWAY in Action",
+  app_showcase_subtitle: "Real screenshots from our app",
+  showcase1_title: "Accessible Map",
+  showcase1_desc: "View real-time accessibility data on every route — fully accessible, partially accessible, or limited access — before you go",
+  showcase2_title: "Community Feed",
+  showcase2_desc: "Follow other users, discover accessible places they love, and share your own experiences with the GOOSEWAY community",
+  showcase3_title: "Search Everything",
+  showcase3_desc: "Find places, obstacle reports, and routes all in one place — community-verified and always up to date",
 
   // ===========================================
   // ABOUT PAGE

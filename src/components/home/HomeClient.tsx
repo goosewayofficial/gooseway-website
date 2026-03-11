@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react";
 import FeaturesSection from "@/components/home/FeaturesSection";
+import AppShowcaseSection from "@/components/home/AppShowcaseSection";
 import CtaSection from "@/components/home/CtaSection";
 import ComingSoonModal from "@/components/home/ComingsoonModal";
 
@@ -25,6 +26,7 @@ export default function HomeClient() {
   return (
     <>
       <FeaturesSection onLearnMoreClick={handleShowModal} />
+      <AppShowcaseSection />
       <CtaSection onVideoClick={handleShowModal} />
       {showModal && <ComingSoonModal onClose={handleCloseModal} />}
     </>

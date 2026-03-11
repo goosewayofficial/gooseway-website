@@ -1,8 +1,10 @@
 // src/app/page.tsx
 
 import HeroSection from "@/components/home/HeroSection";
+import HowItWorksSection from "@/components/home/HowItWorksSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import FaqSection from "@/components/home/FaqSection";
+import StatsSection from "@/components/home/StatsSection";
 import HomeClient from "@/components/home/HomeClient";
 
 export default function Home() {
@@ -11,8 +13,14 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Features Section + CTA Section + Modal (client islands) */}
+      {/* How It Works */}
+      <HowItWorksSection />
+
+      {/* Features Section + App Showcase + CTA + Modal (client islands) */}
       <HomeClient />
+
+      {/* Stats Section */}
+      <StatsSection />
 
       {/* Testimonials Section */}
       <TestimonialsSection />
