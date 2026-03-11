@@ -2,9 +2,8 @@
 
 import HeroSection from "@/components/home/HeroSection";
 import HowItWorksSection from "@/components/home/HowItWorksSection";
-import TestimonialsSection from "@/components/home/TestimonialsSection";
 import FaqSection from "@/components/home/FaqSection";
-import StatsSection from "@/components/home/StatsSection";
+import CtaSection from "@/components/home/CtaSection";
 import HomeClient from "@/components/home/HomeClient";
 
 export default function Home() {
@@ -16,17 +15,14 @@ export default function Home() {
       {/* How It Works */}
       <HowItWorksSection />
 
-      {/* Features Section + App Showcase + CTA + Modal (client islands) */}
+      {/* App Showcase + Features + Modal (client islands) */}
       <HomeClient />
 
-      {/* Stats Section */}
-      <StatsSection />
-
-      {/* Testimonials Section */}
-      <TestimonialsSection />
-
-      {/* FAQ Section */}
+      {/* FAQ — address objections before final CTA */}
       <FaqSection />
+
+      {/* CTA — final conversion push */}
+      <CtaSection />
 
       <div className="fixed -z-10 bottom-0 right-0 w-96 h-96 bg-blue-600 rounded-full opacity-20 blur-3xl" />
     </div>

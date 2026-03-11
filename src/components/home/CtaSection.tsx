@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 interface CtaSectionProps {
-  onVideoClick: () => void;
+  onVideoClick?: () => void;
 }
 
 const socialLinks = [
@@ -16,7 +16,7 @@ const socialLinks = [
   { name: "Line", href: "https://lin.ee/K6cFkWW", icon: <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5"><path d="M19.952 12.17c0-4.27-4.28-7.745-9.545-7.745S.862 7.9.862 12.17c0 3.827 3.394 7.032 7.978 7.637.31.067.734.205.841.47.097.24.063.617.031.86l-.136.819c-.041.24-.19.94.824.513 1.013-.428 5.473-3.22 7.468-5.514 1.378-1.51 2.084-3.046 2.084-4.785z"/></svg> },
 ];
 
-export default function CtaSection({ onVideoClick }: CtaSectionProps) {
+export default function CtaSection({ onVideoClick = () => {} }: CtaSectionProps) {
   const { t } = useLanguage();
 
   return (

@@ -25,9 +25,8 @@ export default function HomeClient() {
 
   return (
     <>
-      <FeaturesSection onLearnMoreClick={handleShowModal} />
       <AppShowcaseSection />
-      <CtaSection onVideoClick={handleShowModal} />
+      <FeaturesSection onLearnMoreClick={handleShowModal} />
       {showModal && <ComingSoonModal onClose={handleCloseModal} />}
     </>
   );

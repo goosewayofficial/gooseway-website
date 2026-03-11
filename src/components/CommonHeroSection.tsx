@@ -34,7 +34,7 @@ export default function CommonHeroSection({
       <div className="absolute bottom-0 left-0 w-52 h-52 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/4 pointer-events-none" />
       <div className="absolute top-1/2 left-1/3 w-28 h-28 bg-[#F9C423]/10 rounded-full -translate-y-1/2 pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Text content */}
           <div className="flex-1 text-center md:text-left">

@@ -93,25 +93,25 @@ export default function HeroSection() {
           {/* Right: Phone mockup */}
           <div className="flex-shrink-0 flex items-end justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.15s", opacity: 0 }}>
             {/* Main phone — map screen */}
-            <div className="w-52 md:w-60 drop-shadow-2xl">
+            <div className="relative w-52 md:w-64 drop-shadow-2xl">
               <Image
                 src="/solutions/solution1.png"
                 alt="GOOSEWAY accessible map"
-                width={240}
-                height={490}
+                width={260}
+                height={530}
                 className="rounded-[2.5rem] w-full h-auto object-contain"
                 priority
               />
-            </div>
-            {/* Secondary phone — community feed, slightly offset */}
-            <div className="hidden lg:block w-44 drop-shadow-xl mb-6 opacity-80">
-              <Image
-                src="/solutions/solution2.png"
-                alt="GOOSEWAY community"
-                width={176}
-                height={360}
-                className="rounded-[2rem] w-full h-auto object-contain"
-              />
+              {/* Mascot overlapping bottom-left of phone */}
+              <div className="absolute -bottom-6 -left-14 w-36 md:w-44 animate-float drop-shadow-lg">
+                <Image
+                  src="/mascot/GooseMascot-1.png"
+                  alt="GOOSEWAY Mascot"
+                  width={128}
+                  height={128}
+                  className="object-contain w-full h-auto"
+                />
+              </div>
             </div>
           </div>
 

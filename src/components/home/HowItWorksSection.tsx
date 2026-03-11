@@ -48,7 +48,7 @@ export default function HowItWorksSection() {
         {/* Steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           {/* Connector line (desktop) */}
-          <div className="hidden md:block absolute top-10 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-px bg-gray-200 z-0" />
+          <div className="hidden md:block absolute top-20 left-[calc(16.67%+1rem)] right-[calc(16.67%+1rem)] h-px bg-gray-200 z-0" />
 
           {steps.map((step, i) => {
             const Icon = step.icon;
@@ -57,17 +57,17 @@ export default function HowItWorksSection() {
                 key={i}
                 className="relative z-10 flex flex-col items-center text-center"
               >
+                {/* Step number (inline, above icon) */}
+                <span className="mb-3 w-7 h-7 bg-white border-2 border-gray-200 rounded-full text-xs font-bold text-gray-400 flex items-center justify-center shadow-sm">
+                  {step.number}
+                </span>
+
                 {/* Icon circle */}
                 <div
                   className={`w-20 h-20 ${step.color} rounded-2xl flex items-center justify-center shadow-lg mb-5`}
                 >
                   <Icon size={32} className="text-white" />
                 </div>
-
-                {/* Step number badge */}
-                <span className="absolute -top-2 -right-2 w-7 h-7 bg-white border-2 border-gray-200 rounded-full text-xs font-bold text-gray-400 flex items-center justify-center shadow-sm">
-                  {step.number}
-                </span>
 
                 <h3 className="text-lg font-bold text-[#231F20] mb-2">
                   {t(step.titleKey)}
