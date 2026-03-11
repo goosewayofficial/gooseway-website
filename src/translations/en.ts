@@ -17,7 +17,7 @@ export const enTranslations = {
   // ===========================================
   // HERO SECTIONS
   // ===========================================
-  welcome: "Navigate Thailand with Confidence",
+  welcome: "Your Goose, Your Guide",
   tagline:
     "The accessibility app for mobility-constrained users — find accessible routes, discover places, and connect with the community",
   start_journey: "Start Your Journey",
@@ -112,13 +112,17 @@ export const enTranslations = {
   // HOW IT WORKS SECTION
   // ===========================================
   how_it_works_title: "How GOOSEWAY Works",
-  how_it_works_subtitle: "Start exploring accessible Thailand in 3 simple steps",
+  how_it_works_subtitle:
+    "Start exploring accessible Thailand in 3 simple steps",
   step1_title: "Download the App",
-  step1_desc: "Join thousands of mobility-constrained users already navigating Thailand with confidence",
+  step1_desc:
+    "Join thousands of mobility-constrained users already navigating Thailand with confidence",
   step2_title: "Find Routes & Places",
-  step2_desc: "Search accessible routes, discover wheelchair-friendly places, and check real-time obstacle reports",
+  step2_desc:
+    "Search accessible routes, discover wheelchair-friendly places, and check real-time obstacle reports",
   step3_title: "Share & Help Others",
-  step3_desc: "Contribute to the community by sharing your experiences and verified accessible locations",
+  step3_desc:
+    "Contribute to the community by sharing your experiences and verified accessible locations",
 
   // ===========================================
   // APP SHOWCASE SECTION
@@ -126,11 +130,14 @@ export const enTranslations = {
   app_showcase_title: "See GOOSEWAY in Action",
   app_showcase_subtitle: "Real screenshots from our app",
   showcase1_title: "Accessible Map",
-  showcase1_desc: "View real-time accessibility data on every route — fully accessible, partially accessible, or limited access — before you go",
+  showcase1_desc:
+    "View real-time accessibility data on every route — fully accessible, partially accessible, or limited access — before you go",
   showcase2_title: "Community Feed",
-  showcase2_desc: "Follow other users, discover accessible places they love, and share your own experiences with the GOOSEWAY community",
+  showcase2_desc:
+    "Follow other users, discover accessible places they love, and share your own experiences with the GOOSEWAY community",
   showcase3_title: "Search Everything",
-  showcase3_desc: "Find places, obstacle reports, and routes all in one place — community-verified and always up to date",
+  showcase3_desc:
+    "Find places, obstacle reports, and routes all in one place — community-verified and always up to date",
 
   // ===========================================
   // ABOUT PAGE
