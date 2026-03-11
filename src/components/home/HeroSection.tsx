@@ -16,7 +16,7 @@ export default function HeroSection() {
       <div className="absolute bottom-0 left-0 w-56 h-56 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/4 pointer-events-none" />
       <div className="absolute top-1/3 left-1/3 w-24 h-24 bg-[#F9C423]/15 rounded-full pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-4">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-40 lg:pb-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
           {/* Left: Text content */}
@@ -114,8 +114,8 @@ export default function HeroSection() {
                 <div className="absolute -left-[6px] sm:-left-[8px] top-32 w-1 h-12 bg-gray-800 rounded-r-lg z-[-1]"></div>
               </div>
               
-              {/* Mascot Parade overlapping bottom-left of phone on desktop, stacking gracefully below on mobile */}
-              <div className="relative mt-8 lg:mt-0 lg:absolute lg:-bottom-8 lg:right-[calc(100%-2rem)] flex h-32 sm:h-36 lg:h-40 z-10 w-[336px] sm:w-[500px] lg:w-[624px] mx-auto pointer-events-none">
+              {/* Mascot Parade overlapping bottom-left of phone on desktop, centered below on mobile */}
+              <div className="absolute top-full mt-8 lg:mt-0 lg:top-auto lg:-bottom-8 left-1/2 lg:left-auto lg:right-[calc(100%-2rem)] -translate-x-1/2 lg:translate-x-0 flex h-32 sm:h-36 lg:h-40 z-10 w-[336px] sm:w-[500px] lg:w-[624px] pointer-events-none transition-all duration-700">
                 {/* 5. Map Goose (Mascot-5) at the very end */}
                 <div className="absolute bottom-6 sm:bottom-4 lg:bottom-5 left-0 w-12 sm:w-16 lg:w-20 animate-float-slow drop-shadow-sm z-0" style={{ animationDelay: "1.6s" }}>
                   <Image

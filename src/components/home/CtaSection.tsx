@@ -22,7 +22,7 @@ export default function CtaSection({ onVideoClick = () => {} }: CtaSectionProps)
   return (
     <section className="relative bg-white pt-10 pb-20 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center gap-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10 text-center md:text-left">
           {/* Mascot */}
           <div className="flex-shrink-0 w-44 h-44 md:w-56 md:h-56 animate-float-slow">
             <Image
@@ -35,11 +35,11 @@ export default function CtaSection({ onVideoClick = () => {} }: CtaSectionProps)
           </div>
 
           {/* Content */}
-          <div className="flex-1 text-center md:text-left">
+          <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
               {t("join_community")}
             </h2>
-            <p className="mt-4 text-gray-600 text-lg max-w-xl">{t("community_desc")}</p>
+            <p className="mt-4 text-gray-600 text-lg md:max-w-xl">{t("community_desc")}</p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
               <a
