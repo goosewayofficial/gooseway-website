@@ -218,9 +218,9 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
         </div>
 
         {/* Responsive Tab Navigation */}
-        <div className="flex justify-center mb-8 sm:mb-10 px-2">
-          <div className="bg-gray-100 rounded-full p-1 w-full max-w-full sm:max-w-fit overflow-x-auto scrollbar-hide">
-            <div className="flex space-x-1 min-w-full sm:min-w-0 sm:justify-center">
+        <div className="flex justify-center mb-8 sm:mb-10 px-2 w-full">
+          <div className="bg-gray-100 rounded-full p-1 inline-flex max-w-full overflow-x-auto scrollbar-hide">
+            <div className="flex space-x-1">
               {solutions.map((solution, index) => {
                 const colors = getCategoryColors(solution.category);
                 return (
@@ -246,18 +246,19 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center">
           {/* Phone Mockup */}
-          <div className="relative mx-auto max-w-xs fade-in-section order-2 lg:order-1">
-            <div className="relative mx-auto w-[240px] sm:w-[270px] h-[480px] sm:h-[540px] bg-gray-900 rounded-[30px] sm:rounded-[36px] shadow-xl overflow-hidden border-[6px] sm:border-[8px] border-gray-900">
-              <div className="w-full h-full rounded-[20px] sm:rounded-[24px] overflow-hidden">
+          <div className="relative mx-auto w-full max-w-[240px] sm:max-w-[280px] fade-in-section order-2 lg:order-1 flex justify-center">
+            <div className="relative w-full aspect-[9/19.5] bg-gray-900 rounded-[32px] sm:rounded-[40px] shadow-xl overflow-hidden border-[6px] sm:border-[8px] border-gray-900">
+              <div className="w-full h-full rounded-[24px] overflow-hidden bg-gray-50">
                 <img
                   src={getActiveSolution().image}
                   alt={getActiveSolution().title}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -right-1 top-20 sm:top-24 w-1 h-8 sm:h-10 bg-gray-800 rounded-l-lg"></div>
-              <div className="absolute -left-1 top-16 sm:top-20 w-1 h-6 sm:h-8 bg-gray-800 rounded-r-lg"></div>
-              <div className="absolute -left-1 top-26 sm:top-32 w-1 h-6 sm:h-8 bg-gray-800 rounded-r-lg"></div>
+              {/* Hardware buttons */}
+              <div className="absolute -right-[6px] sm:-right-[8px] top-24 w-1 h-12 bg-gray-800 rounded-l-lg"></div>
+              <div className="absolute -left-[6px] sm:-left-[8px] top-20 w-1 h-8 bg-gray-800 rounded-r-lg"></div>
+              <div className="absolute -left-[6px] sm:-left-[8px] top-32 w-1 h-12 bg-gray-800 rounded-r-lg"></div>
             </div>
           </div>
 

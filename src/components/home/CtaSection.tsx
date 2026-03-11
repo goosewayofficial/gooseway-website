@@ -20,15 +20,8 @@ export default function CtaSection({ onVideoClick = () => {} }: CtaSectionProps)
   const { t } = useLanguage();
 
   return (
-    <section className="relative bg-[#2563EB] overflow-hidden">
-      {/* Wave top */}
-      <div className="w-full overflow-hidden leading-none -mt-px">
-        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full block">
-          <path d="M0,30 C480,60 960,0 1440,30 L1440,0 L0,0 Z" fill="white" />
-        </svg>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section className="relative bg-white pt-10 pb-20 overflow-hidden">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center gap-10">
           {/* Mascot */}
           <div className="flex-shrink-0 w-44 h-44 md:w-56 md:h-56 animate-float-slow">
@@ -43,10 +36,10 @@ export default function CtaSection({ onVideoClick = () => {} }: CtaSectionProps)
 
           {/* Content */}
           <div className="flex-1 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
               {t("join_community")}
             </h2>
-            <p className="mt-4 text-blue-100 text-lg max-w-xl">{t("community_desc")}</p>
+            <p className="mt-4 text-gray-600 text-lg max-w-xl">{t("community_desc")}</p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
               <a
@@ -59,7 +52,7 @@ export default function CtaSection({ onVideoClick = () => {} }: CtaSectionProps)
               </a>
               <button
                 onClick={onVideoClick}
-                className="flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 text-white font-bold px-7 py-3 rounded-full transition-all duration-200 border border-white/30"
+                className="flex items-center justify-center gap-2 bg-white hover:bg-blue-50 text-blue-600 font-bold px-7 py-3 rounded-full transition-all duration-200 border-2 border-blue-600 shadow-sm hover:shadow"
               >
                 {t("watch_video")}
               </button>
@@ -74,7 +67,7 @@ export default function CtaSection({ onVideoClick = () => {} }: CtaSectionProps)
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.name}
-                  className="w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-all hover:scale-110"
+                  className="w-10 h-10 bg-gray-100 hover:bg-blue-100 rounded-full flex items-center justify-center text-gray-600 hover:text-blue-600 transition-all hover:scale-110"
                 >
                   {s.icon}
                 </a>
@@ -82,13 +75,6 @@ export default function CtaSection({ onVideoClick = () => {} }: CtaSectionProps)
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Wave bottom */}
-      <div className="w-full overflow-hidden leading-none -mb-px">
-        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full block">
-          <path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="white" />
-        </svg>
       </div>
     </section>
   );
