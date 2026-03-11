@@ -9,6 +9,11 @@ export default function HeroSection() {
   const { t } = useLanguage();
   const [showAltMascot, setShowAltMascot] = useState(false);
 
+  const handleComingSoon = (e: React.MouseEvent) => {
+    e.preventDefault();
+    alert(`${t("coming_soon")}\n${t("working_hard")}`);
+  };
+
   return (
     <section className="relative bg-[#2563EB] overflow-hidden">
       {/* Decorative blobs */}
@@ -78,17 +83,16 @@ export default function HeroSection() {
               </a>
             </div>
 
-            {/* App store badges */}
             <div
               className="mt-6 flex flex-wrap gap-3 justify-center md:justify-start animate-fade-up"
               style={{ animationDelay: "0.5s", opacity: 0 }}
             >
-              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" className="opacity-90 hover:opacity-100 transition-opacity">
+              <button onClick={handleComingSoon} className="opacity-90 hover:opacity-100 transition-opacity focus:outline-none">
                 <Image src="/store/App_Store.svg" alt="App Store" width={120} height={40} className="object-contain h-10 w-auto" />
-              </a>
-              <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" className="opacity-90 hover:opacity-100 transition-opacity">
+              </button>
+              <button onClick={handleComingSoon} className="opacity-90 hover:opacity-100 transition-opacity focus:outline-none">
                 <Image src="/store/Google_Play.png" alt="Google Play" width={120} height={40} className="object-contain h-10 w-auto" />
-              </a>
+              </button>
             </div>
           </div>
 

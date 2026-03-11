@@ -25,8 +25,12 @@ interface CombinedFeature {
 export default function AppShowcase({ solutions }: AppShowcaseProps) {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const { t } = useLanguage();
-
   const getActiveSolution = () => solutions[activeTabIndex];
+
+  const handleComingSoon = (e: React.MouseEvent) => {
+    e.preventDefault();
+    alert(`${t("coming_soon")}\n${t("working_hard")}`);
+  };
 
   const getCategoryColors = (category: string) => {
     switch (category) {
@@ -289,9 +293,9 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
             <div className="mt-6 sm:mt-8 space-y-4">
               {/* App Store Download Buttons */}
               <div className="flex flex-row gap-2 sm:gap-4 justify-center lg:justify-start">
-                <a
-                  href="https://testflight.apple.com/join/B1hnSF1F"
-                  className="inline-block transition-transform hover:scale-105 flex-shrink-0"
+                <button
+                  onClick={handleComingSoon}
+                  className="inline-block transition-transform hover:scale-105 flex-shrink-0 focus:outline-none"
                   aria-label="Download on the App Store"
                 >
                   <img
@@ -299,11 +303,11 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
                     alt="Download on the App Store"
                     className="h-10 sm:h-12 md:h-14 w-auto"
                   />
-                </a>
+                </button>
 
-                <a
-                  href="https://drive.google.com/file/d/1cquzTcoWqeHZHNzX-feMXYnMK90DzSd9/view?usp=sharing"
-                  className="inline-block transition-transform hover:scale-105 flex-shrink-0"
+                <button
+                  onClick={handleComingSoon}
+                  className="inline-block transition-transform hover:scale-105 flex-shrink-0 focus:outline-none"
                   aria-label="Get it on Google Play"
                 >
                   <img
@@ -311,7 +315,7 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
                     alt="Get it on Google Play"
                     className="h-10 sm:h-12 md:h-14 w-auto"
                   />
-                </a>
+                </button>
               </div>
 
               {/* User Manual & Video Tutorial Buttons */}

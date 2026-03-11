@@ -61,7 +61,12 @@ const socialLinks = [
 export default function Footer() {
   const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
   const [isTermsOfServiceOpen, setIsTermsOfServiceOpen] = useState(false);
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
+
+  const handleComingSoon = (e: React.MouseEvent) => {
+    e.preventDefault();
+    alert(`${t("coming_soon")}\n${t("working_hard")}`);
+  };
 
   return (
     <>
@@ -159,22 +164,18 @@ export default function Footer() {
 
               {/* App links */}
               <div className="mt-5 flex flex-wrap gap-2">
-                <a
-                  href="https://apps.apple.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="opacity-90 hover:opacity-100 transition-opacity"
+                <button
+                  onClick={handleComingSoon}
+                  className="opacity-90 hover:opacity-100 transition-opacity focus:outline-none"
                 >
                   <Image src="/store/App_Store.svg" alt="App Store" width={110} height={36} className="object-contain h-9 w-auto" />
-                </a>
-                <a
-                  href="https://play.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="opacity-90 hover:opacity-100 transition-opacity"
+                </button>
+                <button
+                  onClick={handleComingSoon}
+                  className="opacity-90 hover:opacity-100 transition-opacity focus:outline-none"
                 >
                   <Image src="/store/Google_Play.png" alt="Google Play" width={110} height={36} className="object-contain h-9 w-auto" />
-                </a>
+                </button>
               </div>
             </div>
           </div>

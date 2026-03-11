@@ -16,7 +16,7 @@ export default function AboutHeroSection() {
           : "Discover who we are and why we're committed to making travel accessible for everyone"
       }
       buttonText={language === "th" ? "ทำความรู้จักเรา" : "Get to Know Us"}
-      buttonLink="#our-story"
+      buttonLink="https://lin.ee/K6cFkWW"
       mascotImage="/mascot/GooseMascot-1.png"
     />
   );
