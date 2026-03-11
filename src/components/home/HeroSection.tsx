@@ -1,11 +1,13 @@
 "use client";
 // src/components/home/HeroSection.tsx
 
+import { useState } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function HeroSection() {
   const { t } = useLanguage();
+  const [showAltMascot, setShowAltMascot] = useState(false);
 
   return (
     <section className="relative bg-[#2563EB] overflow-hidden">
@@ -112,15 +114,66 @@ export default function HeroSection() {
                 <div className="absolute -left-[6px] sm:-left-[8px] top-32 w-1 h-12 bg-gray-800 rounded-r-lg z-[-1]"></div>
               </div>
               
-              {/* Mascot overlapping bottom-left of phone */}
-              <div className="absolute -bottom-6 -left-14 w-36 md:w-44 animate-float drop-shadow-lg z-10">
-                <Image
-                  src="/mascot/GooseMascot-1.png"
-                  alt="GOOSEWAY Mascot"
-                  width={128}
-                  height={128}
-                  className="object-contain w-full h-auto"
-                />
+              {/* Mascot Parade overlapping bottom-left of phone on desktop, stacking gracefully below on mobile */}
+              <div className="relative mt-8 lg:mt-0 lg:absolute lg:-bottom-8 lg:right-[calc(100%-2rem)] flex h-32 sm:h-36 lg:h-40 z-10 w-[336px] sm:w-[500px] lg:w-[624px] mx-auto pointer-events-none">
+                {/* 5. Map Goose (Mascot-5) at the very end */}
+                <div className="absolute bottom-6 sm:bottom-4 lg:bottom-5 left-0 w-12 sm:w-16 lg:w-20 animate-float-slow drop-shadow-sm z-0" style={{ animationDelay: "1.6s" }}>
+                  <Image
+                    src="/mascot/GooseMascot-5.png"
+                    alt="Map Reading Goose"
+                    width={96}
+                    height={96}
+                    className="object-contain w-full h-auto"
+                  />
+                </div>
+
+                {/* 4. Wheelchair Goose (Mascot-4) at the back */}
+                <div className="absolute bottom-4 sm:bottom-3 lg:bottom-3 left-10 sm:left-14 lg:left-20 w-16 sm:w-20 lg:w-28 animate-float-slow drop-shadow-md z-10" style={{ animationDelay: "1.2s" }}>
+                  <Image
+                    src="/mascot/GooseMascot-4.png"
+                    alt="Wheelchair Goose"
+                    width={128}
+                    height={128}
+                    className="object-contain w-full h-auto"
+                  />
+                </div>
+
+                {/* 3. Second Walking Goose (Mascot-3) behind first one */}
+                <div className="absolute bottom-4 sm:bottom-4 lg:bottom-4 left-24 sm:left-32 lg:left-44 w-20 sm:w-24 lg:w-32 animate-float-slow drop-shadow-md z-20" style={{ animationDelay: "0.8s" }}>
+                  <Image
+                    src="/mascot/GooseMascot-3.png"
+                    alt="Walking Goose Follower 2"
+                    width={112}
+                    height={112}
+                    className="object-contain w-full h-auto"
+                  />
+                </div>
+
+                {/* 2. First Walking Goose (Mascot-3) right behind the big one */}
+                <div className="absolute bottom-2 sm:bottom-2 lg:bottom-2 left-40 sm:left-56 lg:left-72 w-24 sm:w-28 lg:w-40 animate-float drop-shadow-lg z-30" style={{ animationDelay: "0.4s" }}>
+                  <Image
+                    src="/mascot/GooseMascot-3.png"
+                    alt="Walking Goose Follower 1"
+                    width={144}
+                    height={144}
+                    className="object-contain w-full h-auto"
+                  />
+                </div>
+                
+                {/* 1. Primary larger mascot (Mascot-1) in front */}
+                <div 
+                  className="absolute bottom-2 lg:bottom-2 left-52 sm:left-76 lg:left-96 w-32 sm:w-48 lg:w-60 animate-float drop-shadow-2xl z-40 pointer-events-auto cursor-pointer transition-transform active:scale-95"
+                  onClick={() => setShowAltMascot(!showAltMascot)}
+                  title="Click me!"
+                >
+                  <Image
+                    src={showAltMascot ? "/mascot/GooseMascot-2.png" : "/mascot/GooseMascot-1.png"}
+                    alt="Main GOOSEWAY Mascot"
+                    width={240}
+                    height={240}
+                    className="object-contain w-full h-auto"
+                  />
+                </div>
               </div>
             </div>
           </div>
