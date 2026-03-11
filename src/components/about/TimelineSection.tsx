@@ -1,5 +1,6 @@
-// src/app/components/about/TimelineSection.tsx
-import { useLanguage } from "../../context/LanguageContext";
+"use client";
+// src/components/about/TimelineSection.tsx
+import { useLanguage } from "@/context/LanguageContext";
 
 type Milestone = {
   year: string;

@@ -1,5 +1,5 @@
+"use client";
 // src/components/home/FaqSection.tsx
-import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import FaqComponent from "../FaqComponent";
 

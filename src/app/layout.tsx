@@ -33,7 +33,7 @@ export default function RootLayout({
       <head>
         <meta name="agd-partner-manual-verification" />
       </head>
-      <body className={`${nunito.variable} font-sans`} style={{ fontFamily: "var(--font-nunito), Nunito, sans-serif" }}>
+      <body className={`${nunito.variable} font-sans`}>
         <LanguageProvider>
           <div className="min-h-screen bg-white">
             <Navbar />

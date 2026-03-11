@@ -1,5 +1,7 @@
+"use client";
 // src/components/home/ComingSoonModal.tsx
-import React from "react";
+
+import { useEffect, useId } from "react";
 import { X } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -9,17 +11,37 @@ interface ComingSoonModalProps {
 
 export default function ComingSoonModal({ onClose }: ComingSoonModalProps) {
   const { t } = useLanguage();
+  const titleId = useId();
+
+  // Close on Escape key
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [onClose]);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"
         onClick={onClose}
-      ></div>
-      <div className="relative bg-white rounded-2xl p-6 max-w-md w-full m-4 shadow-xl transform transition-all animate-scale-in">
+        aria-hidden="true"
+      />
+
+      {/* Dialog */}
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        className="relative bg-white rounded-2xl p-6 max-w-md w-full m-4 shadow-xl transform transition-all animate-scale-in"
+      >
         <div className="absolute top-4 right-4">
           <button
             onClick={onClose}
+            aria-label="Close dialog"
             className="text-gray-400 hover:text-gray-500 transition-colors"
           >
             <X size={24} />
@@ -29,7 +51,7 @@ export default function ComingSoonModal({ onClose }: ComingSoonModalProps) {
           <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
             <span className="text-3xl">🚀</span>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">
+          <h3 id={titleId} className="text-2xl font-bold text-gray-900 mb-2">
             {t("coming_soon")}
           </h3>
           <p className="text-gray-600 mb-6">{t("working_hard")}</p>

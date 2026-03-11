@@ -1,6 +1,7 @@
+"use client";
 // src/components/about/FadeInSection.tsx
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface FadeInSectionProps {
   children: React.ReactNode;

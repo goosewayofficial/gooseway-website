@@ -1,5 +1,5 @@
+"use client";
 // src/components/LanguageSwitcher.tsx
-import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { Globe } from "lucide-react";
 

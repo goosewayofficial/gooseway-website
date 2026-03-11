@@ -1,4 +1,5 @@
 // src/app/interfaces.ts
+import type { ReactNode } from "react";
 
 // จาก src/app/about/page.tsx
 export interface TeamMember {
@@ -73,7 +74,7 @@ export interface Sponsor {
 export interface Feature {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
   image: string;
 }
 

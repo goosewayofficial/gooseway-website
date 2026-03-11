@@ -1,33 +1,18 @@
 // src/app/page.tsx
-"use client";
 
-import React, { useState } from "react";
 import HeroSection from "@/components/home/HeroSection";
-import FeaturesSection from "@/components/home/FeaturesSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import FaqSection from "@/components/home/FaqSection";
-import CtaSection from "@/components/home/CtaSection";
-import ComingSoonModal from "@/components/home/ComingsoonModal";
-import "@/components/home/animations.css";
+import HomeClient from "@/components/home/HomeClient";
 
 export default function Home() {
-  const [showModal, setShowModal] = useState(false);
-
-  const handleShowModal = () => {
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
-
   return (
     <div>
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Features Section - ตอนนี้ใช้ FeatureCard component ข้างใน */}
-      <FeaturesSection onLearnMoreClick={handleShowModal} />
+      {/* Features Section + CTA Section + Modal (client islands) */}
+      <HomeClient />
 
       {/* Testimonials Section */}
       <TestimonialsSection />
@@ -35,13 +20,7 @@ export default function Home() {
       {/* FAQ Section */}
       <FaqSection />
 
-      {/* Community/CTA Section */}
-      <CtaSection onVideoClick={handleShowModal} />
-
-      <div className="fixed -z-10 bottom-0 right-0 w-96 h-96 bg-blue-600 rounded-full opacity-20 blur-3xl"></div>
-
-      {/* Modal */}
-      {showModal && <ComingSoonModal onClose={handleCloseModal} />}
+      <div className="fixed -z-10 bottom-0 right-0 w-96 h-96 bg-blue-600 rounded-full opacity-20 blur-3xl" />
     </div>
   );
 }

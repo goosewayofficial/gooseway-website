@@ -1,6 +1,7 @@
+"use client";
 // src/components/about/StorySection.tsx
 import Image from "next/image";
-import { useLanguage } from "../../context/LanguageContext";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function StorySection() {
   const { t } = useLanguage();
@@ -9,7 +10,7 @@ export default function StorySection() {
     <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div className="relative h-96">
         <Image
-          src="app-logo.jpg"
+          src="/app-logo.jpg"
           alt={t("our_story")}
           fill
           className="rounded-lg object-cover"
