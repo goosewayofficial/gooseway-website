@@ -6,12 +6,12 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const screens = [
   {
-    src: "/solutions/solution1.png",
+    src: "/solutions/solution1.jpg",
     titleKey: "showcase1_title",
     descKey: "showcase1_desc",
   },
   {
-    src: "/solutions/solution2.png",
+    src: "/solutions/solution2.jpg",
     titleKey: "showcase2_title",
     descKey: "showcase2_desc",
     featured: true,
@@ -55,17 +55,26 @@ export default function AppShowcaseSection() {
             >
               {/* Phone */}
               <div
-                className={`drop-shadow-xl md:drop-shadow-2xl transition-transform duration-300 md:hover:-translate-y-2
-                            w-44 md:w-auto
+                className={`relative drop-shadow-xl md:drop-shadow-2xl transition-transform duration-300 md:hover:-translate-y-2
+                            w-44 
                             ${screen.featured ? "md:w-64" : "md:w-52"}`}
               >
-                <Image
-                  src={screen.src}
-                  alt={t(screen.titleKey)}
-                  width={260}
-                  height={530}
-                  className="rounded-[2rem] md:rounded-[2.5rem] w-full h-auto object-contain"
-                />
+                {/* Phone Frame */}
+                <div className="relative w-full aspect-[9/19.5] bg-gray-900 rounded-[28px] md:rounded-[40px] shadow-xl overflow-hidden border-[5px] md:border-[8px] border-gray-900">
+                  <div className="w-full h-full rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-50 relative">
+                    <Image
+                      src={screen.src}
+                      alt={t(screen.titleKey)}
+                      fill
+                      sizes="(max-width: 768px) 11rem, 16rem"
+                      className="object-cover"
+                    />
+                  </div>
+                  {/* Hardware buttons */}
+                  <div className="absolute -right-[5px] md:-right-[8px] top-[15%] h-[10%] w-[3px] md:w-1 bg-gray-800 rounded-l-lg z-[-1]"></div>
+                  <div className="absolute -left-[5px] md:-left-[8px] top-[12%] h-[6%] w-[3px] md:w-1 bg-gray-800 rounded-r-lg z-[-1]"></div>
+                  <div className="absolute -left-[5px] md:-left-[8px] top-[20%] h-[10%] w-[3px] md:w-1 bg-gray-800 rounded-r-lg z-[-1]"></div>
+                </div>
               </div>
 
               {/* Caption */}

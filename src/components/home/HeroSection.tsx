@@ -94,16 +94,26 @@ export default function HeroSection() {
           <div className="flex-shrink-0 flex items-end justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.15s", opacity: 0 }}>
             {/* Main phone — map screen */}
             <div className="relative w-52 md:w-64 drop-shadow-2xl">
-              <Image
-                src="/solutions/solution1.png"
-                alt="GOOSEWAY accessible map"
-                width={260}
-                height={530}
-                className="rounded-[2.5rem] w-full h-auto object-contain"
-                priority
-              />
+              {/* Phone Frame */}
+              <div className="relative w-full aspect-[9/19.5] bg-gray-900 rounded-[32px] sm:rounded-[40px] shadow-xl overflow-hidden border-[6px] sm:border-[8px] border-gray-900">
+                <div className="w-full h-full rounded-[24px] overflow-hidden bg-gray-50 relative">
+                  <Image
+                    src="/solutions/solution1.jpg"
+                    alt="GOOSEWAY accessible map"
+                    fill
+                    sizes="(max-width: 768px) 13rem, 16rem"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                {/* Hardware buttons */}
+                <div className="absolute -right-[6px] sm:-right-[8px] top-24 w-1 h-12 bg-gray-800 rounded-l-lg z-[-1]"></div>
+                <div className="absolute -left-[6px] sm:-left-[8px] top-20 w-1 h-8 bg-gray-800 rounded-r-lg z-[-1]"></div>
+                <div className="absolute -left-[6px] sm:-left-[8px] top-32 w-1 h-12 bg-gray-800 rounded-r-lg z-[-1]"></div>
+              </div>
+              
               {/* Mascot overlapping bottom-left of phone */}
-              <div className="absolute -bottom-6 -left-14 w-36 md:w-44 animate-float drop-shadow-lg">
+              <div className="absolute -bottom-6 -left-14 w-36 md:w-44 animate-float drop-shadow-lg z-10">
                 <Image
                   src="/mascot/GooseMascot-1.png"
                   alt="GOOSEWAY Mascot"
