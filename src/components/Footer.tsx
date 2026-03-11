@@ -5,6 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { useModal } from "@/context/ModalContext";
 import PrivacyPolicy from "./PrivacyPolicy";
 import TermsOfService from "./TermsOfService";
 
@@ -62,10 +63,11 @@ export default function Footer() {
   const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
   const [isTermsOfServiceOpen, setIsTermsOfServiceOpen] = useState(false);
   const { language, t } = useLanguage();
+  const { openComingSoon } = useModal();
 
   const handleComingSoon = (e: React.MouseEvent) => {
     e.preventDefault();
-    alert(`${t("coming_soon")}\n${t("working_hard")}`);
+    openComingSoon();
   };
 
   return (

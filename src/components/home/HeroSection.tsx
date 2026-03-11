@@ -4,14 +4,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import { useModal } from "@/context/ModalContext";
 
 export default function HeroSection() {
   const { t } = useLanguage();
+  const { openComingSoon } = useModal();
   const [showAltMascot, setShowAltMascot] = useState(false);
 
   const handleComingSoon = (e: React.MouseEvent) => {
     e.preventDefault();
-    alert(`${t("coming_soon")}\n${t("working_hard")}`);
+    openComingSoon();
   };
 
   return (

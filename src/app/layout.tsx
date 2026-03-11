@@ -7,6 +7,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "@/context/LanguageContext";
 import CookieConsent from "@/components/CookieConsent";
 import { Metadata } from "next";
+import { ModalProvider } from "@/context/ModalContext";
+import ComingSoonModal from "@/components/modals/ComingSoonModal";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -35,14 +37,17 @@ export default function RootLayout({
       </head>
       <body className={`${nunito.variable} font-sans`}>
         <LanguageProvider>
-          <div className="min-h-screen bg-white">
-            <Navbar />
-            <main>
-              {children}
-            </main>
-            <Footer />
-          </div>
-          <CookieConsent />
+          <ModalProvider>
+            <div className="min-h-screen bg-white">
+              <Navbar />
+              <main>
+                {children}
+              </main>
+              <Footer />
+            </div>
+            <CookieConsent />
+            <ComingSoonModal />
+          </ModalProvider>
         </LanguageProvider>
         <Analytics />
       </body>

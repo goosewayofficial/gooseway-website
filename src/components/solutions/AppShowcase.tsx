@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Solution } from "@/app/interfaces";
 import { useLanguage } from "@/context/LanguageContext";
+import { useModal } from "@/context/ModalContext";
 
 interface AppShowcaseProps {
   solutions: Solution[];
@@ -25,11 +26,12 @@ interface CombinedFeature {
 export default function AppShowcase({ solutions }: AppShowcaseProps) {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const { t } = useLanguage();
+  const { openComingSoon } = useModal();
   const getActiveSolution = () => solutions[activeTabIndex];
 
   const handleComingSoon = (e: React.MouseEvent) => {
     e.preventDefault();
-    alert(`${t("coming_soon")}\n${t("working_hard")}`);
+    openComingSoon();
   };
 
   const getCategoryColors = (category: string) => {
