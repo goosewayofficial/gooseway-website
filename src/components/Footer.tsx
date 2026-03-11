@@ -98,7 +98,9 @@ export default function Footer() {
             {/* Brand */}
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Image src="/logo.svg" alt="GOOSEWAY" width={36} height={36} className="object-contain brightness-0 invert" />
+                <div className="bg-white/10 rounded-lg p-1 border border-white/20">
+                  <Image src="/logo.svg" alt="GOOSEWAY" width={32} height={32} className="object-contain" />
+                </div>
                 <Image src="/logo-text.svg" alt="GOOSEWAY" width={100} height={22} className="object-contain h-7 w-auto brightness-0 invert" />
               </div>
               <p className="text-blue-100 text-sm leading-relaxed">
