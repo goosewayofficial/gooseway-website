@@ -6,8 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { useModal } from "@/context/ModalContext";
-import PrivacyPolicy from "./PrivacyPolicy";
-import TermsOfService from "./TermsOfService";
 
 const socialLinks = [
   {
@@ -60,8 +58,6 @@ const socialLinks = [
 ];
 
 export default function Footer() {
-  const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState(false);
-  const [isTermsOfServiceOpen, setIsTermsOfServiceOpen] = useState(false);
   const { language, t } = useLanguage();
   const { openComingSoon } = useModal();
 
@@ -116,7 +112,7 @@ export default function Footer() {
                   : "A platform for accessible journeys and inclusive communities."}
               </p>
               <p className="text-blue-200 text-xs mt-3 font-semibold italic">
-                &ldquo;Your goose, your guide&rdquo;
+                &ldquo;Your Goose, Your Guide&rdquo;
               </p>
             </div>
 
@@ -189,26 +185,24 @@ export default function Footer() {
               {language === "th" ? "สงวนลิขสิทธิ์" : "All rights reserved"}.
             </p>
             <div className="flex items-center gap-4">
-              <button
-                onClick={() => setIsPrivacyPolicyOpen(true)}
+              <Link
+                href="/privacy-policy"
                 className="hover:text-white transition-colors underline underline-offset-2"
               >
                 {language === "th" ? "นโยบายความเป็นส่วนตัว" : "Privacy Policy"}
-              </button>
+              </Link>
               <span className="text-white/30">|</span>
-              <button
-                onClick={() => setIsTermsOfServiceOpen(true)}
+              <Link
+                href="/terms-and-conditions"
                 className="hover:text-white transition-colors underline underline-offset-2"
               >
-                {language === "th" ? "ข้อตกลงการใช้บริการ" : "Terms of Service"}
-              </button>
+                {language === "th" ? "ข้อตกลงการใช้บริการ" : "Terms and Conditions"}
+              </Link>
             </div>
           </div>
         </div>
       </footer>
 
-      <PrivacyPolicy isOpen={isPrivacyPolicyOpen} onClose={() => setIsPrivacyPolicyOpen(false)} />
-      <TermsOfService isOpen={isTermsOfServiceOpen} onClose={() => setIsTermsOfServiceOpen(false)} />
     </>
   );
 }

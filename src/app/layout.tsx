@@ -18,7 +18,7 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: "GOOSEWAY",
-  description: "Your goose, your guide",
+  description: "Your Goose, Your Guide",
   icons: {
     icon: "/favicon.ico",
   },

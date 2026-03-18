@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { X, Settings, Shield, BarChart, Target, Cookie } from "lucide-react";
-import PrivacyPolicy from "./PrivacyPolicy";
+import Link from "next/link";
 
 interface CookieCategory {
   id: string;
@@ -30,7 +30,6 @@ export default function CookieSettings({
   const [cookieCategories, setCookieCategories] = useState<CookieCategory[]>(
     []
   );
-  const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
 
   // กำหนดข้อมูล cookie categories
   useEffect(() => {
@@ -150,14 +149,6 @@ export default function CookieSettings({
     onClose();
   };
 
-  const openPrivacyPolicy = () => {
-    setShowPrivacyPolicy(true);
-  };
-
-  const closePrivacyPolicy = () => {
-    setShowPrivacyPolicy(false);
-  };
-
   if (!isOpen) return null;
 
   return (
@@ -202,14 +193,15 @@ export default function CookieSettings({
                 {language === "th"
                   ? "สำหรับข้อมูลเพิ่มเติม โปรดดู"
                   : "For more information, please read our"}{" "}
-                <button
-                  onClick={openPrivacyPolicy}
+                <Link
+                  href="/privacy-policy"
+                  onClick={onClose}
                   className="text-blue-600 hover:text-blue-800 underline transition-colors"
                 >
                   {language === "th"
                     ? "นโยบายความเป็นส่วนตัว"
                     : "Privacy Policy"}
-                </button>
+                </Link>
               </p>
             </div>
 
@@ -309,8 +301,6 @@ export default function CookieSettings({
         </div>
       </div>
 
-      {/* Privacy Policy Modal */}
-      <PrivacyPolicy isOpen={showPrivacyPolicy} onClose={closePrivacyPolicy} />
     </>
   );
 }
