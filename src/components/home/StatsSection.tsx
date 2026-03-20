@@ -30,7 +30,7 @@ export default function StatsSection() {
 
   const stats = [
     {
-      value: satisfactionPercent !== null ? `${satisfactionPercent}%` : "—",
+      value: "80.7%",
       label: t("stats_satisfaction"),
     },
     {
