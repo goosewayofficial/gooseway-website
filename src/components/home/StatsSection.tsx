@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL; // ใส่ใน .env ของ repo อีกอัน
-
 export default function StatsSection() {
   const { t } = useLanguage();
   const [totalUsers, setTotalUsers] = useState<number | null>(null);
@@ -16,35 +14,17 @@ export default function StatsSection() {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await fetch(`${API_BASE_URL}/dashboard`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ day: "All" }),
-        });
-        const data = await res.json();
-
-        setTotalUsers(data.user.totalUsers);
-        setTotalLocations(data.location.totalLocation);
-
-        const levelStats = data.locationCategoryAccessLevel;
-        const totalCount = levelStats.reduce(
-          (sum: number, item: any) => sum + Number(item.count),
-          0,
+        const res = await fetch(
+          "https://api.gooseway.co/dashboard/public-stats",
         );
-        const easyCount = levelStats
-          .filter((item: any) => item.accessLevelId === 1)
-          .reduce((sum: number, item: any) => sum + Number(item.count), 0);
-
-        if (totalCount > 0) {
-          setSatisfactionPercent(
-            Math.round((easyCount / totalCount) * 1000) / 10,
-          );
-        }
+        const data = await res.json();
+        setTotalUsers(data.totalUsers);
+        setTotalLocations(data.totalLocations);
+        setSatisfactionPercent(data.satisfactionPercent);
       } catch (error) {
         console.error("Failed to fetch stats:", error);
       }
     };
-
     fetchStats();
   }, []);
 
