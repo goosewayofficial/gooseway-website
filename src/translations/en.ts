@@ -104,7 +104,7 @@ export const enTranslations = {
   // STATS SECTION
   // ===========================================
   stats_satisfaction: "Satisfaction",
-  stats_accessible_places: "Accessible Places",
+  stats_accessible_places: "Locations",
   stats_users: "Users",
   stats_verified_drivers: "Verified Drivers",
 
