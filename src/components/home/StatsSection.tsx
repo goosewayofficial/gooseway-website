@@ -34,11 +34,11 @@ export default function StatsSection() {
       label: t("stats_satisfaction"),
     },
     {
-      value: totalLocations !== null ? `${totalLocations}+` : "—",
+      value: totalLocations !== null ? `${totalLocations}` : "—",
       label: t("stats_accessible_places"),
     },
     {
-      value: totalUsers !== null ? `${totalUsers}+` : "—",
+      value: totalUsers !== null ? `${totalUsers}` : "—",
       label: t("stats_users"),
     },
   ];
