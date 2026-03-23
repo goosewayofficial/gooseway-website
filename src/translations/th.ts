@@ -108,6 +108,7 @@ export const thTranslations = {
   stats_accessible_places: "ข้อมูลสถานที่",
   stats_users: "ผู้ใช้",
   stats_verified_drivers: "คนขับที่ผ่านการตรวจสอบ",
+  stats_total_distance: "ระยะทางรวม",
 
   // ===========================================
   // HOW IT WORKS SECTION

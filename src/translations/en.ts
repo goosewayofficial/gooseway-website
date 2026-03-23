@@ -107,6 +107,7 @@ export const enTranslations = {
   stats_accessible_places: "Locations",
   stats_users: "Users",
   stats_verified_drivers: "Verified Drivers",
+  stats_total_distance: "Total Distance",
 
   // ===========================================
   // HOW IT WORKS SECTION
