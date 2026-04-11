@@ -313,7 +313,7 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
                   aria-label="Get it on Google Play"
                 >
                   <img
-                    src="/store/APK_Badge.png"
+                    src="/store/Google_Play.png"
                     alt="Get it on Google Play"
                     className="h-10 sm:h-12 md:h-14 w-auto"
                   />

@@ -27,7 +27,7 @@ const solutions: Solution[] = [
       "Access reliable accessibility information",
       "Contribute to community knowledge",
     ],
-    image: "/solutions/solution1.jpg",
+    image: "/solutions/solution1.png",
     category: "Navigation",
   },
   {
@@ -67,7 +67,7 @@ const solutions: Solution[] = [
       "Promote inclusive design",
       "Build supportive community",
     ],
-    image: "/solutions/solution2.jpg",
+    image: "/solutions/solution2.png",
     category: "Social",
   },
 ];
