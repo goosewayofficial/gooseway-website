@@ -1,5 +1,5 @@
 // src/app/layout.tsx
-import { Nunito } from "next/font/google";
+import { Poppins, Prompt } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,10 +10,16 @@ import { Metadata } from "next";
 import { ModalProvider } from "@/context/ModalContext";
 import ComingSoonModal from "@/components/modals/ComingSoonModal";
 
-const nunito = Nunito({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-nunito",
+  variable: "--font-poppins",
+});
+
+const prompt = Prompt({
+  subsets: ["latin", "thai"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-prompt",
 });
 
 export const metadata: Metadata = {
@@ -35,7 +41,13 @@ export default function RootLayout({
       <head>
         <meta name="agd-partner-manual-verification" />
       </head>
-      <body className={`${nunito.variable} font-sans`}>
+      <body
+        className="font-sans"
+        style={{
+          "--font-poppins": poppins.style.fontFamily,
+          "--font-prompt": prompt.style.fontFamily,
+        } as React.CSSProperties}
+      >
         <LanguageProvider>
           <ModalProvider>
             <div className="min-h-screen bg-white">

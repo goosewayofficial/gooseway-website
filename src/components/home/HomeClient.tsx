@@ -1,8 +1,8 @@
 "use client";
 // src/components/home/HomeClient.tsx
 
-import FeaturesSection from "@/components/home/FeaturesSection";
 import AppShowcaseSection from "@/components/home/AppShowcaseSection";
+import StatsSection from "@/components/home/StatsSection";
 import { useModal } from "@/context/ModalContext";
 
 export default function HomeClient() {
@@ -11,7 +11,7 @@ export default function HomeClient() {
   return (
     <>
       <AppShowcaseSection />
-      <FeaturesSection onLearnMoreClick={openComingSoon} />
+      <StatsSection />
     </>
   );
 }

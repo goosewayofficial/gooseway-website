@@ -6,12 +6,12 @@ import { useLanguage } from "@/context/LanguageContext";
 
 const screens = [
   {
-    src: "/solutions/solution1.jpg",
+    src: "/solutions/solution1.png",
     titleKey: "showcase1_title",
     descKey: "showcase1_desc",
   },
   {
-    src: "/solutions/solution2.jpg",
+    src: "/solutions/solution2.png",
     titleKey: "showcase2_title",
     descKey: "showcase2_desc",
     featured: true,

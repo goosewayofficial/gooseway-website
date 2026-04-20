@@ -43,6 +43,13 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     setTranslations(
       defaultTranslations[savedLanguage as keyof typeof defaultTranslations],
     );
+    // Update HTML lang attribute and body class
+    document.documentElement.lang = savedLanguage;
+    if (savedLanguage === "th") {
+      document.body.classList.add("lang-th");
+    } else {
+      document.body.classList.remove("lang-th");
+    }
   }, []);
 
   // เปลี่ยนภาษาและบันทึกลงใน localStorage
@@ -52,6 +59,14 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
       defaultTranslations[lang as keyof typeof defaultTranslations],
     );
     localStorage.setItem("language", lang);
+
+    // Update HTML lang attribute and body class
+    document.documentElement.lang = lang;
+    if (lang === "th") {
+      document.body.classList.add("lang-th");
+    } else {
+      document.body.classList.remove("lang-th");
+    }
   };
 
   // ฟังก์ชันสำหรับแปลข้อความ

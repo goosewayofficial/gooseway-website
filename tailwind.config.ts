@@ -22,7 +22,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        nunito: ["Nunito", "sans-serif"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        prompt: ["var(--font-prompt)", "sans-serif"],
+        sans: ["var(--font-main)", "sans-serif"],
       },
       animation: {
         float: "float 6s ease-in-out infinite",

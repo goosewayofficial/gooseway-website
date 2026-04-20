@@ -18,13 +18,24 @@ export default function StatsSection() {
         const res = await fetch(
           "https://api.gooseway.co/dashboard/public-stats",
         );
+        
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+
         const data = await res.json();
-        setTotalUsers(data.totalUsers);
-        setTotalLocations(data.totalLocations);
-        setSatisfactionPercent(data.satisfactionPercent);
-        setTotalDistanceKm(Math.round(data.totalDistanceMeters / 1000));
+        
+        if (data) {
+          if (data.totalUsers !== undefined) setTotalUsers(data.totalUsers);
+          if (data.totalLocations !== undefined) setTotalLocations(data.totalLocations);
+          if (data.satisfactionPercent !== undefined) setSatisfactionPercent(data.satisfactionPercent);
+          if (data.totalDistanceMeters !== undefined) {
+            setTotalDistanceKm(Math.round(data.totalDistanceMeters / 1000));
+          }
+        }
       } catch (error) {
-        console.error("Failed to fetch stats:", error);
+        // Log error silently to prevent crashing the UI in dev mode
+        console.warn("Stats fetch failed (using fallback):", error);
       }
     };
     fetchStats();
@@ -32,7 +43,7 @@ export default function StatsSection() {
 
   const stats = [
     {
-      value: "80.7%",
+      value: satisfactionPercent !== null ? `${satisfactionPercent}%` : "80.7%",
       label: t("stats_satisfaction"),
     },
     {
@@ -53,17 +64,19 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-3xl overflow-hidden my-8">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {stats.map((stat, index) => (
-            <div key={index} className="p-6 rounded-lg">
-              <div className="text-4xl font-bold mb-2">{stat.value}</div>
-              <div className="text-blue-100">{stat.label}</div>
-            </div>
-          ))}
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-3xl overflow-hidden my-8 shadow-lg">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {stats.map((stat, index) => (
+              <div key={index} className="p-6 rounded-lg">
+                <div className="text-4xl font-bold mb-2">{stat.value}</div>
+                <div className="text-blue-100">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

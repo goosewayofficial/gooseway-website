@@ -14,6 +14,15 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  --font-main: var(--font-poppins);
+}
+
+body.lang-th {
+  --font-main: var(--font-prompt);
+}
+
+body, h1, h2, h3, h4, h5, h6, p, div, span, a, button {
+  font-family: var(--font-main), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
 }
 
 /* Animation utilities */
