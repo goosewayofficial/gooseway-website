@@ -11,7 +11,7 @@ export default function TestimonialsSection() {
   const testimonials: Testimonial[] = [
     { name: t("testimonial1_name"), role: t("testimonial1_role"), content: t("testimonial1_content"), avatar: "", rating: 5 },
     { name: t("testimonial2_name"), role: t("testimonial2_role"), content: t("testimonial2_content"), avatar: "", rating: 5 },
-    { name: t("testimonial3_name"), role: t("testimonial3_role"), content: t("testimonial3_content"), avatar: "", rating: 4 },
+    { name: t("testimonial3_name"), role: t("testimonial3_role"), content: t("testimonial3_content"), avatar: "", rating: 5 },
   ];
 
   return (
