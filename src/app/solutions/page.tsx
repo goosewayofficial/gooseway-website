@@ -88,7 +88,7 @@ export default function SolutionPage() {
       <CommonHeroSection
         title={t("our_solutions")}
         subtitle={t("solutions_hero_subtitle")}
-        mascotImage="/mascot/GooseMascot-4.png"
+        mascotImage="/mascot/White/GooseMascotWhite-4.png"
       />
 
       {/* App Showcase */}

@@ -36,7 +36,7 @@ export default function CareerPage() {
       <CommonHeroSection
         title={t("career_title")}
         subtitle={t("career_subtitle")}
-        mascotImage="/mascot/GooseMascot-5.png"
+        mascotImage="/mascot/White/GooseMascotWhite-5.png"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-14">

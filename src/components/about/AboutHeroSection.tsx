@@ -22,7 +22,7 @@ export default function AboutHeroSection() {
         e.preventDefault();
         openDownloadModal();
       }}
-      mascotImage="/mascot/GooseMascot-1.png"
+      mascotImage="/mascot/White/GooseMascotWhite-1.png"
     />
   );
 }

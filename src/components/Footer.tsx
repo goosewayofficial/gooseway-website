@@ -89,11 +89,11 @@ export default function Footer() {
           {/* Mascot - flying goose */}
           <div className="absolute right-4 bottom-20 opacity-20 pointer-events-none hidden lg:block">
             <Image
-              src="/mascot/GooseMascot-9.png"
+              src="/mascot/White/GooseMascotWhite-9.png"
               alt="Gooseway Mascot"
               width={160}
               height={160}
-              className="object-contain animate-float-slow"
+              className="object-contain drop-shadow-lg"
             />
           </div>
 

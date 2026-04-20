@@ -158,7 +158,7 @@ export default function HeroSection() {
                   style={{ animationDelay: "1.6s" }}
                 >
                   <Image
-                    src="/mascot/GooseMascot-5.png"
+                    src="/mascot/White/GooseMascotWhite-5.png"
                     alt="Map Reading Goose"
                     width={96}
                     height={96}
@@ -172,7 +172,7 @@ export default function HeroSection() {
                   style={{ animationDelay: "1.2s" }}
                 >
                   <Image
-                    src="/mascot/GooseMascot-4.png"
+                    src="/mascot/White/GooseMascotWhite-4.png"
                     alt="Wheelchair Goose"
                     width={128}
                     height={128}
@@ -186,7 +186,7 @@ export default function HeroSection() {
                   style={{ animationDelay: "0.8s" }}
                 >
                   <Image
-                    src="/mascot/GooseMascot-3.png"
+                    src="/mascot/White/GooseMascotWhite-3.png"
                     alt="Walking Goose Follower 2"
                     width={112}
                     height={112}
@@ -200,7 +200,7 @@ export default function HeroSection() {
                   style={{ animationDelay: "0.4s" }}
                 >
                   <Image
-                    src="/mascot/GooseMascot-3.png"
+                    src="/mascot/White/GooseMascotWhite-3.png"
                     alt="Walking Goose Follower 1"
                     width={144}
                     height={144}
@@ -217,8 +217,8 @@ export default function HeroSection() {
                   <Image
                     src={
                       showAltMascot
-                        ? "/mascot/GooseMascot-2.png"
-                        : "/mascot/GooseMascot-1.png"
+                        ? "/mascot/White/GooseMascotWhite-2.png"
+                        : "/mascot/White/GooseMascotWhite-1.png"
                     }
                     alt="Main GOOSEWAY Mascot"
                     width={240}

@@ -30,7 +30,7 @@ export default function AchievementPage() {
       <CommonHeroSection
         title={t("achievements_title")}
         subtitle={t("achievements_subtitle")}
-        mascotImage="/mascot/GooseMascot-6.png"
+        mascotImage="/mascot/White/GooseMascotWhite-6.png"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">

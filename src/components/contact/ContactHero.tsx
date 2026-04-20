@@ -17,7 +17,7 @@ export default function ContactHero({ scrollY }: ContactHeroProps) {
           ? "มีคำถามหรือข้อเสนอแนะ? นี่คือวิธีที่คุณสามารถติดต่อเราได้"
           : "Have questions? Here's how you can reach us."
       }
-      mascotImage="/mascot/GooseMascot-7.png"
+      mascotImage="/mascot/White/GooseMascotWhite-7.png"
     />
   );
 }
