@@ -64,7 +64,7 @@ export const enTranslations = {
   testimonial3_content:
     "If I travel alone with this app, it feels like I have a travel companion. It lets me know if a route is accessible, what obstacles I might face, and I can also see reviews from other people. It makes me feel like I have a friend traveling with me.",
   testimonials_footer_quote:
-    "We Wheel Go empowers wheelchair users to travel with confidence, reduce anxiety, and feel included in society.",
+    "GOOSEWAY empowers wheelchair users to travel with confidence, reduce anxiety, and feel included in society.",
 
   // ===========================================
   // FAQ SECTION
