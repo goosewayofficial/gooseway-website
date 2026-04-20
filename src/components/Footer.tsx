@@ -59,12 +59,6 @@ const socialLinks = [
 
 export default function Footer() {
   const { language, t } = useLanguage();
-  const { openComingSoon } = useModal();
-
-  const handleComingSoon = (e: React.MouseEvent) => {
-    e.preventDefault();
-    openComingSoon();
-  };
 
   return (
     <>
@@ -170,12 +164,14 @@ export default function Footer() {
                 >
                   <Image src="/store/App_Store.svg" alt="App Store" width={110} height={36} className="object-contain h-9 w-auto" />
                 </a>
-                <button
-                  onClick={handleComingSoon}
+                <a
+                  href="https://play.google.com/store/apps/details?id=co.gooseway.mobileapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="opacity-90 hover:opacity-100 transition-opacity focus:outline-none"
                 >
                   <Image src="/store/Google_Play.png" alt="Google Play" width={110} height={36} className="object-contain h-9 w-auto" />
-                </button>
+                </a>
               </div>
             </div>
           </div>

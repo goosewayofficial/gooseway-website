@@ -26,13 +26,7 @@ interface CombinedFeature {
 export default function AppShowcase({ solutions }: AppShowcaseProps) {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const { t } = useLanguage();
-  const { openComingSoon } = useModal();
   const getActiveSolution = () => solutions[activeTabIndex];
-
-  const handleComingSoon = (e: React.MouseEvent) => {
-    e.preventDefault();
-    openComingSoon();
-  };
 
   const getCategoryColors = (category: string) => {
     switch (category) {
@@ -309,8 +303,10 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
                   />
                 </a>
 
-                <button
-                  onClick={handleComingSoon}
+                <a
+                  href="https://play.google.com/store/apps/details?id=co.gooseway.mobileapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block transition-transform hover:scale-105 flex-shrink-0 focus:outline-none"
                   aria-label="Get it on Google Play"
                 >
@@ -319,7 +315,7 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
                     alt="Get it on Google Play"
                     className="h-10 sm:h-12 md:h-14 w-auto"
                   />
-                </button>
+                </a>
               </div>
 
               {/* User Manual & Video Tutorial Buttons */}

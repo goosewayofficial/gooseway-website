@@ -7,18 +7,10 @@ import { useModal } from "@/context/ModalContext";
 import Image from "next/image";
 
 export default function DownloadModal() {
-  const { isDownloadModalOpen, closeDownloadModal, openComingSoon } = useModal();
+  const { isDownloadModalOpen, closeDownloadModal } = useModal();
   const { language, t } = useLanguage();
 
   if (!isDownloadModalOpen) return null;
-
-  const handleGooglePlayClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    closeDownloadModal();
-    setTimeout(() => {
-      openComingSoon();
-    }, 300);
-  };
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
@@ -88,9 +80,12 @@ export default function DownloadModal() {
               />
             </a>
 
-            <button
-              onClick={handleGooglePlayClick}
+            <a
+              href="https://play.google.com/store/apps/details?id=co.gooseway.mobileapp"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block transition-transform hover:scale-105 active:scale-95 focus:outline-none"
+              onClick={() => closeDownloadModal()}
             >
               <Image 
                 src="/store/Google_Play.png" 
@@ -99,7 +94,7 @@ export default function DownloadModal() {
                 height={48} 
                 className="h-12 w-auto"
               />
-            </button>
+            </a>
           </div>
           
           <p className="mt-6 text-xs text-gray-400 font-medium italic">

@@ -4,17 +4,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
-import { useModal } from "@/context/ModalContext";
 
 export default function HeroSection() {
   const { t } = useLanguage();
-  const { openComingSoon } = useModal();
   const [showAltMascot, setShowAltMascot] = useState(false);
-
-  const handleComingSoon = (e: React.MouseEvent) => {
-    e.preventDefault();
-    openComingSoon();
-  };
 
   return (
     <section className="relative bg-[#2563EB] overflow-hidden">
@@ -110,8 +103,10 @@ export default function HeroSection() {
                   className="object-contain h-10 w-auto"
                 />
               </a>
-              <button
-                onClick={handleComingSoon}
+              <a
+                href="https://play.google.com/store/apps/details?id=co.gooseway.mobileapp"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="opacity-90 hover:opacity-100 transition-opacity focus:outline-none"
               >
                 <Image
@@ -121,7 +116,7 @@ export default function HeroSection() {
                   height={40}
                   className="object-contain h-10 w-auto"
                 />
-              </button>
+              </a>
             </div>
           </div>
 
