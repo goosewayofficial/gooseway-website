@@ -295,8 +295,10 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
             <div className="mt-6 sm:mt-8 space-y-4">
               {/* App Store Download Buttons */}
               <div className="flex flex-row gap-2 sm:gap-4 justify-center lg:justify-start">
-                <button
-                  onClick={handleComingSoon}
+                <a
+                  href="https://apps.apple.com/us/app/gooseway/id6760458094"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block transition-transform hover:scale-105 flex-shrink-0 focus:outline-none"
                   aria-label="Download on the App Store"
                 >
@@ -305,7 +307,7 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
                     alt="Download on the App Store"
                     className="h-10 sm:h-12 md:h-14 w-auto"
                   />
-                </button>
+                </a>
 
                 <button
                   onClick={handleComingSoon}

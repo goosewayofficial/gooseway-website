@@ -162,12 +162,14 @@ export default function Footer() {
 
               {/* App links */}
               <div className="mt-5 flex flex-wrap gap-2">
-                <button
-                  onClick={handleComingSoon}
+                <a
+                  href="https://apps.apple.com/us/app/gooseway/id6760458094"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="opacity-90 hover:opacity-100 transition-opacity focus:outline-none"
                 >
                   <Image src="/store/App_Store.svg" alt="App Store" width={110} height={36} className="object-contain h-9 w-auto" />
-                </button>
+                </a>
                 <button
                   onClick={handleComingSoon}
                   className="opacity-90 hover:opacity-100 transition-opacity focus:outline-none"

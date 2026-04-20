@@ -117,8 +117,10 @@ export default function HeroSection() {
               className="mt-6 flex flex-wrap gap-3 justify-center md:justify-start animate-fade-up"
               style={{ animationDelay: "0.5s", opacity: 0 }}
             >
-              <button
-                onClick={handleComingSoon}
+              <a
+                href="https://apps.apple.com/us/app/gooseway/id6760458094"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="opacity-90 hover:opacity-100 transition-opacity focus:outline-none"
               >
                 <Image
@@ -128,7 +130,7 @@ export default function HeroSection() {
                   height={40}
                   className="object-contain h-10 w-auto"
                 />
-              </button>
+              </a>
               <button
                 onClick={handleComingSoon}
                 className="opacity-90 hover:opacity-100 transition-opacity focus:outline-none"
