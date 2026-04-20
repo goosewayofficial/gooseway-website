@@ -97,7 +97,7 @@ const achievementsData: BilingualAchievement[] = [
       th: "เราได้รับคัดเลือกให้เป็น 1 ใน 10 ทีมสุดท้ายในฐานะตัวแทนศูนย์ เพื่อเข้าสู่รอบ Pre-Pitching ของโครงการ SYNHUB TED Fellow รอบที่ 1/2569 ซึ่งเป็นโครงการบ่มเพาะและพัฒนาผู้ประกอบการเทคโนโลยีและนวัตกรรม ภายใต้การสนับสนุนจาก TED Fund โดยเราได้เข้าร่วมกิจกรรมเตรียมความพร้อม การให้คำปรึกษาจากผู้เชี่ยวชาญ (Mentoring) และการขัดเกลาแผนธุรกิจเพื่อเตรียมนำเสนอต่อคณะกรรมการในระดับประเทศ ถือเป็นก้าวสำคัญในการขับเคลื่อนนวัตกรรมของเราสู่เชิงพาณิชย์",
       en: "We have been selected as one of the top 10 finalists representing the center to enter the Pre-Pitching round of the SYNHUB TED Fellow Program (Batch 1/2026). This program, supported by the TED Fund, focuses on nurturing technology and innovation-driven entrepreneurs. We participated in intensive preparation sessions, received professional mentoring, and refined our business model to meet national standards, marking a significant milestone in transitioning our innovation into a viable commercial reality.",
     },
-    date: "2024",
+    date: "2026",
     icon: "🚀",
     category: {
       th: "โครงการบ่มเพาะ",
