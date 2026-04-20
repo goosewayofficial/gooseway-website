@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import {
   MapPin,
   Users,
-  Car,
+  Compass,
   Smartphone,
   BookOpen,
   PlayCircle,
@@ -80,7 +80,7 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
       case "Navigation":
         return <MapPin className="w-4 h-4 sm:w-6 sm:h-6" />;
       case "Explore":
-        return <Car className="w-4 h-4 sm:w-6 sm:h-6" />;
+        return <Compass className="w-4 h-4 sm:w-6 sm:h-6" />;
       case "Social":
         return <Users className="w-4 h-4 sm:w-6 sm:h-6" />;
       default:
@@ -135,7 +135,7 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
             <div
               className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${colors.iconBg} ${colors.iconColor} flex items-center justify-center text-xl sm:text-2xl`}
             >
-              🚗
+              🧭
             </div>
           ),
           title: t("explore_places"),
