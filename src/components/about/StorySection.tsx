@@ -8,12 +8,12 @@ export default function StorySection() {
 
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div className="relative h-96">
+      <div className="relative h-96 bg-blue-600 rounded-2xl overflow-hidden shadow-inner">
         <Image
-          src="/app-logo.jpg"
+          src="/feature-graphic.png"
           alt={t("our_story")}
           fill
-          className="rounded-lg object-cover"
+          className="object-contain p-8"
         />
       </div>
       <div className="space-y-6">
