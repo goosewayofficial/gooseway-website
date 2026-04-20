@@ -8,6 +8,7 @@ import { Solution } from "../interfaces";
 import AppShowcase from "@/components/solutions/AppShowcase";
 import CommonHeroSection from "@/components/CommonHeroSection";
 import { useLanguage } from "@/context/LanguageContext";
+import { useModal } from "@/context/ModalContext";
 
 const solutions: Solution[] = [
   {
@@ -73,42 +74,13 @@ const solutions: Solution[] = [
 ];
 
 export default function SolutionPage() {
-  const [showComingSoon, setShowComingSoon] = useState(false);
   const { t } = useLanguage();
+  const { openDownloadModal } = useModal();
 
-  const ComingSoonModal = () => (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      <div
-        className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"
-        onClick={() => setShowComingSoon(false)}
-      ></div>
-      <div className="relative bg-white rounded-2xl p-6 max-w-md w-full m-4 shadow-xl transform transition-all">
-        <div className="absolute top-4 right-4">
-          <button
-            onClick={() => setShowComingSoon(false)}
-            className="text-gray-400 hover:text-gray-500 transition-colors"
-          >
-            <X size={24} />
-          </button>
-        </div>
-        <div className="text-center pt-4">
-          <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-            <span className="text-3xl">🚀</span>
-          </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">
-            {t("coming_soon")}
-          </h3>
-          <p className="text-gray-600 mb-6">{t("working_hard")}</p>
-          <button
-            onClick={() => setShowComingSoon(false)}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-          >
-            {t("got_it")}
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+  const handleDownloadClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    openDownloadModal();
+  };
 
   return (
     <div className="space-y-16">
@@ -128,18 +100,13 @@ export default function SolutionPage() {
           {t("ready_to_make_mobility_accessible")}
         </h2>
         <p className="text-gray-600 mb-6">{t("join_inclusive_community")}</p>
-        <a
-          href="https://lin.ee/K6cFkWW"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={handleDownloadClick}
           className="bg-[#2563EB] hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg inline-block"
         >
           {t("get_started")}
-        </a>
+        </button>
       </section>
-
-      {/* Coming Soon Modal */}
-      {showComingSoon && <ComingSoonModal />}
 
       {/* Decorative Elements */}
       <div className="fixed -z-10 top-20 right-0 w-64 h-64 bg-blue-500 rounded-full opacity-10 blur-3xl"></div>

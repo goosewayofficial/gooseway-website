@@ -42,17 +42,9 @@ export default function CtaSection({ onVideoClick = () => {} }: CtaSectionProps)
             <p className="mt-4 text-gray-600 text-lg md:max-w-xl">{t("community_desc")}</p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-              <a
-                href="https://lin.ee/K6cFkWW"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-[#F9C423] hover:bg-yellow-400 text-[#231F20] font-bold px-7 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
-              >
-                {t("get_started")}
-              </a>
               <button
                 onClick={onVideoClick}
-                className="flex items-center justify-center gap-2 bg-white hover:bg-blue-50 text-blue-600 font-bold px-7 py-3 rounded-full transition-all duration-200 border-2 border-blue-600 shadow-sm hover:shadow"
+                className="flex items-center justify-center gap-2 bg-[#F9C423] hover:bg-yellow-400 text-[#231F20] font-bold px-7 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
               >
                 {t("watch_video")}
               </button>

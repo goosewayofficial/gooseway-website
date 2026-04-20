@@ -2,10 +2,12 @@
 "use client";
 
 import { useLanguage } from "@/context/LanguageContext";
+import { useModal } from "@/context/ModalContext";
 import CommonHeroSection from "../CommonHeroSection";
 
 export default function AboutHeroSection() {
   const { language } = useLanguage();
+  const { openDownloadModal } = useModal();
 
   return (
     <CommonHeroSection
@@ -15,8 +17,11 @@ export default function AboutHeroSection() {
           ? "ค้นหาว่าเราเป็นใคร และทำไมเราถึงมุ่งมั่นที่จะทำให้การเดินทางเข้าถึงได้สำหรับทุกคน"
           : "Discover who we are and why we're committed to making travel accessible for everyone"
       }
-      buttonText={language === "th" ? "ทำความรู้จักเรา" : "Get to Know Us"}
-      buttonLink="https://lin.ee/K6cFkWW"
+      buttonText={language === "th" ? "ดาวน์โหลดแอป" : "Download App"}
+      onButtonClick={(e) => {
+        e.preventDefault();
+        openDownloadModal();
+      }}
       mascotImage="/mascot/GooseMascot-1.png"
     />
   );

@@ -35,7 +35,7 @@ export default function ComingSoonModal() {
           <X size={20} />
         </button>
 
-        <div className="pt-8 pb-10 px-8 flex flex-col items-center text-center">
+        <div className="pt-4 pb-10 px-8 flex flex-col items-center text-center">
           {/* Icon/Mascot Container */}
           <div className="relative mb-6">
             <div className="w-24 h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center p-4">

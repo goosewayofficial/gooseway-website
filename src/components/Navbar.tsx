@@ -8,11 +8,18 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useLanguage } from "../context/LanguageContext";
+import { useModal } from "../context/ModalContext";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const { t } = useLanguage();
+  const { openDownloadModal } = useModal();
+
+  const handleDownloadClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    openDownloadModal();
+  };
 
   const navigation = [
     { name: t("about"), href: "/about" },
@@ -69,15 +76,13 @@ export default function Navbar() {
             <div className="ml-2">
               <LanguageSwitcher />
             </div>
-            <a
-              href="https://lin.ee/K6cFkWW"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={handleDownloadClick}
               className="ml-3 flex items-center gap-2 bg-[#F9C423] hover:bg-yellow-400 text-[#231F20] font-bold text-sm px-4 py-2 rounded-full transition-all duration-200 shadow-sm hover:shadow-md"
             >
               <Download className="w-4 h-4" />
               Download
-            </a>
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -147,16 +152,16 @@ export default function Navbar() {
                 height={80}
                 className="object-contain opacity-90"
               />
-              <a
-                href="https://lin.ee/K6cFkWW"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={(e) => {
+                  handleDownloadClick(e);
+                  setIsOpen(false);
+                }}
                 className="flex items-center gap-2 bg-[#F9C423] hover:bg-yellow-400 text-[#231F20] font-bold px-5 py-3 rounded-2xl transition-all duration-200 shadow-sm text-sm"
-                onClick={() => setIsOpen(false)}
               >
                 <Download className="w-4 h-4" />
                 Download App
-              </a>
+              </button>
             </div>
           </div>
         </div>

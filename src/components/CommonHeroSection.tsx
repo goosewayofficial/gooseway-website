@@ -8,6 +8,7 @@ interface CommonHeroSectionProps {
   subtitle?: string;
   buttonText?: string;
   buttonLink?: string;
+  onButtonClick?: (e: React.MouseEvent) => void;
   mascotImage?: string;
   bgColor?: string;
   // legacy props (kept for compatibility)
@@ -23,6 +24,7 @@ export default function CommonHeroSection({
   subtitle,
   buttonText,
   buttonLink,
+  onButtonClick,
   mascotImage,
   bgColor = "bg-[#2563EB]",
   children,
@@ -49,11 +51,12 @@ export default function CommonHeroSection({
                 {subtitle}
               </p>
             )}
-            {buttonText && buttonLink && (
+            {buttonText && (buttonLink || onButtonClick) && (
               <a
-                href={buttonLink}
-                target={buttonLink.startsWith("http") ? "_blank" : undefined}
-                rel={buttonLink.startsWith("http") ? "noopener noreferrer" : undefined}
+                href={buttonLink || "#"}
+                onClick={onButtonClick}
+                target={buttonLink?.startsWith("http") ? "_blank" : undefined}
+                rel={buttonLink?.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="inline-flex items-center gap-2 mt-6 bg-[#F9C423] hover:bg-yellow-400 text-[#231F20] font-bold px-7 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5 animate-fade-up"
                 style={{ animationDelay: "0.4s", opacity: 0 }}
               >

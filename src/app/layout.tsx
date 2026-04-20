@@ -9,6 +9,7 @@ import CookieConsent from "@/components/CookieConsent";
 import { Metadata } from "next";
 import { ModalProvider } from "@/context/ModalContext";
 import ComingSoonModal from "@/components/modals/ComingSoonModal";
+import DownloadModal from "@/components/modals/DownloadModal";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -59,6 +60,7 @@ export default function RootLayout({
             </div>
             <CookieConsent />
             <ComingSoonModal />
+            <DownloadModal />
           </ModalProvider>
         </LanguageProvider>
         <Analytics />

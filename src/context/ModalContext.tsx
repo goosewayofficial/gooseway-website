@@ -6,18 +6,34 @@ type ModalContextType = {
   isComingSoonOpen: boolean;
   openComingSoon: () => void;
   closeComingSoon: () => void;
+  isDownloadModalOpen: boolean;
+  openDownloadModal: () => void;
+  closeDownloadModal: () => void;
 };
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
 export const ModalProvider = ({ children }: { children: ReactNode }) => {
   const [isComingSoonOpen, setIsComingSoonOpen] = useState(false);
+  const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
 
   const openComingSoon = () => setIsComingSoonOpen(true);
   const closeComingSoon = () => setIsComingSoonOpen(false);
 
+  const openDownloadModal = () => setIsDownloadModalOpen(true);
+  const closeDownloadModal = () => setIsDownloadModalOpen(false);
+
   return (
-    <ModalContext.Provider value={{ isComingSoonOpen, openComingSoon, closeComingSoon }}>
+    <ModalContext.Provider
+      value={{
+        isComingSoonOpen,
+        openComingSoon,
+        closeComingSoon,
+        isDownloadModalOpen,
+        openDownloadModal,
+        closeDownloadModal,
+      }}
+    >
       {children}
     </ModalContext.Provider>
   );
