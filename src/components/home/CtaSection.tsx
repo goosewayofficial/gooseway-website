@@ -26,7 +26,7 @@ export default function CtaSection({ onVideoClick = () => {} }: CtaSectionProps)
           {/* Mascot */}
           <div className="flex-shrink-0 w-44 h-44 md:w-56 md:h-56 animate-float-slow">
             <Image
-              src="/mascot/GooseMascot-2.png"
+              src="/mascot/Original/GooseMascot-2.png"
               alt="Gooseway Mascot"
               width={224}
               height={224}

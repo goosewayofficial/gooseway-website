@@ -48,7 +48,7 @@ export default function DownloadModal() {
           <div className="relative mb-6">
             <div className="w-24 h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center p-4">
               <Image 
-                src="/mascot/GooseMascot-1.png" 
+                src="/mascot/Original/GooseMascot-1.png" 
                 alt="GOOSEWAY Mascot" 
                 width={80} 
                 height={80} 

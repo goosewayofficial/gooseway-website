@@ -146,7 +146,7 @@ export default function Navbar() {
           <div className="px-4 pb-6 pt-2 border-t border-gray-100">
             <div className="flex items-end justify-between">
               <Image
-                src="/mascot/GooseMascot-3.png"
+                src="/mascot/Original/GooseMascot-3.png"
                 alt="Gooseway Mascot"
                 width={80}
                 height={80}
