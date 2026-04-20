@@ -164,7 +164,7 @@ export const enTranslations = {
     "We are dedicated to helping wheelchair users travel independently and confidently, transforming challenges into opportunities.",
 
   our_journey: "Our Journey",
-  milestone_founded: "Company Founded",
+  milestone_founded: "Team Founded",
   milestone_founded_desc:
     "Started with a simple idea and a passionate team of four.",
   milestone_funding: "Funding",

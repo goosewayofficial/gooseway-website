@@ -5,7 +5,6 @@ import StorySection from "@/components/about/StorySection";
 import ValuesSection from "@/components/about/ValuesSection";
 import TimelineSection from "@/components/about/TimelineSection";
 import SponsorSection from "@/components/about/SponsorSection";
-import StatsSection from "@/components/home/StatsSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import FadeInSection from "@/components/about/FadeInSection";
 import AboutHeroSection from "@/components/about/AboutHeroSection";
@@ -28,10 +27,6 @@ export default function AboutPage() {
 
         <FadeInSection>
           <TimelineSection />
-        </FadeInSection>
-
-        <FadeInSection>
-          <StatsSection />
         </FadeInSection>
 
         <FadeInSection>
