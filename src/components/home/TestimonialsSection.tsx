@@ -36,6 +36,13 @@ export default function TestimonialsSection() {
             />
           ))}
         </div>
+        
+        {/* Footer Quote */}
+        <div className="mt-16 text-center animate-fade-up" style={{ animationDelay: "0.6s", opacity: 0 }}>
+          <p className="text-blue-600 text-lg md:text-xl font-medium max-w-4xl mx-auto leading-relaxed">
+            {t("testimonials_footer_quote")}
+          </p>
+        </div>
       </div>
     </section>
   );

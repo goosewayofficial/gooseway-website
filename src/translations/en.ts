@@ -51,18 +51,20 @@ export const enTranslations = {
   // TESTIMONIALS SECTION
   // ===========================================
   testimonials_title: "What Our Users Say",
-  testimonial1_name: "Mock user 1",
-  testimonial1_role: "Wheelchair User",
+  testimonial1_name: "Khun Bloom",
+  testimonial1_role: "ToGether Club Member",
   testimonial1_content:
-    "GOOSEWAY has made my travel much easier. I can plan accessible routes and share experiences with others.",
-  testimonial2_name: "Mock user 2",
-  testimonial2_role: "Tourist",
+    "It helps reduce my anxiety and worry about traveling alone and encountering obstacles like no lifts, no ramps, no accessible restrooms, or having to deal with rough paths.",
+  testimonial2_name: "Khun Salee",
+  testimonial2_role: "Leader of ToGether Club",
   testimonial2_content:
-    "This app helped me plan trips for my mother who uses a wheelchair. Thank you GOOSEWAY for making tourism accessible for everyone.",
-  testimonial3_name: "Mock user 3",
-  testimonial3_role: "GOOSEWAY Driver",
+    "With the app, I can find out in advance if the route I'm taking is accessible, what obstacles I might face, or I can read reviews from other people. It helps reduce my anxiety and worry about traveling alone and encountering issues",
+  testimonial3_name: "Khun Model",
+  testimonial3_role: "Thammasat Student",
   testimonial3_content:
-    "I'm glad to be part of the GOOSEWAY community. Helping wheelchair users travel conveniently makes me proud.",
+    "If I travel alone with this app, it feels like I have a travel companion. It lets me know if a route is accessible, what obstacles I might face, and I can also see reviews from other people. It makes me feel like I have a friend traveling with me.",
+  testimonials_footer_quote:
+    "We Wheel Go empowers wheelchair users to travel with confidence, reduce anxiety, and feel included in society.",
 
   // ===========================================
   // FAQ SECTION
