@@ -132,13 +132,14 @@ export const enTranslations = {
   // ===========================================
   app_showcase_title: "See GOOSEWAY in Action",
   app_showcase_subtitle: "Real screenshots from our app",
+  scroll_for_more: "Scroll for more",
   showcase1_title: "Accessible Map",
   showcase1_desc:
     "View real-time accessibility data on every route — fully accessible, partially accessible, or limited access — before you go",
   showcase2_title: "Community Feed",
   showcase2_desc:
     "Follow other users, discover accessible places they love, and share your own experiences with the GOOSEWAY community",
-  showcase3_title: "Search Everything",
+  showcase3_title: "Explore",
   showcase3_desc:
     "Find places, obstacle reports, and routes all in one place — community-verified and always up to date",
 

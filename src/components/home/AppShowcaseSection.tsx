@@ -1,7 +1,10 @@
 "use client";
 // src/components/home/AppShowcaseSection.tsx
 
+import React, { useState } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 const screens = [
@@ -25,6 +28,15 @@ const screens = [
 
 export default function AppShowcaseSection() {
   const { t } = useLanguage();
+  const [currentIndex, setCurrentIndex] = useState(1); // Start with featured one
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % screens.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + screens.length) % screens.length);
+  };
 
   return (
     <section className="py-14 md:py-20 bg-[#E7EFF3] overflow-hidden">
@@ -40,63 +52,109 @@ export default function AppShowcaseSection() {
           </p>
         </div>
 
-        {/* Mobile: horizontal scroll · Desktop: side-by-side aligned bottom */}
-        <div className="flex md:items-end md:justify-center gap-4 md:gap-8
-                        overflow-x-auto md:overflow-x-visible
-                        snap-x snap-mandatory md:snap-none
-                        pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0
-                        scrollbar-hide">
-          {screens.map((screen, i) => (
-            <div
-              key={i}
-              className={`flex-none snap-center flex flex-col items-center
-                          w-52 md:w-auto
-                          ${screen.featured ? "md:-translate-y-6" : "md:opacity-90"}`}
-            >
-              {/* Phone */}
+        {/* Mobile: Slider · Desktop: Side-by-side */}
+        <div className="relative">
+          {/* Desktop View */}
+          <div className="hidden md:flex md:items-end md:justify-center gap-8">
+            {screens.map((screen, i) => (
               <div
-                className={`relative drop-shadow-xl md:drop-shadow-2xl transition-transform duration-300 md:hover:-translate-y-2
-                            w-44 
-                            ${screen.featured ? "md:w-64" : "md:w-52"}`}
+                key={i}
+                className={`flex flex-col items-center
+                            ${screen.featured ? "md:-translate-y-6" : "md:opacity-90"}`}
               >
-                {/* Phone Frame */}
-                <div className="relative w-full aspect-[9/19.5] bg-gray-900 rounded-[28px] md:rounded-[40px] shadow-xl overflow-hidden border-[5px] md:border-[8px] border-gray-900">
-                  <div className="w-full h-full rounded-[20px] md:rounded-[32px] overflow-hidden bg-gray-50 relative">
-                    <Image
-                      src={screen.src}
-                      alt={t(screen.titleKey)}
-                      fill
-                      sizes="(max-width: 768px) 11rem, 16rem"
-                      className="object-cover"
-                    />
+                <div
+                  className={`relative drop-shadow-2xl transition-transform duration-300 hover:-translate-y-2
+                              ${screen.featured ? "md:w-64" : "md:w-52"}`}
+                >
+                  <div className="relative w-full aspect-[9/19.5] bg-gray-900 rounded-[40px] shadow-xl overflow-hidden border-[8px] border-gray-900">
+                    <div className="w-full h-full rounded-[32px] overflow-hidden bg-gray-50 relative">
+                      <Image
+                        src={screen.src}
+                        alt={t(screen.titleKey)}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
-                  {/* Hardware buttons */}
-                  <div className="absolute -right-[5px] md:-right-[8px] top-[15%] h-[10%] w-[3px] md:w-1 bg-gray-800 rounded-l-lg z-[-1]"></div>
-                  <div className="absolute -left-[5px] md:-left-[8px] top-[12%] h-[6%] w-[3px] md:w-1 bg-gray-800 rounded-r-lg z-[-1]"></div>
-                  <div className="absolute -left-[5px] md:-left-[8px] top-[20%] h-[10%] w-[3px] md:w-1 bg-gray-800 rounded-r-lg z-[-1]"></div>
+                </div>
+                <div className="mt-4 text-center max-w-[13rem]">
+                  <h3 className="mt-2 text-base font-bold text-[#231F20]">
+                    {t(screen.titleKey)}
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-500 leading-relaxed">
+                    {t(screen.descKey)}
+                  </p>
                 </div>
               </div>
+            ))}
+          </div>
 
-              {/* Caption */}
-              <div className="mt-4 text-center w-44 md:max-w-[13rem] md:w-auto">
-                <span className="text-xs font-bold text-[#2563EB] bg-[#2563EB]/10 px-2.5 py-1 rounded-full">
-                  {String(i + 1).padStart(2, "0")} / 03
-                </span>
-                <h3 className="mt-2 text-sm md:text-base font-bold text-[#231F20]">
-                  {t(screen.titleKey)}
-                </h3>
-                <p className="mt-1 text-xs md:text-sm text-gray-500 leading-relaxed">
-                  {t(screen.descKey)}
-                </p>
-              </div>
+          {/* Mobile View (Slider) */}
+          <div className="md:hidden relative px-4">
+            <div className="overflow-hidden">
+              <motion.div
+                className="flex"
+                animate={{ x: `-${currentIndex * 100}%` }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              >
+                {screens.map((screen, i) => (
+                  <div key={i} className="min-w-full flex flex-col items-center px-2">
+                    <div className="relative w-56 drop-shadow-xl">
+                      <div className="relative w-full aspect-[9/19.5] bg-gray-900 rounded-[32px] shadow-xl overflow-hidden border-[6px] border-gray-900">
+                        <div className="w-full h-full rounded-[24px] overflow-hidden bg-gray-50 relative">
+                          <Image
+                            src={screen.src}
+                            alt={t(screen.titleKey)}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-6 text-center">
+                      <h3 className="mt-2 text-lg font-bold text-[#231F20]">
+                        {t(screen.titleKey)}
+                      </h3>
+                      <p className="mt-2 text-sm text-gray-500 leading-relaxed max-w-[250px]">
+                        {t(screen.descKey)}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
             </div>
-          ))}
-        </div>
 
-        {/* Scroll hint (mobile only) */}
-        <p className="md:hidden text-center text-xs text-gray-400 mt-4">
-          ← เลื่อนดูเพิ่มเติม →
-        </p>
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 top-1/3 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center shadow-md z-10 text-gray-600"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 top-1/3 -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center shadow-md z-10 text-gray-600"
+              aria-label="Next slide"
+            >
+              <ChevronRight size={24} />
+            </button>
+
+            {/* Dots */}
+            <div className="flex justify-center gap-2 mt-6">
+              {screens.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentIndex(i)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    i === currentIndex ? "bg-[#2563EB] w-6" : "bg-gray-300"
+                  }`}
+                  aria-label={`Go to slide ${i + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
