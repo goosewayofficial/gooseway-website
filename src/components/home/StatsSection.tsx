@@ -7,9 +7,6 @@ export default function StatsSection() {
   const { t } = useLanguage();
   const [totalUsers, setTotalUsers] = useState<number | null>(null);
   const [totalLocations, setTotalLocations] = useState<number | null>(null);
-  const [satisfactionPercent, setSatisfactionPercent] = useState<number | null>(
-    null,
-  );
   const [totalDistanceKm, setTotalDistanceKm] = useState<number | null>(null);
 
   useEffect(() => {
@@ -28,7 +25,6 @@ export default function StatsSection() {
         if (data) {
           if (data.totalUsers !== undefined) setTotalUsers(data.totalUsers);
           if (data.totalLocations !== undefined) setTotalLocations(data.totalLocations);
-          if (data.satisfactionPercent !== undefined) setSatisfactionPercent(data.satisfactionPercent);
           if (data.totalDistanceMeters !== undefined) {
             setTotalDistanceKm(Math.round(data.totalDistanceMeters / 1000));
           }
@@ -43,7 +39,7 @@ export default function StatsSection() {
 
   const stats = [
     {
-      value: satisfactionPercent !== null ? `${satisfactionPercent}%` : "80.7%",
+      value: "80.7%",
       label: t("stats_satisfaction"),
     },
     {
