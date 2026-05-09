@@ -116,12 +116,12 @@ const achievementsData: BilingualAchievement[] = [
       en: "Hack for Rights: Youth Power for Human Rights Innovation",
     },
     description: {
-      th: "ได้รับคัดเลือกเป็น 1 ใน 70 ทีมเข้าร่วมโครงการ Hack for Rights โดยสำนักงานคณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม.)",
-      en: "Selected as one of the top 70 teams in the Hack for Rights program by the National Human Rights Commission of Thailand (NHRC)",
+      th: "ได้รับคัดเลือกเป็น 1 ใน 62 ทีม จากทั้งหมด 537 ทีม เข้าร่วมโครงการ Hack for Rights โดยสำนักงานคณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม.)",
+      en: "Selected as one of the top 62 teams from a total of 537 teams in the Hack for Rights program by the National Human Rights Commission of Thailand (NHRC)",
     },
     longDescription: {
-      th: "เราภูมิใจที่ได้รับการคัดเลือกให้เป็นหนึ่งใน 70 ทีมจากทั่วประเทศเข้าร่วมโครงการ Hack for Rights ซึ่งจัดโดยสำนักงานคณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม.) โครงการนี้มุ่งเน้นการปลุกพลังเยาวชนคนรุ่นใหม่ในการสร้างสรรค์นวัตกรรมเพื่อส่งเสริมสิทธิมนุษยชนและการไม่เลือกปฏิบัติ ภายใต้หัวข้อ 'เมืองที่ไม่เลือกปฏิบัต่อผู้สูงอายุ' (Age-Friendly and Non-Discriminatory City) โดยเราได้ร่วมระดมไอเดียเพื่อสร้างสังคมที่โอบรับความหลากหลายและสร้างความเท่าเทียมให้กับทุกคน",
-      en: "We are honored to be selected as one of the top 70 teams nationwide for the Hack for Rights project, organized by the National Human Rights Commission of Thailand (NHRC). This initiative empowers the younger generation to create innovations that promote human rights and combat discrimination. Under the theme 'Age-Friendly and Non-Discriminatory City,' we worked on brainstorming and developing solutions to foster an inclusive society that embraces diversity and ensures equality for all.",
+      th: "เราภูมิใจที่ได้รับการคัดเลือกให้เป็นหนึ่งใน 62 ทีม จากผู้สมัครทั้งหมด 537 ทีมทั่วประเทศเข้าร่วมโครงการ Hack for Rights ซึ่งจัดโดยสำนักงานคณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม.) โครงการนี้มุ่งเน้นการปลุกพลังเยาวชนคนรุ่นใหม่ในการสร้างสรรค์นวัตกรรมเพื่อส่งเสริมสิทธิมนุษยชนและการไม่เลือกปฏิบัติ ภายใต้หัวข้อ 'เมืองที่ไม่เลือกปฏิบัต่อผู้สูงอายุ' (Age-Friendly and Non-Discriminatory City) โดยเราได้ร่วมระดมไอเดียเพื่อสร้างสังคมที่โอบรับความหลากหลายและสร้างความเท่าเทียมให้กับทุกคน",
+      en: "We are honored to be selected as one of the top 62 teams from a total of 537 applicants nationwide for the Hack for Rights project, organized by the National Human Rights Commission of Thailand (NHRC). This initiative empowers the younger generation to create innovations that promote human rights and combat discrimination. Under the theme 'Age-Friendly and Non-Discriminatory City,' we worked on brainstorming and developing solutions to foster an inclusive society that embraces diversity and ensures equality for all.",
     },
     date: "2026",
     icon: "⚖️",
@@ -138,6 +138,33 @@ const achievementsData: BilingualAchievement[] = [
       "/achievements/achievement04/achievement04_01.jpg",
       "/achievements/achievement04/achievement04_02.jpg",
     ],
+  },
+  {
+    id: 5,
+    title: {
+      th: "S-Impact 2026: โครงการบ่มเพาะวิสาหกิจเพื่อสังคม",
+      en: "S-Impact 2026: Social Enterprise Incubation Program",
+    },
+    description: {
+      th: "ได้รับคัดเลือกเป็น 1 ใน 62 ทีม จากผู้สมัครมากกว่า 100 ทีม เข้าร่วมโครงการ S-Impact 2026 เพื่อพัฒนาศักยภาพและขยายผลกระทบทางสังคม",
+      en: "Selected as one of the top 62 teams from more than 100 applicants in the S-Impact 2026 program to enhance capacity and scale social impact.",
+    },
+    longDescription: {
+      th: "GOOSEWAY ได้รับคัดเลือกให้เป็น 1 ใน 62 ทีมสุดท้าย จากผู้สมัครมากกว่า 100 ทีมทั่วประเทศ เพื่อเข้าร่วมโครงการ S-Impact 2026 ซึ่งเป็นโครงการบ่มเพาะวิสาหกิจเพื่อสังคมระดับเข้มข้น โดยเราได้รับการสนับสนุนด้านองค์ความรู้ การให้คำปรึกษาจากผู้เชี่ยวชาญ และการสร้างเครือข่ายกับพันธมิตรในภาคส่วนต่างๆ เพื่อมุ่งเน้นการแก้ปัญหาการเดินทางเข้าถึงของผู้ใช้วีลแชร์อย่างเป็นระบบและยั่งยืน ถือเป็นก้าวสำคัญในการเปลี่ยนผ่านจากโครงการนวัตกรรมสู่การเป็นวิสาหกิจเพื่อสังคมที่แข็งแกร่ง",
+      en: "GOOSEWAY has been selected as one of the top 62 teams from more than 100 applicants nationwide for the S-Impact 2026 program, an intensive incubation initiative for social enterprises. Through this program, we receive specialized knowledge, expert mentoring, and networking opportunities with various partners. Our focus is on systematically and sustainably addressing accessibility challenges for wheelchair users. This participation marks a significant milestone in our transition from an innovation project to a robust social enterprise.",
+    },
+    date: "2026",
+    icon: "🌱",
+    category: {
+      th: "โครงการบ่มเพาะ",
+      en: "Incubation",
+    },
+    organizer: {
+      th: "S-Impact",
+      en: "S-Impact",
+    },
+    coverImage: "/achievements/achievement05/achievement05.jpg",
+    images: ["/achievements/achievement05/achievement05_01.jpg"],
   },
 ];
 
