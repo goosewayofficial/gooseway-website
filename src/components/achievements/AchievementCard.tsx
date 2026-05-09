@@ -41,10 +41,6 @@ export default function AchievementCard({
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
           </div>
 
-          <div className="absolute top-4 left-4 bg-blue-100 text-blue-600 p-2 rounded-full flex items-center justify-center text-xl w-10 h-10">
-            {icon}
-          </div>
-
           <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
             {category}
           </div>
