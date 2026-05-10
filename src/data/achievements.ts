@@ -24,8 +24,8 @@ const achievementsData: BilingualAchievement[] = [
   {
     id: 1,
     title: {
-      th: "BIT Social Scale Up 2024",
-      en: "BIT Social Scale Up 2024",
+      th: "BIT Social Scale Up 2024: โครงการบ่มเพาะธุรกิจและนวัตกรรมสังคม",
+      en: "BIT Social Scale Up 2024: Business and Social Innovation Incubation",
     },
     description: {
       th: "ได้รับคัดเลือกให้เข้าร่วมการฝึกอบรมด้านธุรกิจ การบริหารโครงการ และทักษะทางสังคมใน BIT Social Scale Up 2024: โครงการบ่มเพาะโดย Edvisory และ NIA",
@@ -54,8 +54,8 @@ const achievementsData: BilingualAchievement[] = [
   {
     id: 2,
     title: {
-      th: "HealthTech X 2 The Future",
-      en: "HealthTech X 2 The Future",
+      th: "HealthTech X 2 The Future: รางวัลรองชนะเลิศอันดับ 1 และทุนสนับสนุน",
+      en: "HealthTech X 2 The Future: 1st Runner-up and Development Funding",
     },
     description: {
       th: "รางวัลรองชนะเลิศอันดับ 1 และทุนสนับสนุนการพัฒนาจาก HealthTech X 2 The Future โดย ThaiHealth",
@@ -85,26 +85,26 @@ const achievementsData: BilingualAchievement[] = [
   {
     id: 3,
     title: {
-      th: "ผ่านการคัดเลือก 10 ทีมสุดท้าย เข้าสู่รอบ Pre-Pitching 1/2569 โครงการ SYNHUB TED Fellow ในฐานะตัวแทนศูนย์",
-      en: "Selected as a Top 10 Finalist for Pre-Pitching Round 1/2026, SYNHUB TED Fellow (Center Representative)",
+      th: "TED Youth Startup 2026: ผ่านการคัดเลือกรอบ IDEA และได้รับทุนสนับสนุน",
+      en: "TED Youth Startup 2026: IDEA Track Selection and Funding",
     },
     description: {
-      th: "ตัวแทนศูนย์ผู้ผ่านเข้ารอบ 10 ทีมสุดท้าย ในการนำเสนอแผนธุรกิจโครงการ SYNHUB TED Fellow",
-      en: "Representing the center as one of the top 10 finalists in the SYNHUB TED Fellow business pitching.",
+      th: "ได้รับการคัดเลือกผ่านรอบ IDEA โครงการ TED Youth Startup 2026 พร้อมทุนสนับสนุนการพัฒนาเบื้องต้นจำนวน 150,000 บาท",
+      en: "Selected for the TED Youth Startup 2026 IDEA track and awarded 150,000 THB in initial development funding.",
     },
     longDescription: {
-      th: "เราได้รับคัดเลือกให้เป็น 1 ใน 10 ทีมสุดท้ายในฐานะตัวแทนศูนย์ เพื่อเข้าสู่รอบ Pre-Pitching ของโครงการ SYNHUB TED Fellow รอบที่ 1/2569 ซึ่งเป็นโครงการบ่มเพาะและพัฒนาผู้ประกอบการเทคโนโลยีและนวัตกรรม ภายใต้การสนับสนุนจาก TED Fund โดยเราได้เข้าร่วมกิจกรรมเตรียมความพร้อม การให้คำปรึกษาจากผู้เชี่ยวชาญ (Mentoring) และการขัดเกลาแผนธุรกิจเพื่อเตรียมนำเสนอต่อคณะกรรมการในระดับประเทศ ถือเป็นก้าวสำคัญในการขับเคลื่อนนวัตกรรมของเราสู่เชิงพาณิชย์",
-      en: "We have been selected as one of the top 10 finalists representing the center to enter the Pre-Pitching round of the SYNHUB TED Fellow Program (Batch 1/2026). This program, supported by the TED Fund, focuses on nurturing technology and innovation-driven entrepreneurs. We participated in intensive preparation sessions, received professional mentoring, and refined our business model to meet national standards, marking a significant milestone in transitioning our innovation into a viable commercial reality.",
+      th: "เราภูมิใจที่ผ่านการคัดเลือกในรอบ IDEA ของโครงการ TED Youth Startup 2026 ซึ่งเป็นโครงการสนับสนุนและพัฒนาผู้ประกอบการรุ่นใหม่ที่ใช้นวัตกรรมในการขับเคลื่อนธุรกิจ โดยเราได้รับทุนสนับสนุนจำนวน 150,000 บาท เพื่อนำมาใช้ในการพัฒนาผลิตภัณฑ์ต้นแบบ (Prototype) และพิสูจน์แนวคิดเชิงธุรกิจ ถือเป็นก้าวสำคัญที่ช่วยเตรียมความพร้อมให้เราก้าวสู่รอบการระดมทุนที่ใหญ่ขึ้นในอนาคต",
+      en: "We are proud to have passed the IDEA track of the TED Youth Startup 2026 program, which supports and develops new entrepreneurs using innovation to drive business. We have been awarded 150,000 THB in funding to develop our prototype and prove our business concept. This is a significant milestone that helps prepare us for larger funding tracks in the future.",
     },
     date: "2026",
-    icon: "🚀",
+    icon: "💵",
     category: {
-      th: "โครงการบ่มเพาะ",
-      en: "Incubation",
+      th: "การได้รับทุน",
+      en: "Funding",
     },
     organizer: {
-      th: "SynHub TED Fellow ร่วมกับ TED Fund",
-      en: "SynHub TED Fellow in collaboration with TED Fund",
+      th: "TED Youth Startup (กระทรวงการอุดมศึกษา วิทยาศาสตร์ วิจัยและนวัตกรรม)",
+      en: "TED Youth Startup (Ministry of Higher Education, Science, Research and Innovation)",
     },
     coverImage: "/achievements/achievement03/achievement03.jpg",
     images: ["/achievements/achievement03/achievement03_01.jpg"],
@@ -112,8 +112,8 @@ const achievementsData: BilingualAchievement[] = [
   {
     id: 4,
     title: {
-      th: "Hack for Rights: พลังเยาวชน สร้างสรรค์นวัตกรรมสิทธิมนุษยชน",
-      en: "Hack for Rights: Youth Power for Human Rights Innovation",
+      th: "Hack for Rights 2026: พลังเยาวชน สร้างสรรค์นวัตกรรมสิทธิมนุษยชน",
+      en: "Hack for Rights 2026: Youth Power for Human Rights Innovation",
     },
     description: {
       th: "ได้รับคัดเลือกเป็น 1 ใน 62 ทีม จากทั้งหมด 537 ทีม เข้าร่วมโครงการ Hack for Rights โดยสำนักงานคณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม.)",

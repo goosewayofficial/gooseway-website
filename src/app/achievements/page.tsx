@@ -5,7 +5,6 @@ import { useState } from "react";
 import AchievementCard from "../../components/achievements/AchievementCard";
 import AchievementModal from "../../components/achievements/AchievementModal";
 import AchievementFilter from "../../components/achievements/AchievementFilter";
-import FeaturedAchievement from "../../components/achievements/FeaturedAchievement";
 import { getAchievements } from "../../data/achievements";
 import { Achievement } from "../interfaces";
 import CommonHeroSection from "@/components/CommonHeroSection";
@@ -23,7 +22,6 @@ export default function AchievementPage() {
     selectedCategory === "all"
       ? achievements
       : achievements.filter((a) => a.category === selectedCategory);
-  const featuredAchievement = achievements[0];
 
   return (
     <div>
@@ -34,17 +32,6 @@ export default function AchievementPage() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
-        {/* Featured */}
-        <div>
-          <h2 className="text-2xl font-extrabold text-[#231F20] mb-6">
-            {t("latest_achievement")}
-          </h2>
-          <FeaturedAchievement
-            achievement={featuredAchievement}
-            onClick={() => setSelectedAchievement(featuredAchievement)}
-          />
-        </div>
-
         {/* Filter + Grid */}
         <div>
           <h2 className="text-2xl font-extrabold text-[#231F20] mb-4">
