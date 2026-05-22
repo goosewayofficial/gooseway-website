@@ -182,7 +182,14 @@ export default function Footer() {
               © 2025 GOOSEWAY.{" "}
               {language === "th" ? "สงวนลิขสิทธิ์" : "All rights reserved"}.
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 flex-wrap justify-center">
+              <Link
+                href="/support/android-gps"
+                className="hover:text-white transition-colors underline underline-offset-2"
+              >
+                {language === "th" ? "ศูนย์ช่วยเหลือ" : "Support"}
+              </Link>
+              <span className="text-white/30">|</span>
               <Link
                 href="/privacy-policy"
                 className="hover:text-white transition-colors underline underline-offset-2"
