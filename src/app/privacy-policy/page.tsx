@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
               <li>การสมัครสมาชิก</li>
               <li>โทรศัพท์</li>
               <li>อีเมล</li>
-              <li>Google Login</li>
+              <li>Google Login, Apple Sign-In และ LINE Login</li>
               </ul>
               <p></p>
 
@@ -33,7 +33,13 @@ export default function PrivacyPolicyPage() {
               <p><b>ข้อมูลตำแหน่งที่แม่นยำ (precise location)</b> เช่น ข้อมูลตำแหน่งทางภูมิศาสตร์ที่แม่นยำของคุณ ทั้งในขณะที่เปิดใช้งานแอปพลิเคชันและในเบื้องหลังเมื่อแอปปิดอยู่หรือไม่ได้ใช้งาน (when the app is closed or not in use) หรือหน้าจอปิดอยู่ (your screen is off) โดยข้อมูลนี้จะถูกส่งไปยังระบบหลังบ้าน (backend) เพื่อรองรับฟีเจอร์การบันทึกเส้นทาง (Route Recording) และการนำทางบนแผนที่</p>
               <p><b>กล้องถ่ายภาพ (Camera)</b> เช่น การเข้าถึงกล้องถ่ายภาพของอุปกรณ์เมื่อได้รับอนุญาต เพื่อถ่ายรูปภาพสิ่งกีดขวางหรือสถานที่ต่าง ๆ โดยรูปภาพจะถูกอัปโหลดและจัดเก็บอย่างปลอดภัยบน Cloudflare Images</p>
               <p><b>คลังรูปภาพ (Photo Library)</b> เช่น การเข้าถึงแกลเลอรีหรือคลังรูปภาพเมื่อได้รับอนุญาต เพื่อเลือกและอัปโหลดรูปภาพสิ่งกีดขวางหรือสถานที่ต่าง ๆ โดยรูปภาพจะถูกจัดเก็บอย่างปลอดภัยบน Cloudflare Images</p>
-              <p><b>ข้อมูลบัญชีผู้ใช้ผ่านระบบการยืนยันตัวตนบุคคลที่สาม (Google OAuth)</b> เช่น ชื่อ รูปโปรไฟล์ และอีเมล ที่ได้รับจากการเชื่อมต่อผ่าน Google Login เพื่อใช้ในการลงทะเบียน ยืนยันตัวตน และสร้างโปรไฟล์บัญชีผู้ใช้ที่ปลอดภัย</p>
+              <p><b>การยืนยันตัวตนผ่านบุคคลที่สาม (Third-Party Authentication)</b>: เมื่อคุณเลือกที่จะลงชื่อเข้าใช้งาน Gooseway โดยใช้บริการของบุคคลที่สาม เราจะเก็บรวบรวมข้อมูลโปรไฟล์ที่จำเป็นเพื่อระบุตัวตนของคุณและสร้างบัญชีผู้ใช้งานของคุณอย่างปลอดภัย ดังนี้
+              <ul>
+              <li><b>Google Login (Google OAuth)</b>: ข้อมูลโปรไฟล์บัญชีผู้ใช้ (เช่น ชื่อ รูปโปรไฟล์ และอีเมล)</li>
+              <li><b>Apple Sign-In</b>: รหัสประจำตัวผู้ใช้ที่ไม่ซ้ำกัน ชื่อ และอีเมล (หรือที่อยู่อีเมลรีเลย์ส่วนตัวหากคุณเลือกซ่อนอีเมลจริงของคุณ)</li>
+              <li><b>LINE Login</b>: รหัสประจำตัวผู้ใช้ที่ไม่ซ้ำกัน ชื่อที่แสดง รูปโปรไฟล์ และอีเมล (หากคุณให้สิทธิ์การเข้าถึง)</li>
+              </ul>
+              ข้อมูลเหล่านี้ใช้เพื่อวัตถุประสงค์ในการระบุและยืนยันตัวตนของคุณอย่างปลอดภัย สร้างโปรไฟล์บัญชีผู้ใช้ และรักษาความปลอดภัยให้กับบัญชีของคุณเท่านั้น</p>
               <p><b>อีเมล (Email)</b> เช่น อีเมลที่ใช้สมัครใช้งานหรือติดต่อเรา เพื่อวัตถุประสงค์ในการจัดการบัญชี การดูแลผู้ใช้งาน และแจ้งข่าวสารสำคัญ</p>
               <p><b>ข้อมูลทางเทคนิค</b> เช่น IP address, Cookie ID, ประวัติการใช้งานเว็บไซต์ (Activity Log) เป็นต้น</p>
               <p><b>ข้อมูลอื่น ๆ</b> เช่น รูปภาพ ภาพเคลื่อนไหว และข้อมูลอื่นใดที่ถือว่าเป็นข้อมูลส่วนบุคคลตามกฎหมายคุ้มครองข้อมูลส่วนบุคคล</p>
@@ -156,7 +162,7 @@ export default function PrivacyPolicyPage() {
               <li>your account registration</li>
               <li>telephone</li>
               <li>email address</li>
-              <li>Google Login</li>
+              <li>Google Login, Apple Sign-In, and LINE Login</li>
               </ul>
               <p></p>
 
@@ -167,7 +173,13 @@ export default function PrivacyPolicyPage() {
               <p><b>Precise Location</b>: We collect your precise location data (both in the foreground and in the background when the app is closed or not in use or your screen is off). This data is transmitted to Gooseway&apos;s backend to support our route recording feature (continuous wheelchair trace mapping) and map navigation/search features.</p>
               <p><b>Camera</b>: Device camera access when explicitly authorized by you, used to capture photos of accessibility barriers or locations. These photos are uploaded and securely stored on Cloudflare Images.</p>
               <p><b>Photo Library</b>: Device gallery access when explicitly authorized by you, used to select and upload photos of accessibility barriers or locations. These photos are uploaded and securely stored on Cloudflare Images.</p>
-              <p><b>Third-Party Authentication (Google OAuth)</b>: Account profile information (such as name, profile picture, and email address) obtained when you sign in via Google Login, used to securely authenticate your identity and generate your profile.</p>
+              <p><b>Third-Party Authentication</b>: When you choose to sign in to Gooseway using a third-party service, we collect limited profile information to securely authenticate your identity and create your account:
+              <ul>
+              <li><b>Google Login (Google OAuth)</b>: Account profile information (such as name, profile picture, and email address).</li>
+              <li><b>Apple Sign-In</b>: Unique user identifier, name, and email address (or private email relay address if you choose to hide your personal email).</li>
+              <li><b>LINE Login</b>: Unique user identifier, display name, profile picture, and email address (if permission is granted).</li>
+              </ul>
+              These details are used solely to securely authenticate your identity, generate your user profile, and maintain the security of your account.</p>
               <p><b>Email Address</b>: Your email address, used for account registration, customer support interactions, and delivering essential system updates.</p>
               <p><b>Technical data</b> such as IP address, Cookie ID, Activity Log, etc.</p>
               <p><b>Other</b> such as photo, video, and other information that is considered personal data under the Personal Data Protection Laws.</p>
