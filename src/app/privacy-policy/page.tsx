@@ -30,6 +30,11 @@ export default function PrivacyPolicyPage() {
               <p><b>ข้อมูลส่วนบุคคล</b> เช่น ชื่อ นามสกุล อายุ วันเดือนปีเกิด สัญชาติ เลขประจำตัวประชาชน หนังสือเดินทาง เป็นต้น</p>
               <p><b>ข้อมูลการติดต่อ</b> เช่น ที่อยู่ หมายเลขโทรศัพท์ อีเมล เป็นต้น</p>
               <p><b>ข้อมูลบัญชี</b> เช่น บัญชีผู้ใช้งาน ประวัติการใช้งาน เป็นต้น</p>
+              <p><b>ข้อมูลตำแหน่งที่แม่นยำ (precise location)</b> เช่น ข้อมูลตำแหน่งทางภูมิศาสตร์ที่แม่นยำของคุณ ทั้งในขณะที่เปิดใช้งานแอปพลิเคชันและในเบื้องหลังเมื่อแอปปิดอยู่หรือไม่ได้ใช้งาน (when the app is closed or not in use) หรือหน้าจอปิดอยู่ (your screen is off) โดยข้อมูลนี้จะถูกส่งไปยังระบบหลังบ้าน (backend) เพื่อรองรับฟีเจอร์การบันทึกเส้นทาง (Route Recording) และการนำทางบนแผนที่</p>
+              <p><b>กล้องถ่ายภาพ (Camera)</b> เช่น การเข้าถึงกล้องถ่ายภาพของอุปกรณ์เมื่อได้รับอนุญาต เพื่อถ่ายรูปภาพสิ่งกีดขวางหรือสถานที่ต่าง ๆ โดยรูปภาพจะถูกอัปโหลดและจัดเก็บอย่างปลอดภัยบน Cloudflare Images</p>
+              <p><b>คลังรูปภาพ (Photo Library)</b> เช่น การเข้าถึงแกลเลอรีหรือคลังรูปภาพเมื่อได้รับอนุญาต เพื่อเลือกและอัปโหลดรูปภาพสิ่งกีดขวางหรือสถานที่ต่าง ๆ โดยรูปภาพจะถูกจัดเก็บอย่างปลอดภัยบน Cloudflare Images</p>
+              <p><b>ข้อมูลบัญชีผู้ใช้ผ่านระบบการยืนยันตัวตนบุคคลที่สาม (Google OAuth)</b> เช่น ชื่อ รูปโปรไฟล์ และอีเมล ที่ได้รับจากการเชื่อมต่อผ่าน Google Login เพื่อใช้ในการลงทะเบียน ยืนยันตัวตน และสร้างโปรไฟล์บัญชีผู้ใช้ที่ปลอดภัย</p>
+              <p><b>อีเมล (Email)</b> เช่น อีเมลที่ใช้สมัครใช้งานหรือติดต่อเรา เพื่อวัตถุประสงค์ในการจัดการบัญชี การดูแลผู้ใช้งาน และแจ้งข่าวสารสำคัญ</p>
               <p><b>ข้อมูลทางเทคนิค</b> เช่น IP address, Cookie ID, ประวัติการใช้งานเว็บไซต์ (Activity Log) เป็นต้น</p>
               <p><b>ข้อมูลอื่น ๆ</b> เช่น รูปภาพ ภาพเคลื่อนไหว และข้อมูลอื่นใดที่ถือว่าเป็นข้อมูลส่วนบุคคลตามกฎหมายคุ้มครองข้อมูลส่วนบุคคล</p>
 
@@ -110,7 +115,7 @@ export default function PrivacyPolicyPage() {
 
               <h2>การแก้ไขเปลี่ยนแปลงนโยบายความเป็นส่วนตัว</h2>
               <p>เราอาจแก้ไขเปลี่ยนแปลงนโยบายนี้เป็นครั้งคราว โดยคุณสามารถทราบข้อกำหนดและเงื่อนไขนโยบายที่มีการแก้ไขเปลี่ยนแปลงนี้ได้ผ่านทางเว็บไซต์ของเรา</p>
-              <p>นโยบายนี้แก้ไขล่าสุดและมีผลใช้บังคับตั้งแต่วันที่ 18 มีนาคม 2569</p>
+              <p>นโยบายนี้แก้ไขล่าสุดและมีผลใช้บังคับตั้งแต่วันที่ 25 พฤษภาคม 2569</p>
 
               <h2>นโยบายความเป็นส่วนตัวของเว็บไซต์อื่น</h2>
               <p>นโยบายความเป็นส่วนตัวฉบับนี้ใช้สำหรับการเสนอสินค้า บริการ และการใช้งานบนเว็บไซต์สำหรับลูกค้าของเราเท่านั้น หากคุณเข้าชมเว็บไซต์อื่นแม้จะผ่านช่องทางเว็บไซต์ของเรา การคุ้มครองข้อมูลส่วนบุคคลต่าง ๆ จะเป็นไปตามนโยบายความเป็นส่วนตัวของเว็บไซต์นั้น ซึ่งเราไม่มีส่วนเกี่ยวข้องด้วย</p>
@@ -159,6 +164,11 @@ export default function PrivacyPolicyPage() {
               <p><b>Personal data</b> such as name, surname, age, date of birth, nationality, identification card, passport, etc.</p>
               <p><b>Contact information</b> such as address, telephone number, e-mail address, etc.</p>
               <p><b>Account details</b> such as username, password, transactions history, etc.</p>
+              <p><b>Precise Location</b>: We collect your precise location data (both in the foreground and in the background when the app is closed or not in use or your screen is off). This data is transmitted to Gooseway&apos;s backend to support our route recording feature (continuous wheelchair trace mapping) and map navigation/search features.</p>
+              <p><b>Camera</b>: Device camera access when explicitly authorized by you, used to capture photos of accessibility barriers or locations. These photos are uploaded and securely stored on Cloudflare Images.</p>
+              <p><b>Photo Library</b>: Device gallery access when explicitly authorized by you, used to select and upload photos of accessibility barriers or locations. These photos are uploaded and securely stored on Cloudflare Images.</p>
+              <p><b>Third-Party Authentication (Google OAuth)</b>: Account profile information (such as name, profile picture, and email address) obtained when you sign in via Google Login, used to securely authenticate your identity and generate your profile.</p>
+              <p><b>Email Address</b>: Your email address, used for account registration, customer support interactions, and delivering essential system updates.</p>
               <p><b>Technical data</b> such as IP address, Cookie ID, Activity Log, etc.</p>
               <p><b>Other</b> such as photo, video, and other information that is considered personal data under the Personal Data Protection Laws.</p>
 
@@ -241,7 +251,7 @@ export default function PrivacyPolicyPage() {
 
               <h2>Changes to this Privacy Policy</h2>
               <p>We may change this Privacy Policy from time to time. Any changes of this Privacy Policy, we encourage you to frequently check on our website.</p>
-              <p>This Privacy Policy was last updated and effective on 18th March 2026</p>
+              <p>This Privacy Policy was last updated and effective on 25th May 2026</p>
 
               <h2>Links to Other Sites</h2>
               <p>The purpose of this Privacy Policy is to offer products or services and use of our website. Any websites from other domains found on our site is subject to their privacy policy which is not related to us.</p>
