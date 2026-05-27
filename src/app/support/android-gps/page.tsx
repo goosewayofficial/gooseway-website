@@ -1,12 +1,136 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+
+const brands = [
+  {
+    id: "samsung",
+    name: "Samsung",
+    en: [
+      "Open Settings > Apps.",
+      "Select the menu in the upper right-hand corner (or tap Special access).",
+      "Select Optimize battery usage.",
+      "Switch the drop-down menu to show All apps.",
+      "Toggle OFF for GOOSEWAY to prevent background restriction."
+    ],
+    th: [
+      "เปิด การตั้งค่า (Settings) > แอป (Apps)",
+      "เลือกเมนูสามจุดที่มุมขวาบน หรือค้นหาและเลือก การเข้าถึงพิเศษ (Special access)",
+      "แตะที่ เพิ่มประสิทธิภาพการใช้แบตเตอรี่ (Optimize battery usage)",
+      "เลือกให้แสดงผล แอปทั้งหมด (All apps)",
+      "ปิดการใช้งาน (Toggle OFF) สำหรับแอป GOOSEWAY เพื่อป้องกันการจำกัดการทำงานเบื้องหลัง"
+    ]
+  },
+  {
+    id: "xiaomi",
+    name: "Xiaomi (MIUI)",
+    en: [
+      "Open Settings > Additional Settings > Privacy > Location.",
+      "Ensure you are using High Accuracy for Location Mode and allowing location access.",
+      "Go back to Settings > Additional Settings > Battery & performance.",
+      "Select Manage apps battery usage > Choose apps > select GOOSEWAY and select No restrictions."
+    ],
+    th: [
+      "ไปที่ การตั้งค่า (Settings) > การตั้งค่าเพิ่มเติม > ความเป็นส่วนตัว > ตำแหน่ง",
+      "ตรวจสอบให้แน่ใจว่าคุณเปิดโหมด ความแม่นยำสูง (High Accuracy) และอนุญาตการระบุตำแหน่ง",
+      "กลับไปที่ การตั้งค่า > การตั้งค่าเพิ่มเติม > แบตเตอรี่และประสิทธิภาพ (Battery & performance)",
+      "เลือก จัดการการใช้งานแบตเตอรี่ของแอป > เลือกแอป > ค้นหา GOOSEWAY แล้วเลือก ไม่มีการจำกัด (No restrictions)"
+    ]
+  },
+  {
+    id: "oneplus",
+    name: "OnePlus",
+    en: [
+      "Open Settings > Battery > Battery optimization.",
+      "Select the menu at the top right-hand corner and switch to All apps list.",
+      "Find GOOSEWAY and select Don't optimize."
+    ],
+    th: [
+      "ไปที่ การตั้งค่า (Settings) > แบตเตอรี่ > การเพิ่มประสิทธิภาพแบตเตอรี่ (Battery optimization)",
+      "เลือกเมนูที่มุมขวาบนและเปลี่ยนตัวกรองเป็น แอปทั้งหมด (All apps)",
+      "ค้นหาแอป GOOSEWAY และเลือก ไม่ต้องปรับให้เหมาะสม (Don't optimize)"
+    ]
+  },
+  {
+    id: "huawei",
+    name: "Huawei",
+    en: [
+      "Turn Energy Settings to Normal and add GOOSEWAY to Protected Apps.",
+      "Alternatively, open Settings > Apps > Advanced > Ignore optimizations > Allowed > All apps.",
+      "Find GOOSEWAY and set to Allow."
+    ],
+    th: [
+      "เปลี่ยนการตั้งค่าพลังงานเป็น ปกติ (Normal) และเพิ่ม GOOSEWAY ไปยัง แอปที่ได้รับการปกป้อง (Protected Apps)",
+      "หรือไปที่ การตั้งค่า > แอป > ขั้นสูง (Advanced) > ละเว้นการเพิ่มประสิทธิภาพ (Ignore optimizations)",
+      "สลับไปที่ แอปทั้งหมด ค้นหา GOOSEWAY และตั้งค่าเป็น อนุญาต (Allow)"
+    ]
+  },
+  {
+    id: "sony",
+    name: "Sony",
+    en: [
+      "Open Settings > Battery.",
+      "Select the menu in the upper right-hand corner > Battery optimization.",
+      "Select Apps > Find GOOSEWAY and exempt it."
+    ],
+    th: [
+      "ไปที่ การตั้งค่า (Settings) > แบตเตอรี่ (Battery)",
+      "เลือกเมนูสามจุดที่มุมขวาบน > การเพิ่มประสิทธิภาพแบตเตอรี่ (Battery optimization)",
+      "เลือก แอป (Apps) > ค้นหา GOOSEWAY และเว้นการประหยัดพลังงานสำหรับแอป"
+    ]
+  },
+  {
+    id: "lg",
+    name: "LG",
+    en: [
+      "Open Settings > Battery & power saving > Battery usage.",
+      "Select Ignore optimizations.",
+      "Turn ON the toggle for GOOSEWAY."
+    ],
+    th: [
+      "ไปที่ การตั้งค่า (Settings) > แบตเตอรี่และการประหยัดพลังงาน > การใช้งานแบตเตอรี่",
+      "แตะที่ ละเว้นการเพิ่มประสิทธิภาพ (Ignore optimizations)",
+      "เปิดสวิตช์ใช้งานสำหรับแอป GOOSEWAY"
+    ]
+  },
+  {
+    id: "motorola",
+    name: "Motorola",
+    en: [
+      "Open Settings > Battery.",
+      "Select the menu in the upper right-hand corner > Battery optimization.",
+      "Select Not optimized > change to All Apps.",
+      "Find GOOSEWAY and choose Don't Optimize."
+    ],
+    th: [
+      "ไปที่ การตั้งค่า (Settings) > แบตเตอรี่ (Battery)",
+      "เลือกเมนูที่มุมขวาบน > การเพิ่มประสิทธิภาพแบตเตอรี่ (Battery optimization)",
+      "เปลี่ยนประเภทจาก ไม่ได้ปรับให้เหมาะสม เป็น แอปทั้งหมด (All Apps)",
+      "ค้นหาแอป GOOSEWAY และเลือก ไม่ต้องปรับให้เหมาะสม (Don't Optimize)"
+    ]
+  },
+  {
+    id: "htc",
+    name: "HTC",
+    en: [
+      "Open Settings > Power > Battery optimization.",
+      "Select Not optimized > change to All apps.",
+      "Find GOOSEWAY > select Don't optimize > Done."
+    ],
+    th: [
+      "ไปที่ การตั้งค่า (Settings) > พลังงาน (Power) > การเพิ่มประสิทธิภาพแบตเตอรี่ (Battery optimization)",
+      "เปลี่ยนประเภทจาก ไม่ได้ปรับให้เหมาะสม เป็น แอปทั้งหมด (All apps)",
+      "ค้นหาแอป GOOSEWAY > เลือก ไม่ต้องปรับให้เหมาะสม (Don't optimize) > เสร็จสิ้น (Done)"
+    ]
+  }
+];
 
 export default function AndroidGpsSupportPage() {
   const { language } = useLanguage();
   const isTh = language === "th";
+  const [activeBrand, setActiveBrand] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen pt-28 pb-16 bg-gray-50">
@@ -172,7 +296,7 @@ export default function AndroidGpsSupportPage() {
                   ? "โหมดประหยัดแบตเตอรี่อาจจำกัดการทำงานของ GPS เมื่อแอปทำงานอยู่เบื้องหลัง ทำให้เส้นทางหลุดหรืออัปเดตช้า"
                   : "Battery saver can throttle GPS in the background, causing route drift or slow updates."}
               </p>
-              <ol className="list-decimal pl-6 space-y-1.5 text-sm">
+              <ol className="list-decimal pl-6 space-y-1.5 text-sm mb-6">
                 <li>
                   {isTh
                     ? "เปิด การตั้งค่า → แบตเตอรี่ (Battery)"
@@ -189,6 +313,67 @@ export default function AndroidGpsSupportPage() {
                     : "Go to Apps → GOOSEWAY → Battery and choose Unrestricted"}
                 </li>
               </ol>
+
+              {/* Brand-Specific Instructions */}
+              <div className="mt-6 border border-blue-100 rounded-2xl p-6 bg-gradient-to-br from-blue-50/20 to-blue-50/50 shadow-sm">
+                <h3 className="text-sm font-bold text-brand-dark-blue mb-2 flex items-center gap-2 tracking-wide uppercase">
+                  <span>📱</span>
+                  {isTh ? "คำแนะนำเพิ่มเติมสำหรับโทรศัพท์แต่ละแบรนด์" : "Brand-Specific Instructions"}
+                </h3>
+                <p className="text-xs text-gray-500 mb-4 leading-relaxed">
+                  {isTh
+                    ? "ผู้ผลิตโทรศัพท์แต่ละแบรนด์มีนโยบายและขั้นตอนประหยัดแบตเตอรี่เบื้องหลังที่ต่างกันอย่างมาก เลือกแบรนด์อุปกรณ์ของคุณด้านล่างเพื่อดูวิธีเปิดสิทธิ์อย่างละเอียด:"
+                    : "Different Android device manufacturers have highly customized and aggressive background battery saving policies. Select your brand below for precise configuration steps:"}
+                </p>
+
+                {/* Grid of Brand buttons */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+                  {brands.map((brand) => (
+                    <button
+                      key={brand.id}
+                      onClick={() => setActiveBrand(activeBrand === brand.id ? null : brand.id)}
+                      className={`px-3 py-2.5 text-xs sm:text-sm font-semibold rounded-xl border transition-all duration-200 shadow-sm ${
+                        activeBrand === brand.id
+                          ? "bg-brand-blue border-brand-blue text-white hover:bg-blue-700 active:scale-95"
+                          : "bg-white border-gray-200 text-gray-700 hover:border-brand-blue hover:text-brand-blue active:scale-95"
+                      }`}
+                    >
+                      {brand.name}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Animated Brand details box */}
+                {activeBrand && (
+                  <div className="bg-white border border-brand-blue/10 rounded-2xl p-5 shadow-sm transition-all duration-300">
+                    <div className="flex justify-between items-center mb-4 pb-3 border-b border-gray-100">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2.5 h-2.5 rounded-full bg-brand-yellow"></span>
+                        <h4 className="font-bold text-gray-900 text-sm sm:text-base">
+                          {brands.find((b) => b.id === activeBrand)?.name} {isTh ? "การตั้งค่า" : "Configuration Steps"}
+                        </h4>
+                      </div>
+                      <button
+                        onClick={() => setActiveBrand(null)}
+                        className="text-gray-400 hover:text-gray-600 p-1.5 hover:bg-gray-50 rounded-lg transition-colors text-xs font-semibold"
+                        aria-label={isTh ? "ปิด" : "Close"}
+                      >
+                        {isTh ? "ปิด" : "Close"} ✕
+                      </button>
+                    </div>
+                    <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700">
+                      {(isTh
+                        ? brands.find((b) => b.id === activeBrand)?.th
+                        : brands.find((b) => b.id === activeBrand)?.en
+                      )?.map((step, idx) => (
+                        <li key={idx} className="leading-relaxed pl-1">
+                          {step}
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                )}
+              </div>
             </section>
 
             {/* Step 4 */}
@@ -198,13 +383,13 @@ export default function AndroidGpsSupportPage() {
                   4
                 </span>
                 {isTh
-                  ? "สลับโหมดเครื่องบินเพื่อรีเซ็ตสัญญาณ"
-                  : "Toggle airplane mode to reset signals"}
+                  ? "สลับเปิด-ปิด บริการระบุตำแหน่ง และโหมดเครื่องบิน"
+                  : "Toggle Location Services and Airplane Mode"}
               </h2>
               <p className="mb-3">
                 {isTh
-                  ? "การเปิด-ปิดโหมดเครื่องบินจะบังคับให้อุปกรณ์เชื่อมต่อ GPS, Wi-Fi และเครือข่ายมือถือใหม่ ซึ่งช่วยแก้ปัญหาตำแหน่งค้างได้บ่อยครั้ง"
-                  : "Cycling airplane mode forces your device to reacquire GPS, Wi-Fi, and cellular signals — often the fastest fix for a stuck location."}
+                  ? "การเปิด-ปิดบริการตำแหน่งและโหมดเครื่องบินจะบังคับให้อุปกรณ์เชื่อมต่อ GPS, Wi-Fi และสัญญาณโทรศัพท์ใหม่ ซึ่งช่วยแก้ปัญหาตำแหน่งค้างได้รวดเร็วที่สุด"
+                  : "Cycling your device's location services and airplane mode forces it to reacquire GPS, Wi-Fi, and cellular signals — often the fastest fix for a stuck location."}
               </p>
               <ol className="list-decimal pl-6 space-y-1.5 text-sm">
                 <li>
@@ -214,13 +399,13 @@ export default function AndroidGpsSupportPage() {
                 </li>
                 <li>
                   {isTh
-                    ? "แตะไอคอน โหมดเครื่องบิน (Airplane mode) เพื่อเปิด"
-                    : "Tap Airplane mode to turn it on"}
+                    ? "แตะไอคอน ตำแหน่ง (Location/GPS) เพื่อปิดการใช้งาน รอ 10 วินาที แล้วแตะเปิดใหม่อีกครั้ง"
+                    : "Tap the Location (GPS) icon to turn it OFF, wait 10 seconds, then tap to turn it back ON"}
                 </li>
                 <li>
                   {isTh
-                    ? "รอ 10–15 วินาที แล้วแตะอีกครั้งเพื่อปิด"
-                    : "Wait 10–15 seconds, then tap again to turn it off"}
+                    ? "แตะไอคอน โหมดเครื่องบิน (Airplane mode) เพื่อเปิด รอ 10 วินาที แล้วแตะอีกครั้งเพื่อปิด"
+                    : "Tap the Airplane Mode icon to turn it ON, wait 10 seconds, then tap again to turn it OFF"}
                 </li>
               </ol>
             </section>
@@ -326,6 +511,45 @@ export default function AndroidGpsSupportPage() {
                   : "If nothing else works, uninstall GOOSEWAY and reinstall it from Google Play. A fresh install resets all permissions and internal data files."}
               </p>
             </section>
+
+            {/* Step 10 */}
+            <section>
+              <h2 className="text-xl font-bold text-gray-900 mb-3 flex items-start gap-3">
+                <span className="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-blue text-white text-sm font-bold">
+                  10
+                </span>
+                {isTh
+                  ? "ทำการรีเซ็ตข้อมูล A-GPS"
+                  : "Perform an A-GPS reset"}
+              </h2>
+              <p className="mb-3">
+                {isTh
+                  ? "หากสัญญาณ GPS ยังคงคลาดเคลื่อน ข้อมูลความช่วยเหลือระบบดาวเทียม (A-GPS Cache) อาจล้าสมัยหรือเสียหาย คุณสามารถดาวน์โหลดข้อมูลใหม่เพื่อช่วยให้โทรศัพท์ค้นหาดาวเทียมได้เร็วขึ้น"
+                  : "If your GPS signal remains stuck or continues to drift, your Assisted GPS (A-GPS) cache may be corrupted or outdated. Downloading fresh satellite data can dramatically speed up positioning."}
+              </p>
+              <ol className="list-decimal pl-6 space-y-1.5 text-sm">
+                <li>
+                  {isTh
+                    ? "ดาวน์โหลดแอปฟรี เช่น “GPS Status & Toolbox” จาก Google Play Store"
+                    : "Download a free GPS utility app, such as 'GPS Status & Toolbox' from the Google Play Store"}
+                </li>
+                <li>
+                  {isTh
+                    ? "เปิดแอปขึ้นมา แตะไอคอนเมนู (หรือปัดจากด้านซ้าย)"
+                    : "Open the app and access the Menu (or swipe from the left)"}
+                </li>
+                <li>
+                  {isTh
+                    ? "ไปที่ จัดการสถานะ A-GPS (Manage A-GPS State) แล้วเลือก รีเซ็ต (Reset)"
+                    : "Go to Manage A-GPS State and tap Reset"}
+                </li>
+                <li>
+                  {isTh
+                    ? "หลังจากรีเซ็ตแล้ว ให้เลือก ดาวน์โหลด (Download) เพื่อดึงข้อมูลดาวเทียมล่าสุด"
+                    : "Once reset, select Download to fetch fresh satellite data assistance"}
+                </li>
+              </ol>
+            </section>
           </div>
 
           {/* Accessibility note */}
@@ -340,6 +564,21 @@ export default function AndroidGpsSupportPage() {
               {isTh
                 ? "ในขณะที่แอปนำทางทั่วไปอาจคลาดเคลื่อนได้ไม่กี่เมตรโดยไม่กระทบผู้ใช้ แต่สำหรับผู้ใช้รถเข็น ความคลาดเคลื่อนเพียงเล็กน้อยอาจทำให้พลาดทางลาดหรือทางข้ามที่เข้าถึงได้ GOOSEWAY ทำงานได้ดีที่สุดเมื่อ GPS ของคุณมีความแม่นยำในระดับเดียวกับการนำทางในเลนถนน"
                 : "A few meters of GPS drift means little to most map apps. For wheelchair users, that same drift can be the difference between landing on a curb cut and getting stranded on a curb. GOOSEWAY works best when your GPS is accurate to lane-level precision."}
+            </p>
+          </aside>
+
+          {/* Snap-to-road explanation */}
+          <aside className="mt-6 bg-blue-50/70 border-l-4 border-brand-blue rounded-r-lg p-5">
+            <h3 className="font-bold text-gray-950 mb-2 flex items-center gap-2">
+              <span>📍</span>
+              {isTh
+                ? "ทำไม Google Maps ดูปกติ แต่ GOOSEWAY มีปัญหาสัญญาณ?"
+                : "Why does Google Maps look fine while GOOSEWAY drifts?"}
+            </h3>
+            <p className="text-sm text-gray-800 leading-relaxed">
+              {isTh
+                ? "แอปนำทางขับรถ (เช่น Google Maps หรือ Waze) จะใช้ระบบ 'ตรึงตำแหน่งกับถนนรถวิ่ง' (Road Snapping) ซึ่งจะดึงลูกศรชี้พิกัดไปวางไว้บนถนนที่ใกล้ที่สุดโดยอัตโนมัติ แม้สัญญาณจริงจะคลาดเคลื่อนไปหลายเมตรก็ตาม ทำให้เหมือนว่า GPS ของคุณทำงานสมบูรณ์ดี แต่ GOOSEWAY นำทางคุณบนทางเท้า ทางลาด และจุดข้ามคนเดินเท้าดึงข้อมูลตรงจากดาวเทียมโดยไม่มีการตรึงเลนรถวิ่ง เพื่อความถูกต้องและปลอดภัยสูงสุดในการขับเคลื่อนรถเข็น"
+                : "Standard driving apps (like Google Maps or Waze) use 'road snapping' algorithms to lock your cursor to the nearest vehicle road, giving the illusion of a perfect GPS signal even when your phone hardware is struggling. GOOSEWAY, however, guides you on sidewalks, pedestrian lanes, and accessible ramps. We display your true satellite location without snapping you to car lanes to ensure you navigate safely."}
             </p>
           </aside>
 
