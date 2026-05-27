@@ -242,6 +242,21 @@ export const enTranslations = {
   view_user_manual: "View User Manual",
 
   // ===========================================
+  // HOME — WHO IT'S FOR (MARQUEE)
+  // ===========================================
+  marquee_heading: "Made for everyone on the move",
+  marquee_wheelchair_users: "Wheelchair Users",
+  marquee_seniors: "Seniors",
+  marquee_caregivers: "Caregivers",
+  marquee_families: "Families",
+  marquee_travelers: "Travelers",
+  marquee_strollers: "Stroller Users",
+  marquee_injured: "Temporary Impairments",
+  marquee_pregnant: "Expectant Mothers",
+  marquee_volunteers: "Volunteers",
+  marquee_communities: "Communities",
+
+  // ===========================================
   // CAREER PAGE
   // ===========================================
   our_culture: "Our Culture",

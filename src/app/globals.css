@@ -25,6 +25,17 @@ body, h1, h2, h3, h4, h5, h6, p, div, span, a, button {
   font-family: var(--font-main), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
 }
 
+/* Pause the who-it's-for marquee for users who prefer reduced motion,
+   and let them scroll the list manually instead. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  .marquee-viewport {
+    overflow-x: auto;
+  }
+}
+
 /* Animation utilities */
 .animate-float {
   animation: float 6s ease-in-out infinite;

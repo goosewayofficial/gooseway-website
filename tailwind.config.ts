@@ -37,6 +37,7 @@ const config: Config = {
         "fade-down": "fade-down 0.8s ease-out forwards",
         "scale-in": "scale-in 0.3s ease-out forwards",
         blob: "blob 10s infinite",
+        marquee: "marquee 30s linear infinite",
       },
       keyframes: {
         float: {
@@ -68,6 +69,10 @@ const config: Config = {
           "33%": { transform: "translate(20px, -10px) scale(1.05)" },
           "66%": { transform: "translate(-15px, 10px) scale(0.95)" },
           "100%": { transform: "translate(0px, 0px) scale(1)" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
     },

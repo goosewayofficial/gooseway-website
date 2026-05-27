@@ -242,6 +242,21 @@ export const thTranslations = {
   view_user_manual: "ดูคู่มือผู้ใช้",
 
   // ===========================================
+  // HOME — WHO IT'S FOR (MARQUEE)
+  // ===========================================
+  marquee_heading: "ออกแบบมาเพื่อทุกการเดินทางของทุกคน",
+  marquee_wheelchair_users: "ผู้ใช้วีลแชร์",
+  marquee_seniors: "ผู้สูงอายุ",
+  marquee_caregivers: "ผู้ดูแล",
+  marquee_families: "ครอบครัว",
+  marquee_travelers: "นักเดินทาง",
+  marquee_strollers: "ผู้ใช้รถเข็นเด็ก",
+  marquee_injured: "ผู้บกพร่องชั่วคราว",
+  marquee_pregnant: "สตรีมีครรภ์",
+  marquee_volunteers: "อาสาสมัคร",
+  marquee_communities: "ชุมชน",
+
+  // ===========================================
   // CAREER PAGE
   // ===========================================
   our_culture: "วัฒนธรรมองค์กรของเรา",

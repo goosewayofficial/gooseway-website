@@ -3,6 +3,7 @@
 import HeroSection from "@/components/home/HeroSection";
 import HowItWorksSection from "@/components/home/HowItWorksSection";
 import FaqSection from "@/components/home/FaqSection";
+import MarqueeSection from "@/components/home/MarqueeSection";
 import CtaSection from "@/components/home/CtaSection";
 import HomeClient from "@/components/home/HomeClient";
 
@@ -11,6 +12,9 @@ export default function Home() {
     <div>
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Who it's for — reinforce audience right under the hero */}
+      <MarqueeSection />
 
       {/* How It Works */}
       <HowItWorksSection />
