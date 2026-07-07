@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
+import { ClipboardList, Smartphone, Accessibility, MapPin } from "lucide-react";
 
 const brands = [
   {
@@ -174,7 +175,7 @@ export default function AndroidGpsSupportPage() {
           {/* Quick checklist */}
           <section className="mb-10 bg-blue-50 border border-blue-100 rounded-xl p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
-              <span aria-hidden>✅</span>
+              <ClipboardList size={20} className="text-blue-600 shrink-0" />
               {isTh ? "เช็กลิสต์อย่างรวดเร็ว" : "Quick checklist"}
             </h2>
             <ul className="space-y-2 text-gray-700 text-sm leading-relaxed list-disc pl-6">
@@ -317,7 +318,7 @@ export default function AndroidGpsSupportPage() {
               {/* Brand-Specific Instructions */}
               <div className="mt-6 border border-blue-100 rounded-2xl p-6 bg-gradient-to-br from-blue-50/20 to-blue-50/50 shadow-sm">
                 <h3 className="text-sm font-bold text-brand-dark-blue mb-2 flex items-center gap-2 tracking-wide uppercase">
-                  <span>📱</span>
+                  <Smartphone size={16} className="text-brand-dark-blue shrink-0" />
                   {isTh ? "คำแนะนำเพิ่มเติมสำหรับโทรศัพท์แต่ละแบรนด์" : "Brand-Specific Instructions"}
                 </h3>
                 <p className="text-xs text-gray-500 mb-4 leading-relaxed">
@@ -555,7 +556,7 @@ export default function AndroidGpsSupportPage() {
           {/* Accessibility note */}
           <aside className="mt-12 bg-yellow-50 border-l-4 border-brand-yellow rounded-r-lg p-5">
             <h3 className="font-bold text-gray-900 mb-2 flex items-center gap-2">
-              <span aria-hidden>♿</span>
+              <Accessibility size={20} className="text-[#F59E0B] shrink-0" />
               {isTh
                 ? "ทำไม GPS ที่แม่นยำจึงสำคัญสำหรับผู้ใช้รถเข็น"
                 : "Why precise GPS matters for wheelchair users"}
@@ -570,7 +571,7 @@ export default function AndroidGpsSupportPage() {
           {/* Snap-to-road explanation */}
           <aside className="mt-6 bg-blue-50/70 border-l-4 border-brand-blue rounded-r-lg p-5">
             <h3 className="font-bold text-gray-950 mb-2 flex items-center gap-2">
-              <span>📍</span>
+              <MapPin size={20} className="text-brand-blue shrink-0" />
               {isTh
                 ? "ทำไม Google Maps ดูปกติ แต่ GOOSEWAY มีปัญหาสัญญาณ?"
                 : "Why does Google Maps look fine while GOOSEWAY drifts?"}

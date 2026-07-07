@@ -98,7 +98,7 @@ export default function DownloadModal() {
           </div>
           
           <p className="mt-6 text-xs text-gray-400 font-medium italic">
-            Your Goose, Your Guide 🪿✨
+            Your Goose, Your Guide
           </p>
         </div>
       </div>

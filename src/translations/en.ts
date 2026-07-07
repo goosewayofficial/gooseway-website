@@ -116,7 +116,7 @@ export const enTranslations = {
   // ===========================================
   how_it_works_title: "How GOOSEWAY Works",
   how_it_works_subtitle:
-    "Start exploring accessible Thailand in 3 simple steps",
+    "Start exploring accessible Thailand in 4 simple steps",
   step1_title: "Download the App",
   step1_desc:
     "Join thousands of mobility-constrained users already navigating Thailand with confidence",
@@ -126,6 +126,9 @@ export const enTranslations = {
   step3_title: "Share & Help Others",
   step3_desc:
     "Contribute to the community by sharing your experiences and verified accessible locations",
+  step4_title: "Earn Benefits",
+  step4_desc:
+    "Enjoy exclusive rewards, discounts, and promotions from our partners and sponsors for helping the community",
 
   // ===========================================
   // APP SHOWCASE SECTION

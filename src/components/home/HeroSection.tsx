@@ -4,10 +4,19 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import { Accessibility, Eye, Heart, Baby, Luggage } from "lucide-react";
 
 export default function HeroSection() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const [showAltMascot, setShowAltMascot] = useState(false);
+
+  const targetUsers = [
+    { label: language === "th" ? "ผู้ใช้วีลแชร์" : "Wheelchair Users", icon: Accessibility },
+    { label: language === "th" ? "ผู้บกพร่องทางการมองเห็น" : "Visual Impairment", icon: Eye },
+    { label: language === "th" ? "ผู้สูงอายุ" : "Elderly", icon: Heart },
+    { label: language === "th" ? "สตรีมีครรภ์" : "Pregnant", icon: Baby },
+    { label: language === "th" ? "ผู้มีสัมภาระ" : "Luggage", icon: Luggage },
+  ];
 
   return (
     <section className="relative bg-[#2563EB] overflow-hidden">
@@ -21,8 +30,9 @@ export default function HeroSection() {
           {/* Left: Text content */}
           <div className="flex-1 text-center md:text-left">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/15 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-5 animate-fade-down">
-              ♿ {t("tagline").split("—")[0].trim()}
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white text-xs font-semibold px-4 py-2 rounded-full mb-6 border border-white/10 shadow-lg shadow-black/10 animate-fade-down">
+              <Accessibility className="w-3.5 h-3.5 text-brand-yellow" />
+              <span className="tracking-wide uppercase">{t("tagline").split("—")[0].trim()}</span>
             </div>
 
             {/* Headline */}
@@ -32,7 +42,7 @@ export default function HeroSection() {
 
             {/* What the app does */}
             <p
-              className="mt-5 text-lg md:text-xl text-blue-100 max-w-lg animate-fade-up leading-relaxed"
+              className="mt-5 text-lg md:text-xl text-blue-100/90 max-w-lg animate-fade-up leading-relaxed"
               style={{ animationDelay: "0.2s", opacity: 0 }}
             >
               {t("tagline")}
@@ -43,17 +53,12 @@ export default function HeroSection() {
               className="mt-6 flex flex-wrap gap-2 justify-center md:justify-start animate-fade-up"
               style={{ animationDelay: "0.3s", opacity: 0 }}
             >
-              {[
-                "♿ Wheelchair Users",
-                "🦯 Visual Impairment",
-                "👴 Elderly",
-                "🤰 Pregnant",
-                "🧳 Luggage",
-              ].map((label) => (
+              {targetUsers.map(({ label, icon: Icon }) => (
                 <span
                   key={label}
-                  className="bg-white/10 text-white/90 text-xs font-medium px-3 py-1 rounded-full border border-white/20"
+                  className="bg-white/5 hover:bg-white/10 backdrop-blur-sm text-white/90 text-xs font-medium px-3.5 py-1.5 rounded-full border border-white/10 flex items-center gap-1.5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:shadow-black/10 cursor-default"
                 >
+                  <Icon className="w-3.5 h-3.5 text-brand-yellow shrink-0" />
                   {label}
                 </span>
               ))}

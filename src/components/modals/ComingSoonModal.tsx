@@ -70,7 +70,7 @@ export default function ComingSoonModal() {
           </button>
           
           <p className="mt-4 text-xs text-gray-400 font-medium">
-            Stay tuned for updates! 🪿🚀
+            Stay tuned for updates.
           </p>
         </div>
       </div>

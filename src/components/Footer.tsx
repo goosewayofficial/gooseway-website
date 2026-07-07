@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { useModal } from "@/context/ModalContext";
+import { Mail, Phone, MessageSquare } from "lucide-react";
 
 const socialLinks = [
   {
@@ -118,17 +119,17 @@ export default function Footer() {
               <ul className="space-y-2 text-sm text-blue-100">
                 <li>
                   <a href="mailto:goosewayofficial@gmail.com" className="hover:text-white transition-colors flex items-center gap-2">
-                    <span className="text-lg">✉️</span> goosewayofficial@gmail.com
+                    <Mail size={16} className="shrink-0" /> goosewayofficial@gmail.com
                   </a>
                 </li>
                 <li>
                   <a href="tel:+66830796796" className="hover:text-white transition-colors flex items-center gap-2">
-                    <span className="text-lg">📞</span> +66 830796796
+                    <Phone size={16} className="shrink-0" /> +66 830796796
                   </a>
                 </li>
                 <li>
                   <a href="https://lin.ee/K6cFkWW" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
-                    <span className="text-lg">💬</span> Line: @248ynfet
+                    <MessageSquare size={16} className="shrink-0" /> Line: @248ynfet
                   </a>
                 </li>
               </ul>

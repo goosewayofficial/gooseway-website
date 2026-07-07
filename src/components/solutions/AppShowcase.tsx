@@ -8,6 +8,12 @@ import {
   Smartphone,
   BookOpen,
   PlayCircle,
+  AlertTriangle,
+  Shield,
+  Briefcase,
+  Globe,
+  Star,
+  Handshake,
 } from "lucide-react";
 import { Solution } from "@/app/interfaces";
 import { useLanguage } from "@/context/LanguageContext";
@@ -91,9 +97,9 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
         {
           icon: (
             <div
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${colors.iconBg} ${colors.iconColor} flex items-center justify-center text-xl sm:text-2xl`}
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${colors.iconBg} ${colors.iconColor} flex items-center justify-center`}
             >
-              📍
+              <MapPin size={22} />
             </div>
           ),
           title: t("discover_accessible_routes"),
@@ -102,9 +108,9 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
         {
           icon: (
             <div
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xl sm:text-2xl`}
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center`}
             >
-              🚧
+              <AlertTriangle size={22} />
             </div>
           ),
           title: t("report_obstacles"),
@@ -113,9 +119,9 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
         {
           icon: (
             <div
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-xl sm:text-2xl`}
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center`}
             >
-              👥
+              <Users size={22} />
             </div>
           ),
           title: t("share_knowledge"),
@@ -127,9 +133,9 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
         {
           icon: (
             <div
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${colors.iconBg} ${colors.iconColor} flex items-center justify-center text-xl sm:text-2xl`}
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${colors.iconBg} ${colors.iconColor} flex items-center justify-center`}
             >
-              🧭
+              <Compass size={22} />
             </div>
           ),
           title: t("explore_places"),
@@ -138,9 +144,9 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
         {
           icon: (
             <div
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xl sm:text-2xl`}
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center`}
             >
-              🛡️
+              <Shield size={22} />
             </div>
           ),
           title: t("verified_badge"),
@@ -149,9 +155,9 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
         {
           icon: (
             <div
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xl sm:text-2xl`}
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center`}
             >
-              👨‍💼
+              <Briefcase size={22} />
             </div>
           ),
           title: t("map_promotion"),
@@ -163,9 +169,9 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
         {
           icon: (
             <div
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${colors.iconBg} ${colors.iconColor} flex items-center justify-center text-xl sm:text-2xl`}
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${colors.iconBg} ${colors.iconColor} flex items-center justify-center`}
             >
-              🌐
+              <Globe size={22} />
             </div>
           ),
           title: t("connect_community"),
@@ -174,9 +180,9 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
         {
           icon: (
             <div
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center text-xl sm:text-2xl`}
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center`}
             >
-              ⭐
+              <Star size={22} fill="currentColor" />
             </div>
           ),
           title: t("review_places"),
@@ -185,9 +191,9 @@ export default function AppShowcase({ solutions }: AppShowcaseProps) {
         {
           icon: (
             <div
-              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xl sm:text-2xl`}
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center`}
             >
-              🤝
+              <Handshake size={22} />
             </div>
           ),
           title: t("supportive_community"),

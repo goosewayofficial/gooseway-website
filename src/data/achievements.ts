@@ -36,7 +36,7 @@ const achievementsData: BilingualAchievement[] = [
       en: "Selected as a participant in the prestigious BIT Social Scale Up program, which provided extensive training in business development, project management methodologies, and essential soft skills. This program aimed to equip participants with the knowledge and capabilities to effectively address real-world challenges and drive impactful solutions within their respective fields.",
     },
     date: "2024",
-    icon: "🚀",
+    icon: "incubation",
     category: {
       th: "โครงการบ่มเพาะ",
       en: "Incubation",
@@ -66,7 +66,7 @@ const achievementsData: BilingualAchievement[] = [
       en: "GOOSEWAY was selected as one of the top 22 finalist teams out of 234 entries and successfully achieved 1st Runner-up (2nd Place) in HealthTech X 2 The Future, a prestigious platform supporting high-potential health technology solutions. The project was awarded 500,000 THB in development funding to further enhance its impact and scalability. This recognition reflects our team’s commitment, creativity, and capability in addressing critical challenges related to accessibility and equity in transportation for wheelchair users. The funding has empowered us to expand key features, improve user experience, and continue building a more inclusive and accessible society for everyone.",
     },
     date: "2025",
-    icon: "💵",
+    icon: "funding",
     category: {
       th: "การได้รับทุน",
       en: "Funding",
@@ -97,7 +97,7 @@ const achievementsData: BilingualAchievement[] = [
       en: "We are proud to have passed the IDEA track of the TED Youth Startup 2026 program, which supports and develops new entrepreneurs using innovation to drive business. We have been awarded 150,000 THB in funding to develop our prototype and prove our business concept. This is a significant milestone that helps prepare us for larger funding tracks in the future.",
     },
     date: "2026",
-    icon: "💵",
+    icon: "funding",
     category: {
       th: "การได้รับทุน",
       en: "Funding",
@@ -124,7 +124,7 @@ const achievementsData: BilingualAchievement[] = [
       en: "We are honored to be selected as one of the top 62 teams from a total of 537 applicants nationwide for the Hack for Rights project, organized by the National Human Rights Commission of Thailand (NHRC). This initiative empowers the younger generation to create innovations that promote human rights and combat discrimination. Under the theme 'Age-Friendly and Non-Discriminatory City,' we worked on brainstorming and developing solutions to foster an inclusive society that embraces diversity and ensures equality for all.",
     },
     date: "2026",
-    icon: "⚖️",
+    icon: "competition",
     category: {
       th: "การแข่งขัน",
       en: "Competition",
@@ -154,7 +154,7 @@ const achievementsData: BilingualAchievement[] = [
       en: "GOOSEWAY has been selected as one of the top 62 teams from more than 100 applicants nationwide for the S-Impact 2026 program, an intensive incubation initiative for social enterprises. Through this program, we receive specialized knowledge, expert mentoring, and networking opportunities with various partners. Our focus is on systematically and sustainably addressing accessibility challenges for wheelchair users. This participation marks a significant milestone in our transition from an innovation project to a robust social enterprise.",
     },
     date: "2026",
-    icon: "🌱",
+    icon: "incubation",
     category: {
       th: "โครงการบ่มเพาะ",
       en: "Incubation",
