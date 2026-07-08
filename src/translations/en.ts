@@ -200,6 +200,9 @@ export const enTranslations = {
   by_organizer: "By",
   achievements_footer: "These are just some of our achievements and successes",
   follow_updates: "Stay tuned for more updates!",
+  back_to_achievements: "Back to Achievements",
+  gallery: "More Images",
+  lightbox_tip: "Use Left/Right arrow keys on keyboard to navigate, Esc to close",
 
   // ===========================================
   // SOLUTIONS PAGE

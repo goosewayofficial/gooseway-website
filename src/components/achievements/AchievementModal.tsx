@@ -13,9 +13,11 @@ export default function AchievementModal({
   achievement,
   onClose,
 }: AchievementModalProps) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const { t } = useLanguage();
+
+  const allImages = [achievement.coverImage, ...(achievement.images || [])];
 
   // เพิ่มเอฟเฟกต์ Scale In
   useEffect(() => {
@@ -27,17 +29,29 @@ export default function AchievementModal({
     };
   }, []);
 
-  const nextImage = () => {
-    setCurrentImageIndex((prev) =>
-      prev === achievement.images.length - 1 ? 0 : prev + 1
-    );
-  };
+  // Keyboard navigation for Lightbox
+  useEffect(() => {
+    if (activeImageIndex === null) return;
 
-  const prevImage = () => {
-    setCurrentImageIndex((prev) =>
-      prev === 0 ? achievement.images.length - 1 : prev - 1
-    );
-  };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") {
+        setActiveImageIndex((prev) =>
+          prev === null ? null : prev === allImages.length - 1 ? 0 : prev + 1
+        );
+      } else if (e.key === "ArrowLeft") {
+        setActiveImageIndex((prev) =>
+          prev === null ? null : prev === 0 ? allImages.length - 1 : prev - 1
+        );
+      } else if (e.key === "Escape") {
+        setActiveImageIndex(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeImageIndex, allImages.length]);
 
   return (
     <div
@@ -45,108 +59,159 @@ export default function AchievementModal({
       onClick={onClose}
     >
       <div
-        className={`bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto ${
+        className={`bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto ${
           isAnimating ? "scale-in" : ""
-        }`}
+        } relative`}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative">
-          <div className="absolute top-4 right-4 z-10">
+        {/* Close Button top-right */}
+        <div className="absolute top-6 right-6 z-10">
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-gray-600 bg-gray-100 hover:bg-gray-200 p-2 rounded-full transition-all"
+          >
+            <X size={20} />
+          </button>
+        </div>
+
+        <div className="p-6 sm:p-8 space-y-6">
+          {/* Header section (Title, organizer, date, etc) */}
+          <div className="space-y-3 pr-10">
             <button
               onClick={onClose}
-              className="bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+              className="flex items-center gap-1 text-gray-500 hover:text-blue-600 transition-colors text-sm font-medium"
+            >
+              <ChevronLeft size={16} />
+              {t("back_to_achievements")}
+            </button>
+            
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">
+              {achievement.title}
+            </h2>
+            
+            <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500 border-b border-gray-100 pb-4 pt-1">
+              <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full font-medium text-xs">
+                {achievement.category}
+              </span>
+              <span className="text-gray-300">|</span>
+              <div className="flex items-center gap-1">
+                <Award size={14} className="text-gray-400" />
+                <span>{t("by_organizer")} {achievement.organizer}</span>
+              </div>
+              <span className="text-gray-300">|</span>
+              <div className="flex items-center gap-1">
+                <Calendar size={14} className="text-gray-400" />
+                <span>{achievement.date}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Main Cover Image */}
+          <div 
+            className="relative group cursor-zoom-in overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 shadow-sm max-h-[480px] flex items-center justify-center"
+            onClick={() => setActiveImageIndex(0)}
+          >
+            <img
+              src={achievement.coverImage}
+              alt={achievement.title}
+              className="w-full h-full object-contain max-h-[480px] transition-transform duration-500 group-hover:scale-[1.01]"
+            />
+          </div>
+
+          {/* Long Description content */}
+          <div className="prose max-w-none text-gray-700 text-base sm:text-lg leading-relaxed pt-2">
+            <p className="whitespace-pre-line">
+              {achievement.longDescription || achievement.description}
+            </p>
+          </div>
+
+          {/* Gallery / Remaining Images */}
+          {achievement.images && achievement.images.length > 0 && (
+            <div className="border-t border-gray-100 pt-6 space-y-4">
+              <h3 className="text-lg font-bold text-gray-900">
+                {t("gallery")}
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {achievement.images.map((img, idx) => (
+                  <div
+                    key={idx}
+                    className="relative aspect-video group cursor-zoom-in overflow-hidden rounded-xl bg-gray-50 border border-gray-100 shadow-sm"
+                    onClick={() => setActiveImageIndex(idx + 1)}
+                  >
+                    <img
+                      src={img}
+                      alt={`${achievement.title} - ${idx + 1}`}
+                      className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105 group-hover:brightness-95"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Lightbox Modal Overlay */}
+      {activeImageIndex !== null && (
+        <div
+          className="fixed inset-0 bg-black/95 backdrop-blur-md flex flex-col items-center justify-center p-4 z-[70] select-none"
+          onClick={() => setActiveImageIndex(null)}
+        >
+          {/* Lightbox Close / Counter */}
+          <div className="absolute top-6 right-6 z-[80] flex items-center gap-4">
+            <span className="text-white/60 text-sm font-medium">
+              {activeImageIndex + 1} / {allImages.length}
+            </span>
+            <button
+              onClick={() => setActiveImageIndex(null)}
+              className="bg-white/10 hover:bg-white/20 text-white p-2.5 rounded-full transition-colors backdrop-blur-sm"
             >
               <X size={20} />
             </button>
           </div>
 
-          {/* Image Carousel */}
-          <div className="relative h-96 bg-gray-900">
-            {achievement.images.length > 0 ? (
-              <img
-                src={achievement.images[currentImageIndex]}
-                alt={`${achievement.title} - Image ${currentImageIndex + 1}`}
-                className="w-full h-full object-contain"
-              />
-            ) : (
-              <img
-                src={achievement.coverImage}
-                alt={achievement.title}
-                className="w-full h-full object-contain"
-              />
-            )}
+          {/* Lightbox Main Content Container */}
+          <div className="relative max-w-5xl w-full flex items-center justify-center h-[75vh]" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={allImages[activeImageIndex]}
+              alt="Lightbox View"
+              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-fade-in"
+            />
 
-            {achievement.images.length > 1 && (
+            {/* Lightbox Prev / Next controls */}
+            {allImages.length > 1 && (
               <>
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    prevImage();
+                    setActiveImageIndex((prev) =>
+                      prev === null ? null : prev === 0 ? allImages.length - 1 : prev - 1
+                    );
                   }}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-colors"
+                  className="absolute -left-4 sm:-left-16 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3.5 rounded-full transition-all backdrop-blur-sm shadow-lg hover:scale-105"
                 >
-                  <ChevronLeft size={24} />
+                  <ChevronLeft size={28} />
                 </button>
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    nextImage();
+                    setActiveImageIndex((prev) =>
+                      prev === null ? null : prev === allImages.length - 1 ? 0 : prev + 1
+                    );
                   }}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-colors"
+                  className="absolute -right-4 sm:-right-16 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3.5 rounded-full transition-all backdrop-blur-sm shadow-lg hover:scale-105"
                 >
-                  <ChevronRight size={24} />
+                  <ChevronRight size={28} />
                 </button>
-                <div className="absolute bottom-4 left-0 right-0 flex justify-center">
-                  <div className="bg-black/60 text-white px-4 py-2 rounded-full">
-                    {currentImageIndex + 1} / {achievement.images.length}
-                  </div>
-                </div>
               </>
             )}
           </div>
-        </div>
 
-        <div className="p-8 space-y-6">
-          <div className="space-y-4">
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
-              <div>
-                <h2 className="text-3xl font-bold text-gray-800 mb-2">
-                  {achievement.title}
-                </h2>
-                <div className="flex items-center text-gray-600 mb-2">
-                  <Award size={18} className="mr-2" />
-                  <p>
-                    {t("by_organizer")} {achievement.organizer}
-                  </p>
-                </div>
-                <div className="flex items-center text-blue-600">
-                  <Calendar size={18} className="mr-2" />
-                  <span>{achievement.date}</span>
-                </div>
-              </div>
-              <span className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-                {achievement.category}
-              </span>
-            </div>
-
-            <div className="border-t border-gray-100 pt-4">
-              <p className="text-gray-700 text-lg leading-relaxed">
-                {achievement.longDescription || achievement.description}
-              </p>
-            </div>
-
-            {/* Footer buttons */}
-            <div className="pt-4 flex justify-end items-center">
-              <button
-                onClick={onClose}
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                {t("close")}
-              </button>
-            </div>
+          <div className="absolute bottom-6 text-white/40 text-xs text-center px-4">
+            {t("lightbox_tip")}
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

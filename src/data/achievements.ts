@@ -116,12 +116,12 @@ const achievementsData: BilingualAchievement[] = [
       en: "Hack for Rights 2026: Youth Power for Human Rights Innovation",
     },
     description: {
-      th: "ได้รับคัดเลือกเป็น 1 ใน 62 ทีม จากทั้งหมด 537 ทีม เข้าร่วมโครงการ Hack for Rights โดยสำนักงานคณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม.)",
-      en: "Selected as one of the top 62 teams from a total of 537 teams in the Hack for Rights program by the National Human Rights Commission of Thailand (NHRC)",
+      th: "ได้รับรางวัลรองชนะเลิศอันดับ 1 (ชมเชย) จากทั้งหมด 537 ทีมทั่วประเทศ ในโครงการ Hack for Rights 2026 โดยสำนักงานคณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม.)",
+      en: "Awarded the 1st Runner-up Honorable Mention from 537 teams nationwide in the Hack for Rights 2026 program by the National Human Rights Commission of Thailand (NHRC)",
     },
     longDescription: {
-      th: "เราภูมิใจที่ได้รับการคัดเลือกให้เป็นหนึ่งใน 62 ทีม จากผู้สมัครทั้งหมด 537 ทีมทั่วประเทศเข้าร่วมโครงการ Hack for Rights ซึ่งจัดโดยสำนักงานคณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม.) โครงการนี้มุ่งเน้นการปลุกพลังเยาวชนคนรุ่นใหม่ในการสร้างสรรค์นวัตกรรมเพื่อส่งเสริมสิทธิมนุษยชนและการไม่เลือกปฏิบัติ ภายใต้หัวข้อ 'เมืองที่ไม่เลือกปฏิบัต่อผู้สูงอายุ' (Age-Friendly and Non-Discriminatory City) โดยเราได้ร่วมระดมไอเดียเพื่อสร้างสังคมที่โอบรับความหลากหลายและสร้างความเท่าเทียมให้กับทุกคน",
-      en: "We are honored to be selected as one of the top 62 teams from a total of 537 applicants nationwide for the Hack for Rights project, organized by the National Human Rights Commission of Thailand (NHRC). This initiative empowers the younger generation to create innovations that promote human rights and combat discrimination. Under the theme 'Age-Friendly and Non-Discriminatory City,' we worked on brainstorming and developing solutions to foster an inclusive society that embraces diversity and ensures equality for all.",
+      th: "ได้รับรางวัลรองชนะเลิศอันดับ 1 (ชมเชย) จากผู้สมัครทั้งหมด 537 ทีมทั่วประเทศในโครงการ Hack for Rights 2026 ซึ่งจัดโดยสำนักงานคณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม.) โครงการนี้มุ่งเน้นการปลุกพลังเยาวชนคนรุ่นใหม่ในการสร้างสรรค์นวัตกรรมเพื่อส่งเสริมสิทธิมนุษยชนและการไม่เลือกปฏิบัติ ภายใต้หัวข้อ 'เมืองที่ไม่เลือกปฏิบัติต่อผู้สูงอายุ' (Age-Friendly and Non-Discriminatory City) โดยได้ร่วมระดมไอเดียและพัฒนานวัตกรรมเพื่อสร้างสังคมที่โอบรับความหลากหลายและสร้างความเท่าเทียมให้กับทุกคน",
+      en: "Awarded the 1st Runner-up Honorable Mention from 537 teams nationwide in the Hack for Rights 2026 project, organized by the National Human Rights Commission of Thailand (NHRC). This initiative empowers the younger generation to create innovations that promote human rights and combat discrimination. Under the theme 'Age-Friendly and Non-Discriminatory City,' worked on brainstorming and developing solutions to foster an inclusive society that embraces diversity and ensures equality for all.",
     },
     date: "2026",
     icon: "competition",
