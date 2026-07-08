@@ -77,7 +77,7 @@ const achievementsData: BilingualAchievement[] = [
       th: "ThaiHealth",
       en: "ThaiHealth",
     },
-    coverImage: "/achievements/achievement02/achievement02.jpg",
+    coverImage: "/achievements/achievement02/achievement02_01.jpg",
     images: [
       "/achievements/achievement02/achievement02_01.jpg",
       "/achievements/achievement02/achievement02_02.jpg",
@@ -136,11 +136,12 @@ const achievementsData: BilingualAchievement[] = [
       th: "สำนักงานคณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม.)",
       en: "National Human Rights Commission of Thailand (NHRC)",
     },
-    coverImage: "/achievements/achievement04/achievement04.jpg",
+    coverImage: "/achievements/achievement04/achievement04_01.jpg",
     images: [
       "/achievements/achievement04/achievement04_01.jpg",
       "/achievements/achievement04/achievement04_02.jpg",
     ],
+    logo: "/sponsors/nhrc.webp",
   },
   {
     id: 5,
