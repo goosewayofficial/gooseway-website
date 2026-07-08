@@ -27,6 +27,7 @@ export interface Achievement {
   coverImage: string;
   images: string[];
   longDescription?: string;
+  logo?: string;
 }
 
 // จาก src/app/components/achievement-card.tsx

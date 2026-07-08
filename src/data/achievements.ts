@@ -18,6 +18,7 @@ interface BilingualAchievement {
   organizer: BilingualText;
   coverImage: string;
   images: string[];
+  logo?: string;
 }
 
 const achievementsData: BilingualAchievement[] = [
@@ -50,6 +51,7 @@ const achievementsData: BilingualAchievement[] = [
       "/achievements/achievement01/achievement01_01.png",
       "/achievements/achievement01/achievement01_02.png",
     ],
+    logo: "/sponsors/edvisory.png",
   },
   {
     id: 2,
@@ -81,6 +83,7 @@ const achievementsData: BilingualAchievement[] = [
       "/achievements/achievement02/achievement02_02.jpg",
       "/achievements/achievement02/achievement02_03.jpg",
     ],
+    logo: "/sponsors/thaihealth.png",
   },
   {
     id: 3,
@@ -182,6 +185,7 @@ export const getAchievements = (language: "th" | "en"): Achievement[] => {
       organizer: achievement.organizer[language],
       coverImage: achievement.coverImage,
       images: achievement.images,
+      logo: achievement.logo,
     }))
     .reverse();
 };

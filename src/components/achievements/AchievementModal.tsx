@@ -116,6 +116,15 @@ export default function AchievementModal({
               alt={achievement.title}
               className="w-full h-full object-contain max-h-[480px] transition-transform duration-500 group-hover:scale-[1.01]"
             />
+            {achievement.logo && (
+              <div className="absolute top-4 left-4 bg-white p-1.5 rounded-xl shadow-lg w-14 h-14 flex items-center justify-center border border-gray-100 pointer-events-none select-none z-10">
+                <img 
+                  src={achievement.logo} 
+                  alt={`${achievement.organizer} logo`} 
+                  className="max-w-full max-h-full object-contain rounded" 
+                />
+              </div>
+            )}
           </div>
 
           {/* Long Description content */}

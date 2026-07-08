@@ -17,6 +17,7 @@ export default function AchievementCard({
   organizer,
   coverImage,
   images,
+  logo,
   onClick,
   animationDelay,
 }: AchievementCardProps) {
@@ -40,6 +41,16 @@ export default function AchievementCard({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
           </div>
+
+          {logo && (
+            <div className="absolute top-4 left-4 bg-white p-1 rounded-lg shadow-md w-10 h-10 flex items-center justify-center z-10 border border-gray-100 pointer-events-none select-none">
+              <img
+                src={logo}
+                alt={`${organizer} logo`}
+                className="max-w-full max-h-full object-contain rounded"
+              />
+            </div>
+          )}
 
           <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
             {category}
